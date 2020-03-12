@@ -3,6 +3,7 @@
 .DS_Store
 .idea
 .vscode
+.npmrc
 
 # npm
 node_modules
@@ -13,7 +14,11 @@ es
 lib
 dist
 docs/dist
-examples
+examples/element-ui
+examples/pages/en-US
+examples/pages/zh-CN
+examples/pages/es
+examples/pages/fr-FR
 changelog.generated.md
 test/coverage
 vetur
