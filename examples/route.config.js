@@ -171,7 +171,7 @@ route.push({
 let userLanguage = localStorage.getItem('ELEMENT_LANGUAGE') || window.navigator.language || 'en-US';
 let defaultPath = '/en-US';
 if (userLanguage.indexOf('zh-') !== -1) {
-  defaultPath = '/zh-CN';
+  defaultPath = '/zh-CN/component/installation';
 } else if (userLanguage.indexOf('es') !== -1) {
   defaultPath = '/es';
 } else if (userLanguage.indexOf('fr') !== -1) {
