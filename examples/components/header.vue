@@ -2,7 +2,12 @@
   .headerWrapper {
     height: 80px;
   }
-
+  .header-nav-title-icon {
+    color: #000;
+    font-size: x-large;
+    text-align: center;
+    padding-left: 10px;
+  }
   .header {
     height: 80px;
     background-color: #fff;
@@ -85,6 +90,7 @@
     .nav-logo,
     .nav-logo-small {
       vertical-align: sub;
+      width: 30px;
     }
 
     .nav-logo-small {
@@ -269,27 +275,24 @@
   <div class="headerWrapper">
     <header class="header" ref="header">
       <div class="container">
-        <h1><router-link :to="`/${ lang }`">
-          <!-- logo -->
-          <slot>
-            <img
-              src="../assets/images/element-logo.svg"
-              alt="element-logo"
-              class="nav-logo">
-            <img
-              src="../assets/images/element-logo-small.svg"
-              alt="element-logo"
-              class="nav-logo-small">
-          </slot>
-
-        </router-link></h1>
-
+        <!-- logo -->
+        <slot>
+          <img
+            src="../assets/images/logo.png"
+            alt="element-logo"
+            class="nav-logo">
+          <img
+            src="../assets/images/logo.png"
+            alt="element-logo"
+            class="nav-logo-small">
+        </slot>
+        <span class="header-nav-title-icon">桌面版金融组件库</span>
         <!-- nav -->
         <ul class="nav">
           <li class="nav-item nav-algolia-search" v-show="isComponentPage">
             <algolia-search></algolia-search>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link
               active-class="active"
               :to="`/${ lang }/guide`">{{ langConfig.guide }}
@@ -315,12 +318,12 @@
               :to="`/${ lang }/resource`"
               exact>{{ langConfig.resource }}
             </router-link>
-          </li>
+          </li> -->
 
           <!-- gap -->
-          <li class="nav-item" v-show="isComponentPage">
+          <!-- <li class="nav-item" v-show="isComponentPage">
             <div class="nav-gap"></div>
-          </li>
+          </li> -->
 
           <!-- 版本选择器 -->
           <li class="nav-item nav-versions" v-show="isComponentPage">
@@ -347,7 +350,7 @@
           </li>
 
           <!-- 语言选择器 -->
-          <li class="nav-item lang-item">
+          <!-- <li class="nav-item lang-item">
             <el-dropdown
               trigger="click"
               class="nav-dropdown nav-lang"
@@ -368,7 +371,7 @@
                 </el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
-          </li>
+          </li> -->
         </ul>
       </div>
     </header>
