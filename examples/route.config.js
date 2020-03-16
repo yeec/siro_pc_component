@@ -80,7 +80,7 @@ const generateMiscRoutes = function() {
     component: load('theme-nav'),
     children: [
       {
-        path: '/', // 主题管理
+        path: '/theme', // 主题管理
         name: 'theme',
         meta: 'nav',
         component: load('theme')
@@ -101,7 +101,7 @@ const generateMiscRoutes = function() {
   };
 
   let indexRoute = {
-    path: '/', // 首页
+    path: '/home', // 首页
     meta: 'home',
     name: 'nav',
     component: load('index')
@@ -122,6 +122,9 @@ let defaultPath = '/component/installation';
 
 route = route.concat([{
   path: '/',
+  redirect: defaultPath
+}, {
+  path: '*',
   redirect: defaultPath
 }]);
 

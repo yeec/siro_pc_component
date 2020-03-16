@@ -43,20 +43,8 @@ export default {
 </script>`
   },
   {
-    filename: path.join('../../examples/docs/zh-CN', `${componentname}.md`),
+    filename: path.join('../../examples/docs/explain', `${componentname}.md`),
     content: `## ${ComponentName} ${chineseName}`
-  },
-  {
-    filename: path.join('../../examples/docs/en-US', `${componentname}.md`),
-    content: `## ${ComponentName}`
-  },
-  {
-    filename: path.join('../../examples/docs/es', `${componentname}.md`),
-    content: `## ${ComponentName}`
-  },
-  {
-    filename: path.join('../../examples/docs/fr-FR', `${componentname}.md`),
-    content: `## ${ComponentName}`
   },
   {
     filename: path.join('../../test/unit/specs', `${componentname}.spec.js`),
@@ -142,7 +130,7 @@ Object.keys(navConfigFile).forEach(lang => {
   let groups = navConfigFile[lang][4].groups;
   groups[groups.length - 1].list.push({
     path: `/${componentname}`,
-    title: lang === 'zh-CN' && componentname !== chineseName
+    title: lang === 'nav' && componentname !== chineseName
       ? `${ComponentName} ${chineseName}`
       : ComponentName
   });

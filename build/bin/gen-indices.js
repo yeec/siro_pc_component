@@ -11,12 +11,12 @@ const indexName = 'element-zh';
 const index = client.initIndex(indexName);
 index.clearIndex(err => {
   if (err) return;
-  fs.readdir(path.resolve(__dirname, '../../examples/docs/zh-CN'), (err, files) => {
+  fs.readdir(path.resolve(__dirname, '../../examples/docs/explain'), (err, files) => {
     if (err) return;
     let indices = [];
     files.forEach(file => {
       const component = file.replace('.md', '');
-      const content = fs.readFileSync(path.resolve(__dirname, `../../examples/docs/zh-CN/${ file }`), 'utf8');
+      const content = fs.readFileSync(path.resolve(__dirname, `../../examples/docs/explain/${ file }`), 'utf8');
       const matches = content
         .replace(/:::[\s\S]*?:::/g, '')
         .replace(/```[\s\S]*?```/g, '')
