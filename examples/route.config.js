@@ -1,38 +1,21 @@
 import navConfig from './nav.config';
-import langs from './i18n/route';
 
-const LOAD_MAP = {
-  'zh-CN': name => {
-    return r => require.ensure([], () =>
-      r(require(`./pages/zh-CN/${name}.vue`)),
-    'zh-CN');
-  }
+const load = function(path) {
+  return r => require.ensure([], () => r(require(`./pages/template-vue/${path}.vue`)), 'template-vue');
 };
 
-const load = function(lang, path) {
-  return LOAD_MAP[lang](path);
-};
-
-const LOAD_DOCS_MAP = {
-  'zh-CN': path => {
-    return r => require.ensure([], () =>
-      r(require(`./docs/zh-CN${path}.md`)),
-    'zh-CN');
-  }
-};
-
-const loadDocs = function(lang, path) {
-  return LOAD_DOCS_MAP[lang](path);
+const loadDocs = function(path) {
+  return r => require.ensure([], () => r(require(`./docs/explain${path}.md`)), 'explain');
 };
 
 const registerRoute = (navConfig) => {
   let route = [];
-  Object.keys(navConfig).forEach((lang, index) => {
-    let navs = navConfig[lang];
+  Object.keys(navConfig).forEach((nav, index) => {
+    let navs = navConfig[nav];
     route.push({
       path: '/component',
       redirect: '/component/installation',
-      component: load(lang, 'component'),
+      component: load('component'),
       children: []
     });
     navs.forEach(nav => {
@@ -40,31 +23,30 @@ const registerRoute = (navConfig) => {
       if (nav.groups) {
         nav.groups.forEach(group => {
           group.list.forEach(nav => {
-            addRoute(nav, lang, index);
+            addRoute(nav, index);
           });
         });
       } else if (nav.children) {
         nav.children.forEach(nav => {
-          addRoute(nav, lang, index);
+          addRoute(nav, index);
         });
       } else {
-        addRoute(nav, lang, index);
+        addRoute(nav, index);
       }
     });
-    console.log(route);
   });
-  function addRoute(page, lang, index) {
+  function addRoute(page, index) {
     const component = page.path === '/changelog'
-      ? load(lang, 'changelog')
-      : loadDocs(lang, page.path);
+      ? load('changelog')
+      : loadDocs(page.path);
     let child = {
       path: page.path.slice(1),
       meta: {
         title: page.title || page.name,
         description: page.description,
-        lang
+        lang: 'nav'
       },
-      name: 'component-' + lang + (page.title || page.name),
+      name: 'component-' + (page.title || page.name),
       component: component.default || component
     };
 
@@ -75,62 +57,60 @@ const registerRoute = (navConfig) => {
 
 let route = registerRoute(navConfig);
 
-const generateMiscRoutes = function(lang) {
+const generateMiscRoutes = function() {
   let guideRoute = {
-    path: `/${ lang }/guide`, // 指南
-    redirect: `/${ lang }/guide/design`,
-    component: load(lang, 'guide'),
+    path: '/guide', // 指南
+    redirect: '/guide/design',
+    component: load('guide'),
     children: [{
       path: 'design', // 设计原则
-      name: 'guide-design' + lang,
-      meta: { lang },
-      component: load(lang, 'design')
+      name: 'guide-design',
+      meta: 'nav',
+      component: load('design')
     }, {
       path: 'nav', // 导航
-      name: 'guide-nav' + lang,
-      meta: { lang },
-      component: load(lang, 'nav')
+      name: 'guide-nav',
+      meta: 'nav',
+      component: load('nav')
     }]
   };
 
   let themeRoute = {
-    path: `/${ lang }/theme`,
-    component: load(lang, 'theme-nav'),
+    path: '/theme',
+    component: load('theme-nav'),
     children: [
       {
         path: '/', // 主题管理
-        name: 'theme' + lang,
-        meta: { lang },
-        component: load(lang, 'theme')
+        name: 'theme',
+        meta: 'nav',
+        component: load('theme')
       },
       {
         path: 'preview', // 主题预览编辑
-        name: 'theme-preview-' + lang,
-        meta: { lang },
-        component: load(lang, 'theme-preview')
+        name: 'theme-preview',
+        meta: 'nav',
+        component: load('theme-preview')
       }]
   };
 
   let resourceRoute = {
-    path: `/${ lang }/resource`, // 资源
-    meta: { lang },
-    name: 'resource' + lang,
-    component: load(lang, 'resource')
+    path: '/resource', // 资源
+    meta: 'resource',
+    name: 'nav',
+    component: load('resource')
   };
 
   let indexRoute = {
-    path: `/${ lang }`, // 首页
-    meta: { lang },
-    name: 'home' + lang,
-    component: load(lang, 'index')
+    path: '/', // 首页
+    meta: 'home',
+    name: 'nav',
+    component: load('index')
   };
 
   return [guideRoute, resourceRoute, themeRoute, indexRoute];
 };
 
-langs.forEach(lang => {
-  route = route.concat(generateMiscRoutes(lang.lang));
-});
+route = route.concat(generateMiscRoutes());
 
 route.push({
   path: '/play',
