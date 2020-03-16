@@ -252,7 +252,7 @@
 
     computed: {
       lang() {
-        return this.$route.path.split('/')[1];
+        return 'zh-CN';
       },
 
       langConfig() {

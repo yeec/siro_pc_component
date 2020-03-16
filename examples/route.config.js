@@ -30,8 +30,8 @@ const registerRoute = (navConfig) => {
   Object.keys(navConfig).forEach((lang, index) => {
     let navs = navConfig[lang];
     route.push({
-      path: `/${ lang }/component`,
-      redirect: `/${ lang }/component/installation`,
+      path: '/component',
+      redirect: '/component/installation',
       component: load(lang, 'component'),
       children: []
     });
@@ -51,6 +51,7 @@ const registerRoute = (navConfig) => {
         addRoute(nav, lang, index);
       }
     });
+    console.log(route);
   });
   function addRoute(page, lang, index) {
     const component = page.path === '/changelog'
@@ -69,7 +70,6 @@ const registerRoute = (navConfig) => {
 
     route[index].children.push(child);
   }
-
   return route;
 };
 
@@ -138,13 +138,10 @@ route.push({
   component: require('./play/index.vue')
 });
 
-let defaultPath = '/zh-CN/component/installation';
+let defaultPath = '/component/installation';
 
 route = route.concat([{
   path: '/',
-  redirect: defaultPath
-}, {
-  path: '*',
   redirect: defaultPath
 }]);
 
