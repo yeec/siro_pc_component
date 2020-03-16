@@ -232,7 +232,7 @@
         return this.$route.meta.lang;
       },
       langConfig() {
-        return compoLang.filter(config => config.lang === this.lang)[0]['nav'];
+        return compoLang[0]['nav'];
       }
     },
     methods: {

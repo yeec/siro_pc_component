@@ -173,15 +173,14 @@
 
     computed: {
       lang() {
-        return this.$route.path.split('/')[1] || 'zh-CN';
+        return 'zh-CN';
       },
-
       langConfig() {
-        return compoLang.filter(config => config.lang === this.lang)[0]['footer'];
+        return compoLang[0]['footer'];
       },
 
       gitterLink() {
-        return this.lang === 'zh-CN' ? 'https://gitter.im/ElemeFE/element' : 'https://gitter.im/element-en/Lobby';
+        return 'https://gitter.im/ElemeFE/element';
       }
     }
   };
