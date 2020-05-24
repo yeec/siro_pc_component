@@ -43,7 +43,7 @@
   import emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElDialog',
+    name: 'ComDialog',
 
     mixins: [Popup, emitter, Migrating],
 

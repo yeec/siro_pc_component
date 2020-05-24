@@ -1,8 +1,8 @@
-import ElButton from './src/button';
+import ComButton from './src/button';
 
 /* istanbul ignore next */
-ElButton.install = function(Vue) {
-  Vue.component(ElButton.name, ElButton);
+ComButton.install = function(Vue) {
+  Vue.component(ComButton.name, ComButton);
 };
 
-export default ElButton;
+export default ComButton;
