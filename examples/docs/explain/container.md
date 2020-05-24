@@ -7,7 +7,7 @@
 
 `<el-aside>`：侧边栏容器。
 
-`<el-main>`：主要区域容器。
+`<com-main>`：主要区域容器。
 
 `<com-footer>`：底栏容器。
 
@@ -21,25 +21,25 @@
 ```html
 <el-container>
   <com-header>Header</com-header>
-  <el-main>Main</el-main>
+  <com-main>Main</com-main>
 </el-container>
 
 <el-container>
   <com-header>Header</com-header>
-  <el-main>Main</el-main>
+  <com-main>Main</com-main>
   <com-footer>Footer</com-footer>
 </el-container>
 
 <el-container>
   <el-aside width="200px">Aside</el-aside>
-  <el-main>Main</el-main>
+  <com-main>Main</com-main>
 </el-container>
 
 <el-container>
   <com-header>Header</com-header>
   <el-container>
     <el-aside width="200px">Aside</el-aside>
-    <el-main>Main</el-main>
+    <com-main>Main</com-main>
   </el-container>
 </el-container>
 
@@ -48,7 +48,7 @@
   <el-container>
     <el-aside width="200px">Aside</el-aside>
     <el-container>
-      <el-main>Main</el-main>
+      <com-main>Main</com-main>
       <com-footer>Footer</com-footer>
     </el-container>
   </el-container>
@@ -58,7 +58,7 @@
   <el-aside width="200px">Aside</el-aside>
   <el-container>
     <com-header>Header</com-header>
-    <el-main>Main</el-main>
+    <com-main>Main</com-main>
   </el-container>
 </el-container>
 
@@ -66,7 +66,7 @@
   <el-aside width="200px">Aside</el-aside>
   <el-container>
     <com-header>Header</com-header>
-    <el-main>Main</el-main>
+    <com-main>Main</com-main>
     <com-footer>Footer</com-footer>
   </el-container>
 </el-container>
@@ -86,7 +86,7 @@
     line-height: 200px;
   }
   
-  .el-main {
+  .com-main {
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
@@ -177,7 +177,7 @@
       <span>王小虎</span>
     </com-header>
     
-    <el-main>
+    <com-main>
       <el-table :data="tableData">
         <el-table-column prop="date" label="日期" width="140">
         </el-table-column>
@@ -186,7 +186,7 @@
         <el-table-column prop="address" label="地址">
         </el-table-column>
       </el-table>
-    </el-main>
+    </com-main>
   </el-container>
 </el-container>
 
