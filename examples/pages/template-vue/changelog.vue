@@ -137,9 +137,9 @@
 <template>
   <div class="page-changelog">
     <div class="heading">
-      <com-button class="fr">
+      <el-button class="fr">
         <a href="https://github.com/ElemeFE/element/releases" target="_blank">GitHub Releases</a>
-      </com-button>
+      </el-button>
       更新日志
     </div>
     <ul class="timeline" ref="timeline">
