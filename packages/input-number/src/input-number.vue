@@ -51,7 +51,7 @@
   import RepeatClick from 'element-ui/src/directives/repeat-click';
 
   export default {
-    name: 'ElInputNumber',
+    name: 'ComInputNumber',
     mixins: [Focus('input')],
     inject: {
       elForm: {
