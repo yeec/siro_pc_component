@@ -1,15 +1,15 @@
 ## Container 布局容器
 用于布局的容器组件，方便快速搭建页面的基本结构：
 
-`<el-container>`：外层容器。当子元素中包含 `<el-header>` 或 `<el-footer>` 时，全部子元素会垂直上下排列，否则会水平左右排列。
+`<el-container>`：外层容器。当子元素中包含 `<com-header>` 或 `<com-footer>` 时，全部子元素会垂直上下排列，否则会水平左右排列。
 
-`<el-header>`：顶栏容器。
+`<com-header>`：顶栏容器。
 
 `<el-aside>`：侧边栏容器。
 
 `<el-main>`：主要区域容器。
 
-`<el-footer>`：底栏容器。
+`<com-footer>`：底栏容器。
 
 :::tip
 以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。此外，`<el-container>` 的子元素只能是后四者，后四者的父元素也只能是 `<el-container>`。
@@ -20,14 +20,14 @@
 :::demo
 ```html
 <el-container>
-  <el-header>Header</el-header>
+  <com-header>Header</com-header>
   <el-main>Main</el-main>
 </el-container>
 
 <el-container>
-  <el-header>Header</el-header>
+  <com-header>Header</com-header>
   <el-main>Main</el-main>
-  <el-footer>Footer</el-footer>
+  <com-footer>Footer</com-footer>
 </el-container>
 
 <el-container>
@@ -36,7 +36,7 @@
 </el-container>
 
 <el-container>
-  <el-header>Header</el-header>
+  <com-header>Header</com-header>
   <el-container>
     <el-aside width="200px">Aside</el-aside>
     <el-main>Main</el-main>
@@ -44,12 +44,12 @@
 </el-container>
 
 <el-container>
-  <el-header>Header</el-header>
+  <com-header>Header</com-header>
   <el-container>
     <el-aside width="200px">Aside</el-aside>
     <el-container>
       <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
+      <com-footer>Footer</com-footer>
     </el-container>
   </el-container>
 </el-container>
@@ -57,7 +57,7 @@
 <el-container>
   <el-aside width="200px">Aside</el-aside>
   <el-container>
-    <el-header>Header</el-header>
+    <com-header>Header</com-header>
     <el-main>Main</el-main>
   </el-container>
 </el-container>
@@ -65,14 +65,14 @@
 <el-container>
   <el-aside width="200px">Aside</el-aside>
   <el-container>
-    <el-header>Header</el-header>
+    <com-header>Header</com-header>
     <el-main>Main</el-main>
-    <el-footer>Footer</el-footer>
+    <com-footer>Footer</com-footer>
   </el-container>
 </el-container>
 
 <style>
-  .el-header, .el-footer {
+  .com-header, .com-footer {
     background-color: #B3C0D1;
     color: #333;
     text-align: center;
@@ -165,17 +165,17 @@
   </el-aside>
   
   <el-container>
-    <el-header style="text-align: right; font-size: 12px">
-      <el-dropdown>
+    <com-header style="text-align: right; font-size: 12px">
+      <com-dropdown>
         <i class="el-icon-setting" style="margin-right: 15px"></i>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>查看</el-dropdown-item>
-          <el-dropdown-item>新增</el-dropdown-item>
-          <el-dropdown-item>删除</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
+        <com-dropdown-menu slot="dropdown">
+          <com-dropdown-item>查看</com-dropdown-item>
+          <com-dropdown-item>新增</com-dropdown-item>
+          <com-dropdown-item>删除</com-dropdown-item>
+        </com-dropdown-menu>
+      </com-dropdown>
       <span>王小虎</span>
-    </el-header>
+    </com-header>
     
     <el-main>
       <el-table :data="tableData">
@@ -191,7 +191,7 @@
 </el-container>
 
 <style>
-  .el-header {
+  .com-header {
     background-color: #B3C0D1;
     color: #333;
     line-height: 60px;
@@ -222,7 +222,7 @@
 ### Container Attributes
 | 参数    | 说明     | 类型    | 可选值      | 默认值 |
 |---------|----------|---------|-------------|--------|
-| direction | 子元素的排列方向 | string | horizontal / vertical | 子元素中有 `el-header` 或 `el-footer` 时为 vertical，否则为 horizontal |
+| direction | 子元素的排列方向 | string | horizontal / vertical | 子元素中有 `com-header` 或 `com-footer` 时为 vertical，否则为 horizontal |
 
 ### Header Attributes
 | 参数    | 说明     | 类型    | 可选值      | 默认值 |

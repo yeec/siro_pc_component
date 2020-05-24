@@ -48,8 +48,8 @@
     <el-input type="textarea" v-model="form.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">立即创建</el-button>
-    <el-button>取消</el-button>
+    <com-button type="primary" @click="onSubmit">立即创建</com-button>
+    <com-button>取消</com-button>
   </el-form-item>
 </el-form>
 <script>
@@ -102,7 +102,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </el-select>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">查询</el-button>
+    <com-button type="primary" @click="onSubmit">查询</com-button>
   </el-form-item>
 </el-form>
 <script>
@@ -215,8 +215,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     <el-input type="textarea" v-model="ruleForm.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
-    <el-button @click="resetForm('ruleForm')">重置</el-button>
+    <com-button type="primary" @click="submitForm('ruleForm')">立即创建</com-button>
+    <com-button @click="resetForm('ruleForm')">重置</com-button>
   </el-form-item>
 </el-form>
 <script>
@@ -296,8 +296,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     <el-input v-model.number="ruleForm.age"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
-    <el-button @click="resetForm('ruleForm')">重置</el-button>
+    <com-button type="primary" @click="submitForm('ruleForm')">提交</com-button>
+    <com-button @click="resetForm('ruleForm')">重置</com-button>
   </el-form-item>
 </el-form>
 <script>
@@ -405,12 +405,12 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
       required: true, message: '域名不能为空', trigger: 'blur'
     }"
   >
-    <el-input v-model="domain.value"></el-input><el-button @click.prevent="removeDomain(domain)">删除</el-button>
+    <el-input v-model="domain.value"></el-input><com-button @click.prevent="removeDomain(domain)">删除</com-button>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('dynamicValidateForm')">提交</el-button>
-    <el-button @click="addDomain">新增域名</el-button>
-    <el-button @click="resetForm('dynamicValidateForm')">重置</el-button>
+    <com-button type="primary" @click="submitForm('dynamicValidateForm')">提交</com-button>
+    <com-button @click="addDomain">新增域名</com-button>
+    <com-button @click="resetForm('dynamicValidateForm')">重置</com-button>
   </el-form-item>
 </el-form>
 <script>
@@ -473,8 +473,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     <el-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('numberValidateForm')">提交</el-button>
-    <el-button @click="resetForm('numberValidateForm')">重置</el-button>
+    <com-button type="primary" @click="submitForm('numberValidateForm')">提交</com-button>
+    <com-button @click="resetForm('numberValidateForm')">重置</com-button>
   </el-form-item>
 </el-form>
 <script>
@@ -549,8 +549,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </el-radio-group>
   </el-form-item>
   <el-form-item size="large">
-    <el-button type="primary" @click="onSubmit">立即创建</el-button>
-    <el-button>取消</el-button>
+    <com-button type="primary" @click="onSubmit">立即创建</com-button>
+    <com-button>取消</com-button>
   </el-form-item>
 </el-form>
 

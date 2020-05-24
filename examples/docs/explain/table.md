@@ -359,8 +359,8 @@
       label="操作"
       width="100">
       <template slot-scope="scope">
-        <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
-        <el-button type="text" size="small">编辑</el-button>
+        <com-button @click="handleClick(scope.row)" type="text" size="small">查看</com-button>
+        <com-button type="text" size="small">编辑</com-button>
       </template>
     </el-table-column>
   </el-table>
@@ -565,12 +565,12 @@
       label="操作"
       width="120">
       <template slot-scope="scope">
-        <el-button
+        <com-button
           @click.native.prevent="deleteRow(scope.$index, tableData)"
           type="text"
           size="small">
           移除
-        </el-button>
+        </com-button>
       </template>
     </el-table-column>
   </el-table>
@@ -783,8 +783,8 @@
     </el-table-column>
   </el-table>
   <div style="margin-top: 20px">
-    <el-button @click="setCurrent(tableData[1])">选中第二行</el-button>
-    <el-button @click="setCurrent()">取消选择</el-button>
+    <com-button @click="setCurrent(tableData[1])">选中第二行</com-button>
+    <com-button @click="setCurrent()">取消选择</com-button>
   </div>
 </template>
 
@@ -860,8 +860,8 @@
     </el-table-column>
   </el-table>
   <div style="margin-top: 20px">
-    <el-button @click="toggleSelection([tableData[1], tableData[2]])">切换第二、第三行的选中状态</el-button>
-    <el-button @click="toggleSelection()">取消选择</el-button>
+    <com-button @click="toggleSelection([tableData[1], tableData[2]])">切换第二、第三行的选中状态</com-button>
+    <com-button @click="toggleSelection()">取消选择</com-button>
   </div>
 </template>
 
@@ -993,8 +993,8 @@
 :::demo 在列中设置`filters` `filter-method`属性即可开启该列的筛选，filters 是一个数组，`filter-method`是一个方法，它用于决定某些数据是否显示，会传入三个参数：`value`, `row` 和 `column`。
 ```html
 <template>
-  <el-button @click="resetDateFilter">清除日期过滤器</el-button>
-  <el-button @click="clearFilter">清除所有过滤器</el-button>
+  <com-button @click="resetDateFilter">清除日期过滤器</com-button>
+  <com-button @click="clearFilter">清除所有过滤器</com-button>
   <el-table
     ref="filterTable"
     :data="tableData"
@@ -1117,13 +1117,13 @@
     </el-table-column>
     <el-table-column label="操作">
       <template slot-scope="scope">
-        <el-button
+        <com-button
           size="mini"
-          @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-        <el-button
+          @click="handleEdit(scope.$index, scope.row)">编辑</com-button>
+        <com-button
           size="mini"
           type="danger"
-          @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+          @click="handleDelete(scope.$index, scope.row)">删除</com-button>
       </template>
     </el-table-column>
   </el-table>
@@ -1443,13 +1443,13 @@
           placeholder="输入关键字搜索"/>
       </template>
       <template slot-scope="scope">
-        <el-button
+        <com-button
           size="mini"
-          @click="handleEdit(scope.$index, scope.row)">Edit</el-button>
-        <el-button
+          @click="handleEdit(scope.$index, scope.row)">Edit</com-button>
+        <com-button
           size="mini"
           type="danger"
-          @click="handleDelete(scope.$index, scope.row)">Delete</el-button>
+          @click="handleDelete(scope.$index, scope.row)">Delete</com-button>
       </template>
     </el-table-column>
   </el-table>
