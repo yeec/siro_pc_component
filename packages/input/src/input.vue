@@ -115,9 +115,9 @@
   import {isKorean} from 'element-ui/src/utils/shared';
 
   export default {
-    name: 'ElInput',
+    name: 'ComInput',
 
-    componentName: 'ElInput',
+    componentName: 'ComInput',
 
     mixins: [emitter, Migrating],
 
