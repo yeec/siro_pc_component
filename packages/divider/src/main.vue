@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'ElDivider',
+  name: 'ComDivider',
   props: {
     direction: {
       type: String,
