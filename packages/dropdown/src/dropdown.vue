@@ -7,9 +7,9 @@
   import { generateId } from 'element-ui/src/utils/util';
 
   export default {
-    name: 'ElDropdown',
+    name: 'ComDropdown',
 
-    componentName: 'ElDropdown',
+    componentName: 'ComDropdown',
 
     mixins: [Emitter, Migrating],
 
@@ -87,7 +87,7 @@
 
     watch: {
       visible(val) {
-        this.broadcast('ElDropdownMenu', 'visible', val);
+        this.broadcast('ComDropdownMenu', 'visible', val);
         this.$emit('visible-change', val);
       },
       focusing(val) {
