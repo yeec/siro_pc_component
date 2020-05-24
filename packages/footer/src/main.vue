@@ -6,9 +6,9 @@
 
 <script>
   export default {
-    name: 'ElFooter',
+    name: 'ComFooter',
 
-    componentName: 'ElFooter',
+    componentName: 'ComFooter',
 
     props: {
       height: {
