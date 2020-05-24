@@ -294,7 +294,7 @@
           </li>
           <!-- 版本选择器 -->
           <li class="nav-item nav-versions" v-show="isComponentPage">
-            <el-dropdown
+            <com-dropdown
               trigger="click"
               class="nav-dropdown"
               :class="{ 'is-active': verDropdownVisible }">
@@ -302,18 +302,18 @@
                 {{ version }}
                 <i class="el-icon-arrow-down el-icon--right"></i>
               </span>
-              <el-dropdown-menu
+              <com-dropdown-menu
                 slot="dropdown"
                 class="nav-dropdown-list"
                 @input="handleVerDropdownToggle">
-                <el-dropdown-item
+                <com-dropdown-item
                   v-for="item in Object.keys(versions)"
                   :key="item"
                   @click.native="switchVersion(item)">
                   {{ item }}
-                </el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+                </com-dropdown-item>
+              </com-dropdown-menu>
+            </com-dropdown>
           </li>
         </ul>
       </div>
