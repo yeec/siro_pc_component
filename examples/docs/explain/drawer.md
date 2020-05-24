@@ -16,17 +16,17 @@
   <el-radio label="btt">从下往上开</el-radio>
 </el-radio-group>
 
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<com-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
-</el-button>
+</com-button>
 
-<el-drawer
+<com-drawer
   title="我是标题"
   :visible.sync="drawer"
   :direction="direction"
   :before-close="handleClose">
   <span>我来啦!</span>
-</el-drawer>
+</com-drawer>
 
 <script>
   export default {
@@ -57,16 +57,16 @@
 :::demo 当遇到不需要 title 的场景时, 可以通过 `withHeader` 这个属性来关闭掉 title 的显示, 这样可以留出更大的空间给到用户, 为了用户的可访问性, 请务必设定 `title` 的值
 
 ```html
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<com-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
-</el-button>
+</com-button>
 
-<el-drawer
+<com-drawer
   title="我是标题"
   :visible.sync="drawer"
   :with-header="false">
   <span>我来啦!</span>
-</el-drawer>
+</com-drawer>
 
 <script>
   export default {
@@ -88,9 +88,9 @@
 :::demo
 
 ```html
-<el-button type="text" @click="table = true">打开嵌套表格的 Drawer</el-button>
-<el-button type="text" @click="dialog = true">打开嵌套 Form 的 Drawer</el-button>
-<el-drawer
+<com-button type="text" @click="table = true">打开嵌套表格的 Drawer</com-button>
+<com-button type="text" @click="dialog = true">打开嵌套 Form 的 Drawer</com-button>
+<com-drawer
   title="我嵌套了表格!"
   :visible.sync="table"
   direction="rtl"
@@ -100,9 +100,9 @@
       <el-table-column property="name" label="姓名" width="200"></el-table-column>
       <el-table-column property="address" label="地址"></el-table-column>
     </el-table>
-</el-drawer>
+</com-drawer>
 
-<el-drawer
+<com-drawer
   title="我嵌套了 Form !"
   :before-close="handleClose"
   :visible.sync="dialog"
@@ -123,11 +123,11 @@
       </el-form-item>
     </el-form>
     <div class="demo-drawer__footer">
-      <el-button @click="cancelForm">取 消</el-button>
-      <el-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? '提交中 ...' : '确 定' }}</el-button>
+      <com-button @click="cancelForm">取 消</com-button>
+      <com-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? '提交中 ...' : '确 定' }}</com-button>
     </div>
   </div>
-</el-drawer>
+</com-drawer>
 
 <script>
 export default {
@@ -204,25 +204,25 @@ export default {
 
 ```html
 
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<com-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
-</el-button>
+</com-button>
 
-<el-drawer
+<com-drawer
   title="我是外面的 Drawer"
   :visible.sync="drawer"
   size="50%">
   <div>
-   <el-button @click="innerDrawer = true">打开里面的!</el-button>
-   <el-drawer
+   <com-button @click="innerDrawer = true">打开里面的!</com-button>
+   <com-drawer
      title="我是里面的"
      :append-to-body="true"
      :before-close="handleClose"
      :visible.sync="innerDrawer">
      <p>_(:зゝ∠)_</p>
-   </el-drawer>
+   </com-drawer>
   </div>
-</el-drawer>
+</com-drawer>
 
 <script>
   export default {

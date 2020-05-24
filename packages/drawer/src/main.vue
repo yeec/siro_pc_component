@@ -52,7 +52,7 @@ import emitter from 'element-ui/src/mixins/emitter';
 import Utils from 'element-ui/src/utils/aria-utils';
 
 export default {
-  name: 'ElDrawer',
+  name: 'ComDrawer',
   mixins: [Popup, emitter],
   props: {
     appendToBody: {
@@ -121,7 +121,7 @@ export default {
   data() {
     return {
       closed: false,
-      prevActiveElement: null
+      prevActiveComement: null
     };
   },
   watch: {
@@ -132,15 +132,15 @@ export default {
         if (this.appendToBody) {
           document.body.appendChild(this.$el);
         }
-        this.prevActiveElement = document.activeElement;
+        this.prevActiveComement = document.activeComement;
         this.$nextTick(() => {
           Utils.focusFirstDescendant(this.$refs.drawer);
         });
       } else {
         if (!this.closed) this.$emit('close');
         this.$nextTick(() => {
-          if (this.prevActiveElement) {
-            this.prevActiveElement.focus();
+          if (this.prevActiveComement) {
+            this.prevActiveComement.focus();
           }
         });
       }
