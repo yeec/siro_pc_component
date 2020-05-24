@@ -1,8 +1,8 @@
-import ElDropdownMenu from '../dropdown/src/dropdown-menu';
+import ComDropdownMenu from '../dropdown/src/dropdown-menu';
 
 /* istanbul ignore next */
-ElDropdownMenu.install = function(Vue) {
-  Vue.component(ElDropdownMenu.name, ElDropdownMenu);
+ComDropdownMenu.install = function(Vue) {
+  Vue.component(ComDropdownMenu.name, ComDropdownMenu);
 };
 
-export default ElDropdownMenu;
+export default ComDropdownMenu;
