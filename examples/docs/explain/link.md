@@ -7,12 +7,12 @@
 :::demo
 ```html
 <div>
-  <el-link href="https://element.eleme.io" target="_blank">默认链接</el-link>
-  <el-link type="primary">主要链接</el-link>
-  <el-link type="success">成功链接</el-link>
-  <el-link type="warning">警告链接</el-link>
-  <el-link type="danger">危险链接</el-link>
-  <el-link type="info">信息链接</el-link>
+  <com-link href="https://element.eleme.io" target="_blank">默认链接</com-link>
+  <com-link type="primary">主要链接</com-link>
+  <com-link type="success">成功链接</com-link>
+  <com-link type="warning">警告链接</com-link>
+  <com-link type="danger">危险链接</com-link>
+  <com-link type="info">信息链接</com-link>
 </div>
 ```
 :::
@@ -22,12 +22,12 @@
 :::demo
 ```html
 <div>
-  <el-link disabled>默认链接</el-link>
-  <el-link type="primary" disabled>主要链接</el-link>
-  <el-link type="success" disabled>成功链接</el-link>
-  <el-link type="warning" disabled>警告链接</el-link>
-  <el-link type="danger" disabled>危险链接</el-link>
-  <el-link type="info" disabled>信息链接</el-link>
+  <com-link disabled>默认链接</com-link>
+  <com-link type="primary" disabled>主要链接</com-link>
+  <com-link type="success" disabled>成功链接</com-link>
+  <com-link type="warning" disabled>警告链接</com-link>
+  <com-link type="danger" disabled>危险链接</com-link>
+  <com-link type="info" disabled>信息链接</com-link>
 </div>
 ```
 :::
@@ -37,8 +37,8 @@
 :::demo
 ```html
 <div>
-  <el-link :underline="false">无下划线</el-link>
-  <el-link>有下划线</el-link>
+  <com-link :underline="false">无下划线</com-link>
+  <com-link>有下划线</com-link>
 </div>
 ```
 :::
@@ -49,8 +49,8 @@
 :::demo
 ```html
 <div>
-  <el-link icon="el-icon-edit">编辑</el-link>
-  <el-link>查看<i class="el-icon-view el-icon--right"></i> </el-link>
+  <com-link icon="el-icon-edit">编辑</com-link>
+  <com-link>查看<i class="el-icon-view el-icon--right"></i> </com-link>
 </div>
 ```
 :::
