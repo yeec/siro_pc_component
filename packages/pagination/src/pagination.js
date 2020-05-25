@@ -1,12 +1,12 @@
 import Pager from './pager.vue';
 import ElSelect from 'element-ui/packages/select';
-import ElOption from 'element-ui/packages/option';
+import ComOption from 'element-ui/packages/option';
 import ElInput from 'element-ui/packages/input';
 import Locale from 'element-ui/src/mixins/locale';
 import { valueEquals } from 'element-ui/src/utils/util';
 
 export default {
-  name: 'ElPagination',
+  name: 'ComPagination',
 
   props: {
     pageSize: {
@@ -179,10 +179,10 @@ export default {
               disabled={ this.$parent.disabled }>
               {
                 this.pageSizes.map(item =>
-                  <el-option
+                  <com-option
                     value={ item }
                     label={ item + this.t('el.pagination.pagesize') }>
-                  </el-option>
+                  </com-option>
                 )
               }
             </el-select>
@@ -192,7 +192,7 @@ export default {
 
       components: {
         ElSelect,
-        ElOption
+        ComOption
       },
 
       methods: {

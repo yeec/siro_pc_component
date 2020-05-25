@@ -52,7 +52,7 @@
 </template>
 <script>
   export default {
-    name: 'ElProgress',
+    name: 'ComProgress',
     props: {
       type: {
         type: String,

@@ -15,7 +15,7 @@
 <script>
 import { t } from 'element-ui/src/locale';
 export default {
-  name: 'ElPageHeader',
+  name: 'ComPageHeader',
 
   props: {
     title: {

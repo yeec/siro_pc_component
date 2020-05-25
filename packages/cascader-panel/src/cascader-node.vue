@@ -1,6 +1,6 @@
 <script>
   import ElCheckbox from 'element-ui/packages/checkbox';
-  import ElRadio from 'element-ui/packages/radio';
+  import ComRadio from 'element-ui/packages/radio';
   import { isEqual } from 'element-ui/src/utils/util';
 
   const stopPropagation = e => e.stopPropagation();
@@ -10,7 +10,7 @@
 
     components: {
       ElCheckbox,
-      ElRadio
+      ComRadio
     },
 
     props: {
@@ -148,7 +148,7 @@
         }
 
         return (
-          <el-radio
+          <com-radio
             value={ checkedValue }
             label={ value }
             disabled={ isDisabled }
@@ -156,7 +156,7 @@
             nativeOnClick={ stopPropagation }>
             {/* add an empty element to avoid render label */}
             <span></span>
-          </el-radio>
+          </com-radio>
         );
       },
 

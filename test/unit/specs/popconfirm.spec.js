@@ -10,11 +10,11 @@ describe('Popconfirm', () => {
     const createVM = () => {
       return createVue(`
         <div>
-          <el-popconfirm
+          <com-popconfirm
             ref="popover"
             title="content">
             <button slot="reference">trigger</button>
-          </el-popconfirm>
+          </com-popconfirm>
         </div>
       `, true);
     };

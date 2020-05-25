@@ -9,12 +9,12 @@
 ```html
 <template>
   <el-select v-model="value" placeholder="请选择">
-    <el-option
+    <com-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
+    </com-option>
   </el-select>
 </template>
 
@@ -52,13 +52,13 @@
 ```html
 <template>
   <el-select v-model="value" placeholder="请选择">
-    <el-option
+    <com-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value"
       :disabled="item.disabled">
-    </el-option>
+    </com-option>
   </el-select>
 </template>
 
@@ -99,12 +99,12 @@
 ```html
 <template>
   <el-select v-model="value" disabled placeholder="请选择">
-    <el-option
+    <com-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
+    </com-option>
   </el-select>
 </template>
   
@@ -144,12 +144,12 @@
 ```html
 <template>
   <el-select v-model="value" clearable placeholder="请选择">
-    <el-option
+    <com-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
+    </com-option>
   </el-select>
 </template>
 
@@ -189,12 +189,12 @@
 ```html
 <template>
   <el-select v-model="value1" multiple placeholder="请选择">
-    <el-option
+    <com-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
+    </com-option>
   </el-select>
 
   <el-select
@@ -203,12 +203,12 @@
     collapse-tags
     style="margin-left: 20px;"
     placeholder="请选择">
-    <el-option
+    <com-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
+    </com-option>
   </el-select>
 </template>
 
@@ -249,14 +249,14 @@
 ```html
 <template>
   <el-select v-model="value" placeholder="请选择">
-    <el-option
+    <com-option
       v-for="item in cities"
       :key="item.value"
       :label="item.label"
       :value="item.value">
       <span style="float: left">{{ item.label }}</span>
       <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
-    </el-option>
+    </com-option>
   </el-select>
 </template>
 
@@ -299,17 +299,17 @@
 ```html
 <template>
   <el-select v-model="value" placeholder="请选择">
-    <el-option-group
+    <com-option-group
       v-for="group in options"
       :key="group.label"
       :label="group.label">
-      <el-option
+      <com-option
         v-for="item in group.options"
         :key="item.value"
         :label="item.label"
         :value="item.value">
-      </el-option>
-    </el-option-group>
+      </com-option>
+    </com-option-group>
   </el-select>
 </template>
 
@@ -358,12 +358,12 @@
 ```html
 <template>
   <el-select v-model="value" filterable placeholder="请选择">
-    <el-option
+    <com-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
+    </com-option>
   </el-select>
 </template>
 
@@ -410,12 +410,12 @@
     placeholder="请输入关键词"
     :remote-method="remoteMethod"
     :loading="loading">
-    <el-option
+    <com-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
+    </com-option>
   </el-select>
 </template>
 
@@ -484,12 +484,12 @@
     allow-create
     default-first-option
     placeholder="请选择文章标签">
-    <el-option
+    <com-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
+    </com-option>
   </el-select>
 </template>
 

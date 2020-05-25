@@ -12,12 +12,12 @@
         size="medium"
         @change="onSelectChange"
       >
-        <el-option
+        <com-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
           :value="item.value">
-        </el-option>
+        </com-option>
       </el-select>
     </div>
   </section>

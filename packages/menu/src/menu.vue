@@ -5,7 +5,7 @@
   import { addClass, removeClass, hasClass } from 'element-ui/src/utils/dom';
 
   export default {
-    name: 'ElMenu',
+    name: 'ComMenu',
 
     render (h) {
       const component = (
@@ -25,16 +25,16 @@
 
       if (this.collapseTransition) {
         return (
-          <el-menu-collapse-transition>
+          <com-menu-collapse-transition>
             { component }
-          </el-menu-collapse-transition>
+          </com-menu-collapse-transition>
         );
       } else {
         return component;
       }
     },
 
-    componentName: 'ElMenu',
+    componentName: 'ComMenu',
 
     mixins: [emitter, Migrating],
 

@@ -38,7 +38,7 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElRadioButton',
+    name: 'ComRadioButton',
 
     mixins: [Emitter],
 
@@ -73,7 +73,7 @@
       _radioGroup() {
         let parent = this.$parent;
         while (parent) {
-          if (parent.$options.componentName !== 'ElRadioGroup') {
+          if (parent.$options.componentName !== 'ComRadioGroup') {
             parent = parent.$parent;
           } else {
             return parent;
@@ -106,7 +106,7 @@
     methods: {
       handleChange() {
         this.$nextTick(() => {
-          this.dispatch('ElRadioGroup', 'handleChange', this.value);
+          this.dispatch('ComRadioGroup', 'handleChange', this.value);
         });
       }
     }

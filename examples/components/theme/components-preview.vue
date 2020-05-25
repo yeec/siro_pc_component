@@ -79,20 +79,20 @@
     </el-row>
     <h4>Radio</h4>
     <el-row class="demo-line">
-      <el-radio v-model="radio" label="1">Option A</el-radio>
-      <el-radio v-model="radio" label="2">Option B</el-radio>
+      <com-radio v-model="radio" label="1">Option A</com-radio>
+      <com-radio v-model="radio" label="2">Option B</com-radio>
     </el-row>
     <el-row class="demo-line">
-      <el-radio-group v-model="radio1">
-        <el-radio-button label="New York"></el-radio-button>
-        <el-radio-button label="Washington"></el-radio-button>
-        <el-radio-button label="Los Angeles"></el-radio-button>
-        <el-radio-button label="Chicago"></el-radio-button>
-      </el-radio-group>
+      <com-radio-group v-model="radio1">
+        <com-radio-button label="New York"></com-radio-button>
+        <com-radio-button label="Washington"></com-radio-button>
+        <com-radio-button label="Los Angeles"></com-radio-button>
+        <com-radio-button label="Chicago"></com-radio-button>
+      </com-radio-group>
     </el-row>
     <el-row class="demo-line">
-      <el-radio v-model="radio2" label="1" border>Option A</el-radio>
-      <el-radio v-model="radio2" label="2" border>Option B</el-radio>
+      <com-radio v-model="radio2" label="1" border>Option A</com-radio>
+      <com-radio v-model="radio2" label="2" border>Option B</com-radio>
     </el-row>
     <h4>Checkbox</h4>
     <el-row class="demo-line">
@@ -117,12 +117,12 @@
     <h4>Select</h4>
     <el-row>
       <el-select v-model="selectValue" placeholder="Select">
-        <el-option
+        <com-option
           v-for="item in selectOptions"
           :key="item.value"
           :label="item.label"
           :value="item.value"
-        ></el-option>
+        ></com-option>
       </el-select>
     </el-row>
     <h4>Cascader</h4>
@@ -149,14 +149,14 @@
     </el-row>
     <h4>Rate</h4>
     <el-row>
-      <el-rate class="demo-line" v-model="rate"></el-rate>
-      <el-rate
+      <com-rate class="demo-line" v-model="rate"></com-rate>
+      <com-rate
         class="demo-line"
         v-model="rate"
         show-score
         text-color="#ff9900"
         score-template="{value} points">
-      </el-rate>
+      </com-rate>
     </el-row>
     <h4>Transfer</h4>
     <el-row>
@@ -183,9 +183,9 @@
     </el-row>
     <h4>Progress</h4>
     <el-row style="width: 380px">
-      <el-progress :percentage="20"></el-progress>
-      <el-progress :percentage="60" status="exception"></el-progress>
-      <el-progress :percentage="100" status="success"></el-progress>
+      <com-progress :percentage="20"></com-progress>
+      <com-progress :percentage="60" status="exception"></com-progress>
+      <com-progress :percentage="100" status="success"></com-progress>
     </el-row>
     <h4>Tree</h4>
     <el-row style="width: 380px">
@@ -193,7 +193,7 @@
     </el-row>
     <h4>Pagination</h4>
     <el-row>
-      <el-pagination layout="prev, pager, next" :total="1000"></el-pagination>
+      <com-pagination layout="prev, pager, next" :total="1000"></com-pagination>
     </el-row>
     <h4>Badge</h4>
     <el-row>
@@ -252,26 +252,26 @@
     </el-row>
     <h4>Menu</h4>
     <el-row>
-      <el-menu :default-active="menu" class="el-menu-demo" mode="horizontal">
-        <el-menu-item index="1">Processing Center</el-menu-item>
+      <com-menu :default-active="menu" class="el-menu-demo" mode="horizontal">
+        <com-menu-item index="1">Processing Center</com-menu-item>
         <el-submenu index="2">
           <template slot="title">Workspace</template>
-          <el-menu-item index="2-1">item one</el-menu-item>
-          <el-menu-item index="2-2">item two</el-menu-item>
-          <el-menu-item index="2-3">item three</el-menu-item>
+          <com-menu-item index="2-1">item one</com-menu-item>
+          <com-menu-item index="2-2">item two</com-menu-item>
+          <com-menu-item index="2-3">item three</com-menu-item>
           <el-submenu index="2-4">
             <template slot="title">item four</template>
-            <el-menu-item index="2-4-1">item one</el-menu-item>
-            <el-menu-item index="2-4-2">item two</el-menu-item>
-            <el-menu-item index="2-4-3">item three</el-menu-item>
+            <com-menu-item index="2-4-1">item one</com-menu-item>
+            <com-menu-item index="2-4-2">item two</com-menu-item>
+            <com-menu-item index="2-4-3">item three</com-menu-item>
           </el-submenu>
         </el-submenu>
-        <el-menu-item index="3" disabled>Info</el-menu-item>
-        <el-menu-item index="4">
+        <com-menu-item index="3" disabled>Info</com-menu-item>
+        <com-menu-item index="4">
           <a href="https://www.ele.me" target="_blank">Orders</a>
-        </el-menu-item>
-      </el-menu>
-      <el-menu
+        </com-menu-item>
+      </com-menu>
+      <com-menu
         default-active="2"
         class="demo-line"
       >
@@ -280,31 +280,31 @@
             <i class="el-icon-location"></i>
             <span>Navigator One</span>
           </template>
-          <el-menu-item-group title="Group One">
-            <el-menu-item index="1-1">item one</el-menu-item>
-            <el-menu-item index="1-2">item one</el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group title="Group Two">
-            <el-menu-item index="1-3">item three</el-menu-item>
-          </el-menu-item-group>
+          <com-menu-item-group title="Group One">
+            <com-menu-item index="1-1">item one</com-menu-item>
+            <com-menu-item index="1-2">item one</com-menu-item>
+          </com-menu-item-group>
+          <com-menu-item-group title="Group Two">
+            <com-menu-item index="1-3">item three</com-menu-item>
+          </com-menu-item-group>
           <el-submenu index="1-4">
             <template slot="title">item four</template>
-            <el-menu-item index="1-4-1">item one</el-menu-item>
+            <com-menu-item index="1-4-1">item one</com-menu-item>
           </el-submenu>
         </el-submenu>
-        <el-menu-item index="2">
+        <com-menu-item index="2">
           <i class="el-icon-menu"></i>
           <span>Navigator Two</span>
-        </el-menu-item>
-        <el-menu-item index="3" disabled>
+        </com-menu-item>
+        <com-menu-item index="3" disabled>
           <i class="el-icon-document"></i>
           <span>Navigator Three</span>
-        </el-menu-item>
-        <el-menu-item index="4">
+        </com-menu-item>
+        <com-menu-item index="4">
           <i class="el-icon-setting"></i>
           <span>Navigator Four</span>
-        </el-menu-item>
-      </el-menu>
+        </com-menu-item>
+      </com-menu>
     </el-row>
     <h4>Tabs</h4>
     <el-row>

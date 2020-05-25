@@ -18,10 +18,10 @@ describe('Rate', () => {
     vm = createVue({
       template: `
         <div>
-          <el-rate
+          <com-rate
             v-model="value"
             show-text
-            :texts="['1', '2', '3', '4', '5']"></el-rate>
+            :texts="['1', '2', '3', '4', '5']"></com-rate>
         </div>
       `,
 
@@ -39,7 +39,7 @@ describe('Rate', () => {
     vm = createVue({
       template: `
         <div>
-          <el-rate v-model="value"></el-rate>
+          <com-rate v-model="value"></com-rate>
         </div>
       `,
 
@@ -62,7 +62,7 @@ describe('Rate', () => {
     vm = createVue({
       template: `
         <div>
-          <el-rate v-model="value"></el-rate>
+          <com-rate v-model="value"></com-rate>
         </div>
       `,
 
@@ -81,7 +81,7 @@ describe('Rate', () => {
     vm = createVue({
       template: `
         <div>
-          <el-rate v-model="value" :colors="['#99A9BF', '#F7BA2A', '#FF9900']"></el-rate>
+          <com-rate v-model="value" :colors="['#99A9BF', '#F7BA2A', '#FF9900']"></com-rate>
         </div>
       `,
 
@@ -99,7 +99,7 @@ describe('Rate', () => {
     vm = createVue({
       template: `
         <div>
-          <el-rate v-model="value" :colors="colors"></el-rate>
+          <com-rate v-model="value" :colors="colors"></com-rate>
         </div>
       `,
 
@@ -133,7 +133,7 @@ describe('Rate', () => {
     vm = createVue({
       template: `
         <div>
-          <el-rate v-model="value" :low-threshold="3"></el-rate>
+          <com-rate v-model="value" :low-threshold="3"></com-rate>
         </div>
       `,
 
@@ -151,7 +151,7 @@ describe('Rate', () => {
     const vm1 = createVue({
       template: `
         <div>
-          <el-rate v-model="value" disabled show-text></el-rate>
+          <com-rate v-model="value" disabled show-text></com-rate>
         </div>
       `,
 
@@ -164,7 +164,7 @@ describe('Rate', () => {
     const vm2 = createVue({
       template: `
         <div>
-          <el-rate v-model="value" disabled show-text></el-rate>
+          <com-rate v-model="value" disabled show-text></com-rate>
         </div>
       `,
 
@@ -188,7 +188,7 @@ describe('Rate', () => {
     vm = createVue({
       template: `
         <div>
-          <el-rate v-model="value" allow-half></el-rate>
+          <com-rate v-model="value" allow-half></com-rate>
         </div>
       `,
 
@@ -210,9 +210,9 @@ describe('Rate', () => {
     vm = createVue({
       template: `
         <div>
-          <el-rate
+          <com-rate
             v-model="value"
-            :icon-classes="{ 2: 'icon-rate-face-1', 4: { value: 'icon-rate-face-2', excluded: true }, 5: 'icon-rate-face-3' }"></el-rate>
+            :icon-classes="{ 2: 'icon-rate-face-1', 4: { value: 'icon-rate-face-2', excluded: true }, 5: 'icon-rate-face-3' }"></com-rate>
         </div>
       `,
 

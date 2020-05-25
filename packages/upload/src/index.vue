@@ -1,7 +1,7 @@
 <script>
 import UploadList from './upload-list';
 import Upload from './upload';
-import ElProgress from 'element-ui/packages/progress';
+import ComProgress from 'element-ui/packages/progress';
 import Migrating from 'element-ui/src/mixins/migrating';
 
 function noop() {}
@@ -12,7 +12,7 @@ export default {
   mixins: [Migrating],
 
   components: {
-    ElProgress,
+    ComProgress,
     UploadList,
     Upload
   },

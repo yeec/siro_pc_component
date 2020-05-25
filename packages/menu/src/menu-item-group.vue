@@ -11,9 +11,9 @@
 </template>
 <script>
   export default {
-    name: 'ElMenuItemGroup',
+    name: 'ComMenuItemGroup',
 
-    componentName: 'ElMenuItemGroup',
+    componentName: 'ComMenuItemGroup',
 
     inject: ['rootMenu'],
     props: {
@@ -31,7 +31,7 @@
         let padding = 20;
         let parent = this.$parent;
         if (this.rootMenu.collapse) return 20;
-        while (parent && parent.$options.componentName !== 'ElMenu') {
+        while (parent && parent.$options.componentName !== 'ComMenu') {
           if (parent.$options.componentName === 'ElSubmenu') {
             padding += 20;
           }

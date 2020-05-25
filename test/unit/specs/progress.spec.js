@@ -10,9 +10,9 @@ describe('Progress', () => {
     vm = createVue({
       template: `
         <div>
-          <el-progress ref="percent0" :percentage="0"></el-progress>
-          <el-progress ref="percent50" :percentage="50"></el-progress>
-          <el-progress ref="percent100" :percentage="100"></el-progress>
+          <com-progress ref="percent0" :percentage="0"></com-progress>
+          <com-progress ref="percent50" :percentage="50"></com-progress>
+          <com-progress ref="percent100" :percentage="100"></com-progress>
         </div>
       `
     }, true);
@@ -29,10 +29,10 @@ describe('Progress', () => {
     vm = createVue({
       template: `
         <div>
-          <el-progress ref="lineSuccess" :percentage="100" status="success"></el-progress>
-          <el-progress ref="lineException" :percentage="0" status="exception"></el-progress>
-          <el-progress type="circle" ref="circleSuccess" :percentage="100" status="success"></el-progress>
-          <el-progress type="circle" ref="circleException" :percentage="0" status="exception"></el-progress>
+          <com-progress ref="lineSuccess" :percentage="100" status="success"></com-progress>
+          <com-progress ref="lineException" :percentage="0" status="exception"></com-progress>
+          <com-progress type="circle" ref="circleSuccess" :percentage="100" status="success"></com-progress>
+          <com-progress type="circle" ref="circleException" :percentage="0" status="exception"></com-progress>
         </div>
       `
     }, true);
@@ -49,7 +49,7 @@ describe('Progress', () => {
   it('text inside', () => {
     vm = createVue({
       template: `
-        <el-progress :percentage="50" text-inside></el-progress>
+        <com-progress :percentage="50" text-inside></com-progress>
       `
     }, true);
     expect(vm.$el.classList.contains('el-progress--text-inside')).to.be.true;
@@ -57,7 +57,7 @@ describe('Progress', () => {
   it('stroke width', () => {
     vm = createVue({
       template: `
-        <el-progress :percentage="50" :stroke-width="8"></el-progress>
+        <com-progress :percentage="50" :stroke-width="8"></com-progress>
       `
     }, true);
     expect(vm.$el.querySelector('.el-progress-bar__outer').style.height).to.be.equal('8px');
@@ -65,7 +65,7 @@ describe('Progress', () => {
   it('show text', () => {
     vm = createVue({
       template: `
-        <el-progress :percentage="50" :show-text="false"></el-progress>
+        <com-progress :percentage="50" :show-text="false"></com-progress>
       `
     }, true);
     expect(vm.$el.querySelector('.el-progress__text')).to.not.exist;
@@ -73,7 +73,7 @@ describe('Progress', () => {
   it('circle', () => {
     vm = createVue({
       template: `
-        <el-progress type="circle" :percentage="50"></el-progress>
+        <com-progress type="circle" :percentage="50"></com-progress>
       `
     }, true);
     expect(vm.$el.classList.contains('el-progress--circle')).to.be.true;
@@ -81,7 +81,7 @@ describe('Progress', () => {
   it('dashboard', () => {
     vm = createVue({
       template: `
-        <el-progress type="dashboard" :percentage="50"></el-progress>
+        <com-progress type="dashboard" :percentage="50"></com-progress>
       `
     }, true);
     expect(vm.$el.classList.contains('el-progress--dashboard')).to.be.true;
@@ -89,7 +89,7 @@ describe('Progress', () => {
   it('width', () => {
     vm = createVue({
       template: `
-        <el-progress type="circle" :percentage="50" :width="120"></el-progress>
+        <com-progress type="circle" :percentage="50" :width="120"></com-progress>
       `
     }, true);
     expect(vm.$el.querySelector('.el-progress-circle').style.height).to.be.equal('120px');
@@ -98,7 +98,7 @@ describe('Progress', () => {
   it('should work with stroke-width', () => {
     vm = createVue({
       template: `
-        <el-progress :text-inside="true" :stroke-width="36" :percentage="0"></el-progress>
+        <com-progress :text-inside="true" :stroke-width="36" :percentage="0"></com-progress>
       `
     }, true);
     expect(vm.$el.querySelector('.el-progress-bar__innerText').offsetTop).to.be.equal(12);
@@ -106,7 +106,7 @@ describe('Progress', () => {
   it('color', () => {
     vm = createVue({
       template: `
-      <el-progress :percentage="50" color="rgb(0, 0, 0)"></el-progress>
+      <com-progress :percentage="50" color="rgb(0, 0, 0)"></com-progress>
       `
     }, true);
     expect(vm.$el.querySelector('.el-progress-bar__inner').style.backgroundColor).to.equal('rgb(0, 0, 0)');
@@ -114,7 +114,7 @@ describe('Progress', () => {
   it('color is function', async() => {
     vm = createVue({
       template: `
-      <el-progress :percentage="percentage" :color="customColor"></el-progress>
+      <com-progress :percentage="percentage" :color="customColor"></com-progress>
       `,
       data() {
         return {
@@ -145,7 +145,7 @@ describe('Progress', () => {
   it('color is array', async() => {
     vm = createVue({
       template: `
-      <el-progress :percentage="percentage" :color="colors"></el-progress>
+      <com-progress :percentage="percentage" :color="colors"></com-progress>
       `,
       data() {
         return {
@@ -178,7 +178,7 @@ describe('Progress', () => {
   it('format content', () => {
     vm = createVue({
       template: `
-      <el-progress :percentage="50" :format="format"></el-progress>
+      <com-progress :percentage="50" :format="format"></com-progress>
       `,
       methods: {
         format(percentage) {

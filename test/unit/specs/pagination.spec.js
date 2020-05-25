@@ -55,12 +55,12 @@ describe('Pagination', () => {
   it('custom slot', () => {
     vm = createVue({
       template: `
-        <el-pagination
+        <com-pagination
           layout="slot, prev, pager, next"
           :page-size="25"
           :total="100">
           <span class="slot-test">slot test</span>
-        </el-pagination>
+        </com-pagination>
       `
     });
     expect(vm.$el.querySelector('.slot-test')).to.exist;
@@ -153,7 +153,7 @@ describe('Pagination', () => {
   it('set currentPage & total', (done) => {
     vm = createVue({
       template: `
-        <el-pagination
+        <com-pagination
           @current-change="handleChange"
           :current-page="currentPage"
           :page-size="10"
@@ -222,7 +222,7 @@ describe('Pagination', () => {
   it('jumper: change value', (done) => {
     vm = createVue({
       template: `
-        <el-pagination
+        <com-pagination
           @current-change="handleChange"
           :page-size="10"
           layout="pager, jumper"
@@ -279,7 +279,7 @@ describe('Pagination', () => {
   it('event:current-change', (done) => {
     vm = createVue({
       template: `
-        <el-pagination
+        <com-pagination
           :total="1000"
           @current-change="change = true" />
       `,
@@ -308,7 +308,7 @@ describe('Pagination', () => {
   it('event:current-change after current page is manually updated', (done) => {
     vm = createVue({
       template: `
-        <el-pagination
+        <com-pagination
           :total="15"
           :current-page.sync="currentPage"
           @current-change="emitCount++" />
@@ -340,7 +340,7 @@ describe('Pagination', () => {
   it('event:size-change', done => {
     vm = createVue({
       template: `
-        <el-pagination
+        <com-pagination
           :total="100"
           layout="sizes, prev, pager, next"
           @size-change="trigger = true"
@@ -366,7 +366,7 @@ describe('Pagination', () => {
   it('event: prev and next click', done => {
     vm = createVue({
       template: `
-        <el-pagination
+        <com-pagination
           :total="100"
           layout="sizes, prev, pager, next"
           @prev-click="trigger = true"
@@ -394,7 +394,7 @@ describe('Pagination', () => {
   it('pageSize > total', () => {
     vm = createVue({
       template: `
-        <el-pagination
+        <com-pagination
           @current-change="handleChange"
           :page-size="1000"
           :total="0" />
@@ -424,7 +424,7 @@ describe('Pagination', () => {
   it('hideOnSinglePage', () => {
     vm = createVue({
       template: `
-        <el-pagination
+        <com-pagination
           hide-on-single-page
           :total="1" />
       `

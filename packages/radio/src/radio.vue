@@ -46,7 +46,7 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElRadio',
+    name: 'ComRadio',
 
     mixins: [Emitter],
 
@@ -60,7 +60,7 @@
       }
     },
 
-    componentName: 'ElRadio',
+    componentName: 'ComRadio',
 
     props: {
       value: {},
@@ -80,7 +80,7 @@
       isGroup() {
         let parent = this.$parent;
         while (parent) {
-          if (parent.$options.componentName !== 'ElRadioGroup') {
+          if (parent.$options.componentName !== 'ComRadioGroup') {
             parent = parent.$parent;
           } else {
             this._radioGroup = parent;
@@ -95,7 +95,7 @@
         },
         set(val) {
           if (this.isGroup) {
-            this.dispatch('ElRadioGroup', 'input', [val]);
+            this.dispatch('ComRadioGroup', 'input', [val]);
           } else {
             this.$emit('input', val);
           }
@@ -125,7 +125,7 @@
       handleChange() {
         this.$nextTick(() => {
           this.$emit('change', this.model);
-          this.isGroup && this.dispatch('ElRadioGroup', 'handleChange', this.model);
+          this.isGroup && this.dispatch('ComRadioGroup', 'handleChange', this.model);
         });
       }
     }

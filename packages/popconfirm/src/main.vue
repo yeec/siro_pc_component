@@ -1,5 +1,5 @@
 <template>
-  <el-popover
+  <com-popover
     v-bind="$attrs"
     v-model="visible"
     trigger="click"
@@ -32,16 +32,16 @@
     </div>
   </div>
   <slot name="reference" slot="reference"></slot>
-</el-popover>
+</com-popover>
 </template>
 
 <script>
-import ElPopover from 'element-ui/packages/popover';
+import ComPopover from 'element-ui/packages/popover';
 import ElButton from 'element-ui/packages/button';
 import {t} from 'element-ui/src/locale';
 
 export default {
-  name: 'ElPopconfirm',
+  name: 'ComPopconfirm',
   props: {
     title: {
       type: String
@@ -76,7 +76,7 @@ export default {
     }
   },
   components: {
-    ElPopover,
+    ComPopover,
     ElButton
   },
   data() {

@@ -14,8 +14,8 @@
   </el-form-item>
   <el-form-item label="活动区域">
     <el-select v-model="form.region" placeholder="请选择活动区域">
-      <el-option label="区域一" value="shanghai"></el-option>
-      <el-option label="区域二" value="beijing"></el-option>
+      <com-option label="区域一" value="shanghai"></com-option>
+      <com-option label="区域二" value="beijing"></com-option>
     </el-select>
   </el-form-item>
   <el-form-item label="活动时间">
@@ -39,10 +39,10 @@
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="特殊资源">
-    <el-radio-group v-model="form.resource">
-      <el-radio label="线上品牌商赞助"></el-radio>
-      <el-radio label="线下场地免费"></el-radio>
-    </el-radio-group>
+    <com-radio-group v-model="form.resource">
+      <com-radio label="线上品牌商赞助"></com-radio>
+      <com-radio label="线下场地免费"></com-radio>
+    </com-radio-group>
   </el-form-item>
   <el-form-item label="活动形式">
     <el-input type="textarea" v-model="form.desc"></el-input>
@@ -97,8 +97,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
   </el-form-item>
   <el-form-item label="活动区域">
     <el-select v-model="formInline.region" placeholder="活动区域">
-      <el-option label="区域一" value="shanghai"></el-option>
-      <el-option label="区域二" value="beijing"></el-option>
+      <com-option label="区域一" value="shanghai"></com-option>
+      <com-option label="区域二" value="beijing"></com-option>
     </el-select>
   </el-form-item>
   <el-form-item>
@@ -131,11 +131,11 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 :::demo 通过设置 `label-position` 属性可以改变表单域标签的位置，可选值为 `top`、`left`，当设为 `top` 时标签会置于表单域的顶部
 ```html
-<el-radio-group v-model="labelPosition" size="small">
-  <el-radio-button label="left">左对齐</el-radio-button>
-  <el-radio-button label="right">右对齐</el-radio-button>
-  <el-radio-button label="top">顶部对齐</el-radio-button>
-</el-radio-group>
+<com-radio-group v-model="labelPosition" size="small">
+  <com-radio-button label="left">左对齐</com-radio-button>
+  <com-radio-button label="right">右对齐</com-radio-button>
+  <com-radio-button label="top">顶部对齐</com-radio-button>
+</com-radio-group>
 <div style="margin: 20px;"></div>
 <el-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
   <el-form-item label="名称">
@@ -177,8 +177,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
   </el-form-item>
   <el-form-item label="活动区域" prop="region">
     <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
-      <el-option label="区域一" value="shanghai"></el-option>
-      <el-option label="区域二" value="beijing"></el-option>
+      <com-option label="区域一" value="shanghai"></com-option>
+      <com-option label="区域二" value="beijing"></com-option>
     </el-select>
   </el-form-item>
   <el-form-item label="活动时间" required>
@@ -206,10 +206,10 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="特殊资源" prop="resource">
-    <el-radio-group v-model="ruleForm.resource">
-      <el-radio label="线上品牌商赞助"></el-radio>
-      <el-radio label="线下场地免费"></el-radio>
-    </el-radio-group>
+    <com-radio-group v-model="ruleForm.resource">
+      <com-radio label="线上品牌商赞助"></com-radio>
+      <com-radio label="线下场地免费"></com-radio>
+    </com-radio-group>
   </el-form-item>
   <el-form-item label="活动形式" prop="desc">
     <el-input type="textarea" v-model="ruleForm.desc"></el-input>
@@ -522,8 +522,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
   </el-form-item>
   <el-form-item label="活动区域">
     <el-select v-model="sizeForm.region" placeholder="请选择活动区域">
-      <el-option label="区域一" value="shanghai"></el-option>
-      <el-option label="区域二" value="beijing"></el-option>
+      <com-option label="区域一" value="shanghai"></com-option>
+      <com-option label="区域二" value="beijing"></com-option>
     </el-select>
   </el-form-item>
   <el-form-item label="活动时间">
@@ -543,10 +543,10 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="特殊资源">
-    <el-radio-group v-model="sizeForm.resource" size="medium">
-      <el-radio border label="线上品牌商赞助"></el-radio>
-      <el-radio border label="线下场地免费"></el-radio>
-    </el-radio-group>
+    <com-radio-group v-model="sizeForm.resource" size="medium">
+      <com-radio border label="线上品牌商赞助"></com-radio>
+      <com-radio border label="线下场地免费"></com-radio>
+    </com-radio-group>
   </el-form-item>
   <el-form-item size="large">
     <el-button type="primary" @click="onSubmit">立即创建</el-button>

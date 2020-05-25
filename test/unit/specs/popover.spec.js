@@ -11,12 +11,12 @@ describe('Popover', () => {
     const createVM = (trigger) => {
       return createVue(`
         <div>
-          <el-popover
+          <com-popover
             ref="popover"
             trigger="${trigger}"
             content="content">
             <button slot="reference">trigger ${trigger}</button>
-          </el-popover>
+          </com-popover>
         </div>
       `, true);
     };
@@ -62,14 +62,14 @@ describe('Popover', () => {
     it('focus input in children node', () => {
       vm = createVue(`
         <div>
-          <el-popover
+          <com-popover
             ref="popover"
             trigger="focus"
             content="content">
             <div slot="reference">
               <input type="text" value="trigger focus" />
             </div>
-          </el-popover>
+          </com-popover>
         </div>
       `, true);
       const compo = vm.$refs.popover;
@@ -84,14 +84,14 @@ describe('Popover', () => {
     it('focus textarea in children node', () => {
       vm = createVue(`
         <div>
-          <el-popover
+          <com-popover
             ref="popover"
             trigger="focus"
             content="content">
             <div slot="reference">
               <textarea></textarea>
             </div>
-          </el-popover>
+          </com-popover>
         </div>
       `, true);
       const compo = vm.$refs.popover;
@@ -106,12 +106,12 @@ describe('Popover', () => {
     it('focus input', () => {
       vm = createVue(`
         <div>
-          <el-popover
+          <com-popover
             ref="popover"
             trigger="focus"
             content="content">
             <input type="text" slot="reference" value="trigger focus" />
-          </el-popover>
+          </com-popover>
         </div>
       `, true);
       const compo = vm.$refs.popover;
@@ -139,11 +139,11 @@ describe('Popover', () => {
     const vm = createVue({
       template: `
         <div>
-          <el-popover
+          <com-popover
             ref="popover1"
             trigger="click"
             content="content">
-          </el-popover>
+          </com-popover>
           <button v-popover:popover1>create by directive</button>
         </div>
       `,
@@ -177,12 +177,12 @@ describe('Popover', () => {
   describe('create by slot', () => {
     const vm = createVue(`
       <div>
-        <el-popover
+        <com-popover
           ref="popover"
           trigger="click"
           content="content">
           <button slot="reference">create by slot</button>
-        </el-popover>
+        </com-popover>
       </div>
     `, true);
     const compo = vm.$refs.popover;
@@ -211,14 +211,14 @@ describe('Popover', () => {
     vm = createVue({
       template: `
         <div>
-          <el-popover
+          <com-popover
             ref="popover"
             trigger="click"
             @show="handleShow"
             @hide="handleHide"
             content="content">
             <button slot="reference">trigger</button>
-          </el-popover>
+          </com-popover>
         </div>
       `,
 
@@ -253,14 +253,14 @@ describe('Popover', () => {
     it('100ms open / instant close', async() => {
       vm = createVue(`
         <div>
-          <el-popover
+          <com-popover
             ref="popover"
             content="content"
             trigger="hover"
             :open-delay="100"
             :close-delay="0">
             <button slot="reference">reference</button>
-          </el-popover>
+          </com-popover>
         </div>
       `, true);
       const compo = vm.$refs.popover;
@@ -277,14 +277,14 @@ describe('Popover', () => {
     it('instant open / 100ms close', async() => {
       vm = createVue(`
         <div>
-          <el-popover
+          <com-popover
             ref="popover"
             content="content"
             trigger="hover"
             :open-delay="0"
             :close-delay="100">
             <button slot="reference">reference</button>
-          </el-popover>
+          </com-popover>
         </div>
       `, true);
       const compo = vm.$refs.popover;

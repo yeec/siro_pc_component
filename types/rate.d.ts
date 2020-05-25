@@ -13,7 +13,7 @@ export type RateColors = Options
 export type RateIconClasses = Options
 
 /** Rate Component */
-export declare class ElRate extends ElementUIComponent {
+export declare class ComRate extends ElementUIComponent {
   /** Max rating score */
   max: number
 

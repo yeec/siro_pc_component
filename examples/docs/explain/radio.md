@@ -10,8 +10,8 @@
 
 ```html
 <template>
-  <el-radio v-model="radio" label="1">备选项</el-radio>
-  <el-radio v-model="radio" label="2">备选项</el-radio>
+  <com-radio v-model="radio" label="1">备选项</com-radio>
+  <com-radio v-model="radio" label="2">备选项</com-radio>
 </template>
 
 <script>
@@ -33,8 +33,8 @@
 :::demo 只要在`el-radio`元素中设置`disabled`属性即可，它接受一个`Boolean`，`true`为禁用。
 ```html
 <template>
-  <el-radio disabled v-model="radio" label="禁用">备选项</el-radio>
-  <el-radio disabled v-model="radio" label="选中且禁用">备选项</el-radio>
+  <com-radio disabled v-model="radio" label="禁用">备选项</com-radio>
+  <com-radio disabled v-model="radio" label="选中且禁用">备选项</com-radio>
 </template>
 
 <script>
@@ -57,11 +57,11 @@
 
 ```html
 <template>
-  <el-radio-group v-model="radio">
-    <el-radio :label="3">备选项</el-radio>
-    <el-radio :label="6">备选项</el-radio>
-    <el-radio :label="9">备选项</el-radio>
-  </el-radio-group>
+  <com-radio-group v-model="radio">
+    <com-radio :label="3">备选项</com-radio>
+    <com-radio :label="6">备选项</com-radio>
+    <com-radio :label="9">备选项</com-radio>
+  </com-radio-group>
 </template>
 
 <script>
@@ -84,36 +84,36 @@
 ```html
 <template>
   <div>
-    <el-radio-group v-model="radio1">
-      <el-radio-button label="上海"></el-radio-button>
-      <el-radio-button label="北京"></el-radio-button>
-      <el-radio-button label="广州"></el-radio-button>
-      <el-radio-button label="深圳"></el-radio-button>
-    </el-radio-group>
+    <com-radio-group v-model="radio1">
+      <com-radio-button label="上海"></com-radio-button>
+      <com-radio-button label="北京"></com-radio-button>
+      <com-radio-button label="广州"></com-radio-button>
+      <com-radio-button label="深圳"></com-radio-button>
+    </com-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio2" size="medium">
-      <el-radio-button label="上海" ></el-radio-button>
-      <el-radio-button label="北京"></el-radio-button>
-      <el-radio-button label="广州"></el-radio-button>
-      <el-radio-button label="深圳"></el-radio-button>
-    </el-radio-group>
+    <com-radio-group v-model="radio2" size="medium">
+      <com-radio-button label="上海" ></com-radio-button>
+      <com-radio-button label="北京"></com-radio-button>
+      <com-radio-button label="广州"></com-radio-button>
+      <com-radio-button label="深圳"></com-radio-button>
+    </com-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio3" size="small">
-      <el-radio-button label="上海"></el-radio-button>
-      <el-radio-button label="北京" disabled ></el-radio-button>
-      <el-radio-button label="广州"></el-radio-button>
-      <el-radio-button label="深圳"></el-radio-button>
-    </el-radio-group>
+    <com-radio-group v-model="radio3" size="small">
+      <com-radio-button label="上海"></com-radio-button>
+      <com-radio-button label="北京" disabled ></com-radio-button>
+      <com-radio-button label="广州"></com-radio-button>
+      <com-radio-button label="深圳"></com-radio-button>
+    </com-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio4" disabled size="mini">
-      <el-radio-button label="上海"></el-radio-button>
-      <el-radio-button label="北京"></el-radio-button>
-      <el-radio-button label="广州"></el-radio-button>
-      <el-radio-button label="深圳"></el-radio-button>
-    </el-radio-group>
+    <com-radio-group v-model="radio4" disabled size="mini">
+      <com-radio-button label="上海"></com-radio-button>
+      <com-radio-button label="北京"></com-radio-button>
+      <com-radio-button label="广州"></com-radio-button>
+      <com-radio-button label="深圳"></com-radio-button>
+    </com-radio-group>
   </div>
 </template>
 
@@ -138,24 +138,24 @@
 ```html
 <template>
   <div>
-    <el-radio v-model="radio1" label="1" border>备选项1</el-radio>
-    <el-radio v-model="radio1" label="2" border>备选项2</el-radio>
+    <com-radio v-model="radio1" label="1" border>备选项1</com-radio>
+    <com-radio v-model="radio1" label="2" border>备选项2</com-radio>
   </div>
   <div style="margin-top: 20px">
-    <el-radio v-model="radio2" label="1" border size="medium">备选项1</el-radio>
-    <el-radio v-model="radio2" label="2" border size="medium">备选项2</el-radio>
+    <com-radio v-model="radio2" label="1" border size="medium">备选项1</com-radio>
+    <com-radio v-model="radio2" label="2" border size="medium">备选项2</com-radio>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio3" size="small">
-      <el-radio label="1" border>备选项1</el-radio>
-      <el-radio label="2" border disabled>备选项2</el-radio>
-    </el-radio-group>
+    <com-radio-group v-model="radio3" size="small">
+      <com-radio label="1" border>备选项1</com-radio>
+      <com-radio label="2" border disabled>备选项2</com-radio>
+    </com-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio4" size="mini" disabled>
-      <el-radio label="1" border>备选项1</el-radio>
-      <el-radio label="2" border>备选项2</el-radio>
-    </el-radio-group>
+    <com-radio-group v-model="radio4" size="mini" disabled>
+      <com-radio label="1" border>备选项1</com-radio>
+      <com-radio label="2" border>备选项2</com-radio>
+    </com-radio-group>
   </div>
 </template>
 

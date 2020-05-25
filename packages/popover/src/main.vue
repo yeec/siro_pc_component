@@ -28,7 +28,7 @@ import { addClass, removeClass } from 'element-ui/src/utils/dom';
 import { generateId } from 'element-ui/src/utils/util';
 
 export default {
-  name: 'ElPopover',
+  name: 'ComPopover',
 
   mixins: [Popper],
 

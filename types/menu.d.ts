@@ -4,7 +4,7 @@ export type MenuDisplayMode = 'horizontal' | 'vertical'
 export type MenuTheme = 'light' | 'dark'
 
 /** Menu that provides navigation for your website */
-export declare class ElMenu extends ElementUIComponent {
+export declare class ComMenu extends ElementUIComponent {
   /** Menu display mode */
   mode: MenuDisplayMode
 

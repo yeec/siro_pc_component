@@ -39,12 +39,12 @@
         </div>
       </div>
       <el-select v-model="selectedComponent" class="selector">
-        <el-option
+        <com-option
           v-for="item in selectOptions"
           :key="item.value"
           :label="item.label"
           :value="item.value">
-        </el-option>
+        </com-option>
       </el-select>
       <div class="line"></div>
     </div>

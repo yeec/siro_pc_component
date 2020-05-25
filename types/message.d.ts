@@ -3,7 +3,7 @@ import Vue, {VNode} from 'vue'
 export type MessageType = 'success' | 'warning' | 'info' | 'error'
 
 /** Message Component */
-export declare class ElMessageComponent extends Vue {
+export declare class ComMessageComponent extends Vue {
   /** Close the Loading instance */
   close (): void
 }
@@ -14,11 +14,11 @@ export interface CloseEventHandler {
    *
    * @param instance The message component that is being closed
    */
-  (instance: ElMessageComponent): void
+  (instance: ComMessageComponent): void
 }
 
 /** Options used in Message */
-export interface ElMessageOptions {
+export interface ComMessageOptions {
   /** Message text */
   message: string | VNode
 
@@ -50,41 +50,41 @@ export interface ElMessageOptions {
   offset?: number
 }
 
-export interface ElMessage {
+export interface ComMessage {
   /** Show an info message */
-  (text: string): ElMessageComponent
+  (text: string): ComMessageComponent
 
   /** Show message */
-  (options: ElMessageOptions): ElMessageComponent
+  (options: ComMessageOptions): ComMessageComponent
 
   /** Show a success message */
-  success (text: string): ElMessageComponent
+  success (text: string): ComMessageComponent
   
   /** Show a success message with options */
-  success (options: ElMessageOptions): ElMessageComponent
+  success (options: ComMessageOptions): ComMessageComponent
 
   /** Show a warning message */
-  warning (text: string): ElMessageComponent
+  warning (text: string): ComMessageComponent
   
   /** Show a warning message with options */
-  warning (options: ElMessageOptions): ElMessageComponent
+  warning (options: ComMessageOptions): ComMessageComponent
 
   /** Show an info message */
-  info (text: string): ElMessageComponent
+  info (text: string): ComMessageComponent
   
   /** Show an info message with options */
-  info (options: ElMessageOptions): ElMessageComponent
+  info (options: ComMessageOptions): ComMessageComponent
 
   /** Show an error message */
-  error (text: string): ElMessageComponent
+  error (text: string): ComMessageComponent
   
   /** Show an error message with options */
-  error (options: ElMessageOptions): ElMessageComponent
+  error (options: ComMessageOptions): ComMessageComponent
 }
 
 declare module 'vue/types/vue' {
   interface Vue {
   /** Used to show feedback after an activity. The difference with Notification is that the latter is often used to show a system level passive notification. */
-    $message: ElMessage
+    $message: ComMessage
   }
 }

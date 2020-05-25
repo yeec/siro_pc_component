@@ -38,7 +38,7 @@
   import Migrating from 'element-ui/src/mixins/migrating';
 
   export default {
-    name: 'ElRate',
+    name: 'ComRate',
 
     mixins: [Migrating],
 

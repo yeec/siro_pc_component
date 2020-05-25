@@ -451,8 +451,8 @@ describe('Form', () => {
           <el-form :model="form" :rules="rules" ref="form">
             <el-form-item label="记住密码" prop="region" ref="field">
               <el-select v-model="form.region" placeholder="请选择活动区域">
-                <el-option label="区域一" value="shanghai"></el-option>
-                <el-option label="区域二" ref="opt" value="beijing"></el-option>
+                <com-option label="区域一" value="shanghai"></com-option>
+                <com-option label="区域二" ref="opt" value="beijing"></com-option>
               </el-select>
             </el-form-item>
           </el-form>
@@ -699,10 +699,10 @@ describe('Form', () => {
         template: `
           <el-form :model="form" :rules="rules" ref="form">
             <el-form-item label="活动名称" prop="type" ref="field">
-              <el-radio-group v-model="form.type">
-                <el-radio label="线上品牌商赞助"></el-radio>
-                <el-radio label="线下场地免费"></el-radio>
-              </el-radio-group>
+              <com-radio-group v-model="form.type">
+                <com-radio label="线上品牌商赞助"></com-radio>
+                <com-radio label="线下场地免费"></com-radio>
+              </com-radio-group>
             </el-form-item>
           </el-form>
         `,

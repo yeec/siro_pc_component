@@ -4,12 +4,12 @@ import { MessageType } from './message'
 export type NotificationPosition = 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
 
 /** Notification Component */
-export declare class ElNotificationComponent extends Vue {
+export declare class Component extends Vue {
   /** Close the Notification instance */
   close (): void
 }
 
-export interface ElNotificationOptions {
+export interface Options {
   /** Title */
   title: string
 
@@ -47,38 +47,38 @@ export interface ElNotificationOptions {
   position?: NotificationPosition
 }
 
-export interface ElNotification {
+export interface  {
   /** Show a notification */
-  (options: ElNotificationOptions): ElNotificationComponent
+  (options: Options): Component
 
   /** Show a success notification */
-  success (message: string | VNode): ElNotificationComponent
+  success (message: string | VNode): Component
 
   /** Show a success notification */
-  success (options: ElNotificationOptions): ElNotificationComponent
+  success (options: Options): Component
 
   /** Show a warning notification */
-  warning (message: string | VNode): ElNotificationComponent
+  warning (message: string | VNode): Component
 
   /** Show a warning notification */
-  warning (options: ElNotificationOptions): ElNotificationComponent
+  warning (options: Options): Component
 
   /** Show an info notification */
-  info (message: string | VNode): ElNotificationComponent
+  info (message: string | VNode): Component
 
   /** Show an info notification */
-  info (options: ElNotificationOptions): ElNotificationComponent
+  info (options: Options): Component
 
   /** Show an error notification */
-  error (message: string | VNode): ElNotificationComponent
+  error (message: string | VNode): Component
 
   /** Show an error notification */
-  error (options: ElNotificationOptions): ElNotificationComponent
+  error (options: Options): Component
 }
 
 declare module 'vue/types/vue' {
   interface Vue {
     /** Displays a global notification message at the upper right corner of the page */
-    $notify: ElNotification
+    $notify: 
   }
 }

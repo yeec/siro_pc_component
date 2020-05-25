@@ -48,13 +48,13 @@ describe('Select', () => {
             :loading="loading"
             :remoteMethod="remoteMethod"
             :automatic-dropdown="automaticDropdown">
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item.label"
               :key="item.value"
               :disabled="item.disabled"
               :value="item.value">
-            </el-option>
+            </com-option>
           </el-select>
         </div>
       `,
@@ -115,12 +115,12 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value">
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item.label"
               :key="item.value"
               :value="item.value">
-            </el-option>
+            </com-option>
           </el-select>
         </div>
       `,
@@ -149,13 +149,13 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value" @change="handleChange">
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item.label"
               :key="item.value"
               :value="item.value">
               <p>{{item.label}} {{item.value}}</p>
-            </el-option>
+            </com-option>
           </el-select>
         </div>
       `,
@@ -230,12 +230,12 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value" @visible-change="handleVisibleChange">
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item.label"
               :key="item.value"
               :value="item.value">
-            </el-option>
+            </com-option>
           </el-select>
         </div>
       `,
@@ -298,12 +298,12 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value" value-key="id">
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item.label"
               :key="item.id"
               :value="item">
-            </el-option>
+            </com-option>
           </el-select>
         </div>
       `,
@@ -336,12 +336,12 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value">
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item.label"
               :key="item.value"
               :value="item.value">
-            </el-option>
+            </com-option>
             <i slot="prefix" class="el-input__icon el-icon-search"></i>
           </el-select>
         </div>
@@ -362,13 +362,13 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value">
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item.label"
               :key="item.value"
               :value="item.value">
               <p>{{item.label}} {{item.value}}</p>
-            </el-option>
+            </com-option>
           </el-select>
         </div>
       `,
@@ -391,18 +391,18 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value">
-            <el-option-group
+            <com-option-group
               v-for="group in options"
               :key="group.label"
               :disabled="group.disabled"
               :label="group.label">
-              <el-option
+              <com-option
                 v-for="item in group.options"
                 :label="item.label"
                 :key="item.value"
                 :value="item.value">
-              </el-option>
-            </el-option-group>
+              </com-option>
+            </com-option-group>
           </el-select>
         </div>
       `,
@@ -488,7 +488,7 @@ describe('Select', () => {
             default-first-option
             filterable
           >
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item"
               :key="item"
@@ -564,13 +564,13 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value" multiple @remove-tag="handleRemoveTag">
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item.label"
               :key="item.value"
               :value="item.value">
               <p>{{item.label}} {{item.value}}</p>
-            </el-option>
+            </com-option>
           </el-select>
         </div>
       `,
@@ -701,7 +701,7 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value" ref="select">
-            <el-option label="1" :value="1" />
+            <com-option label="1" :value="1" />
           </el-select>
         </div>
       `,
@@ -774,9 +774,9 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value" @change="change" ref="select">
-            <el-option label="1" :value="1" />
-            <el-option label="2" :value="2" />
-            <el-option label="3" :value="3" />
+            <com-option label="1" :value="1" />
+            <com-option label="2" :value="2" />
+            <com-option label="3" :value="3" />
           </el-select>
         </div>
       `,
@@ -826,7 +826,7 @@ describe('Select', () => {
       template: `
         <div>
           <el-select ref="select" v-model="value" filterable>
-            <el-option label="test" value="test" />
+            <com-option label="test" value="test" />
           </el-select>
         </div>
       `,
@@ -848,12 +848,12 @@ describe('Select', () => {
       template: `
         <div>
           <el-select v-model="value">
-            <el-option
+            <com-option
               v-for="item in options"
               :label="item.label"
               :key="item.value"
               :value="item.value">
-            </el-option>
+            </com-option>
           </el-select>
         </div>
       `,

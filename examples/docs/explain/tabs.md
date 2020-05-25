@@ -89,12 +89,12 @@
 
 ```html
 <template>
-  <el-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
-    <el-radio-button label="top">top</el-radio-button>
-    <el-radio-button label="right">right</el-radio-button>
-    <el-radio-button label="bottom">bottom</el-radio-button>
-    <el-radio-button label="left">left</el-radio-button>
-  </el-radio-group>
+  <com-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
+    <com-radio-button label="top">top</com-radio-button>
+    <com-radio-button label="right">right</com-radio-button>
+    <com-radio-button label="bottom">bottom</com-radio-button>
+    <com-radio-button label="left">left</com-radio-button>
+  </com-radio-group>
 
   <el-tabs :tab-position="tabPosition" style="height: 200px;">
     <el-tab-pane label="用户管理">用户管理</el-tab-pane>

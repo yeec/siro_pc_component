@@ -1,8 +1,8 @@
-import ElMenuItemGroup from '../menu/src/menu-item-group';
+import ComMenuItemGroup from '../menu/src/menu-item-group';
 
 /* istanbul ignore next */
-ElMenuItemGroup.install = function(Vue) {
-  Vue.component(ElMenuItemGroup.name, ElMenuItemGroup);
+ComMenuItemGroup.install = function(Vue) {
+  Vue.component(ComMenuItemGroup.name, ComMenuItemGroup);
 };
 
-export default ElMenuItemGroup;
+export default ComMenuItemGroup;

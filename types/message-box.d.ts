@@ -13,7 +13,7 @@ export interface MessageBoxInputValidator {
   (value: string): boolean | string
 }
 
-export declare class ElMessageBoxComponent extends Vue {
+export declare class ComMessageBoxComponent extends Vue {
   title: string
   message: string
   type: MessageType
@@ -42,7 +42,7 @@ export declare class ElMessageBoxComponent extends Vue {
 }
 
 /** Options used in MessageBox */
-export interface ElMessageBoxOptions {
+export interface ComMessageBoxOptions {
   /** Title of the MessageBox */
   title?: string
 
@@ -59,10 +59,10 @@ export interface ElMessageBoxOptions {
   customClass?: string
 
   /** MessageBox closing callback if you don't prefer Promise */
-  callback?: (action: MessageBoxCloseAction, instance: ElMessageBoxComponent) => void
+  callback?: (action: MessageBoxCloseAction, instance: ComMessageBoxComponent) => void
 
   /** Callback before MessageBox closes, and it will prevent MessageBox from closing */
-  beforeClose?: (action: MessageBoxCloseAction, instance: ElMessageBoxComponent, done: (() => void)) => void
+  beforeClose?: (action: MessageBoxCloseAction, instance: ComMessageBoxComponent, done: (() => void)) => void
 
   /** Whether to lock body scroll when MessageBox prompts */
   lockScroll?: boolean
@@ -131,29 +131,29 @@ export interface ElMessageBoxOptions {
   distinguishCancelAndClose?: boolean
 }
 
-export interface ElMessageBoxShortcutMethod {
-  (message: string, title: string, options?: ElMessageBoxOptions): Promise<MessageBoxData>
-  (message: string, options?: ElMessageBoxOptions): Promise<MessageBoxData>
+export interface ComMessageBoxShortcutMethod {
+  (message: string, title: string, options?: ComMessageBoxOptions): Promise<MessageBoxData>
+  (message: string, options?: ComMessageBoxOptions): Promise<MessageBoxData>
 }
 
-export interface ElMessageBox {
+export interface ComMessageBox {
   /** Show a message box */
   (message: string, title?: string, type?: string): Promise<MessageBoxData>
 
   /** Show a message box */
-  (options: ElMessageBoxOptions): Promise<MessageBoxData>
+  (options: ComMessageBoxOptions): Promise<MessageBoxData>
 
   /** Show an alert message box */
-  alert: ElMessageBoxShortcutMethod
+  alert: ComMessageBoxShortcutMethod
 
   /** Show a confirm message box */
-  confirm: ElMessageBoxShortcutMethod
+  confirm: ComMessageBoxShortcutMethod
 
   /** Show a prompt message box */
-  prompt: ElMessageBoxShortcutMethod
+  prompt: ComMessageBoxShortcutMethod
 
   /** Set default options of message boxes */
-  setDefaults (defaults: ElMessageBoxOptions): void
+  setDefaults (defaults: ComMessageBoxOptions): void
 
   /** Close current message box */
   close (): void
@@ -162,15 +162,15 @@ export interface ElMessageBox {
 declare module 'vue/types/vue' {
   interface Vue {
     /** Show a message box */
-    $msgbox: ElMessageBox
+    $msgbox: ComMessageBox
 
     /** Show an alert message box */
-    $alert: ElMessageBoxShortcutMethod
+    $alert: ComMessageBoxShortcutMethod
 
     /** Show a confirm message box */
-    $confirm: ElMessageBoxShortcutMethod
+    $confirm: ComMessageBoxShortcutMethod
 
     /** Show a prompt message box */
-    $prompt: ElMessageBoxShortcutMethod
+    $prompt: ComMessageBoxShortcutMethod
   }
 }

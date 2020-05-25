@@ -9,12 +9,12 @@
 :::demo 需要设置 `visible` 属性，它的**类型**是 `boolean`,当为 **true** 时显示 Drawer。Drawer 分为两个部分：`title` 和 `body`，`title` 需要具名为 **title** 的 `slot`, 也可以通过 `title` 属性来定义，默认值为空。需要注意的是, Drawer 默认是从右往左打开, 当然可以设置对应的 `direction`, 详细请参考 `direction` 用法 最后，本例还展示了 `before-close` 的用法
 
 ```html
-<el-radio-group v-model="direction">
-  <el-radio label="ltr">从左往右开</el-radio>
-  <el-radio label="rtl">从右往左开</el-radio>
-  <el-radio label="ttb">从上往下开</el-radio>
-  <el-radio label="btt">从下往上开</el-radio>
-</el-radio-group>
+<com-radio-group v-model="direction">
+  <com-radio label="ltr">从左往右开</com-radio>
+  <com-radio label="rtl">从右往左开</com-radio>
+  <com-radio label="ttb">从上往下开</com-radio>
+  <com-radio label="btt">从下往上开</com-radio>
+</com-radio-group>
 
 <com-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
@@ -117,8 +117,8 @@
       </el-form-item>
       <el-form-item label="活动区域" :label-width="formLabelWidth">
         <el-select v-model="form.region" placeholder="请选择活动区域">
-          <el-option label="区域一" value="shanghai"></el-option>
-          <el-option label="区域二" value="beijing"></el-option>
+          <com-option label="区域一" value="shanghai"></com-option>
+          <com-option label="区域二" value="beijing"></com-option>
         </el-select>
       </el-form-item>
     </el-form>

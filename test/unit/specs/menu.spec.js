@@ -9,10 +9,10 @@ describe('Menu', () => {
   it('create', done => {
     vm = createVue({
       template: `
-        <el-menu>
-          <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-          <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-        </el-menu>
+        <com-menu>
+          <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
+          <com-menu-item index="2" ref="item2">订单管理</com-menu-item>
+        </com-menu>
       `
     }, true);
     var item1 = vm.$refs.item1;
@@ -30,13 +30,13 @@ describe('Menu', () => {
   it('background-color', done => {
     vm = createVue({
       template: `
-        <el-menu default-active="2"
+        <com-menu default-active="2"
           background-color="#f00"
           text-color="#000"
           active-text-color="#0f0">
-          <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-          <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-        </el-menu>
+          <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
+          <com-menu-item index="2" ref="item2">订单管理</com-menu-item>
+        </com-menu>
       `
     }, true);
     expect(vm.$el.style.backgroundColor).to.equal('rgb(255, 0, 0)');
@@ -52,10 +52,10 @@ describe('Menu', () => {
   it('menu-item click', done => {
     vm = createVue({
       template: `
-        <el-menu>
-          <el-menu-item @click="onMenuItemClick" index="1" ref="item1">处理中心</el-menu-item>
-          <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-        </el-menu>
+        <com-menu>
+          <com-menu-item @click="onMenuItemClick" index="1" ref="item1">处理中心</com-menu-item>
+          <com-menu-item index="2" ref="item2">订单管理</com-menu-item>
+        </com-menu>
       `,
       methods: {
         onMenuItemClick(el) {
@@ -81,10 +81,10 @@ describe('Menu', () => {
   it('menu-item disabled', done => {
     vm = createVue({
       template: `
-        <el-menu default-active="2">
-          <el-menu-item index="1" ref="item1" disabled>处理中心</el-menu-item>
-          <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-        </el-menu>
+        <com-menu default-active="2">
+          <com-menu-item index="1" ref="item1" disabled>处理中心</com-menu-item>
+          <com-menu-item index="2" ref="item2">订单管理</com-menu-item>
+        </com-menu>
       `
     }, true);
     expect(vm.$refs.item2.$el.classList.contains('is-active')).to.be.true;
@@ -98,10 +98,10 @@ describe('Menu', () => {
     it('normal active', done => {
       vm = createVue({
         template: `
-          <el-menu default-active="2">
-            <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-            <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-          </el-menu>
+          <com-menu default-active="2">
+            <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
+            <com-menu-item index="2" ref="item2">订单管理</com-menu-item>
+          </com-menu>
         `
       }, true);
       expect(vm.$refs.item2.$el.classList.contains('is-active')).to.be.true;
@@ -114,10 +114,10 @@ describe('Menu', () => {
     it('dynamic active', done => {
       vm = createVue({
         template: `
-          <el-menu :default-active="active">
-            <el-menu-item index="1" ref="item1">active watch处理中心</el-menu-item>
-            <el-menu-item index="2" ref="item2">active watch订单管理</el-menu-item>
-          </el-menu>
+          <com-menu :default-active="active">
+            <com-menu-item index="1" ref="item1">active watch处理中心</com-menu-item>
+            <com-menu-item index="2" ref="item2">active watch订单管理</com-menu-item>
+          </com-menu>
         `,
         data() {
           return {
@@ -137,16 +137,16 @@ describe('Menu', () => {
       vm = createVue({
         template: `
           <div>
-            <el-menu default-active="2-2">
-              <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
+            <com-menu default-active="2-2">
+              <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
               <el-submenu index="2" ref="submenu">
                 <template slot="title">我的工作台</template>
-                <el-menu-item index="2-1">选项1</el-menu-item>
-                <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-                <el-menu-item index="2-3">选项3</el-menu-item>
+                <com-menu-item index="2-1">选项1</com-menu-item>
+                <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
+                <com-menu-item index="2-3">选项3</com-menu-item>
               </el-submenu>
-              <el-menu-item index="3">订单管理</el-menu-item>
-            </el-menu>
+              <com-menu-item index="3">订单管理</com-menu-item>
+            </com-menu>
           </div>
         `
       }, true);
@@ -162,16 +162,16 @@ describe('Menu', () => {
       vm = createVue({
         template: `
           <div>
-            <el-menu default-active="2-2">
-              <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
+            <com-menu default-active="2-2">
+              <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
               <el-submenu index="2" ref="submenu">
                 <template slot="title">我的工作台</template>
-                <el-menu-item index="2-1">选项1</el-menu-item>
-                <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-                <el-menu-item index="2-3">选项3</el-menu-item>
+                <com-menu-item index="2-1">选项1</com-menu-item>
+                <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
+                <com-menu-item index="2-3">选项3</com-menu-item>
               </el-submenu>
-              <el-menu-item index="3">订单管理</el-menu-item>
-            </el-menu>
+              <com-menu-item index="3">订单管理</com-menu-item>
+            </com-menu>
           </div>
         `
       }, true);
@@ -188,16 +188,16 @@ describe('Menu', () => {
     it('toggle', done => {
       vm = createVue({
         template: `
-          <el-menu>
-            <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
+          <com-menu>
+            <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
             <el-submenu index="2" ref="submenu">
               <template slot="title">我的工作台</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-              <el-menu-item index="2-3">选项3</el-menu-item>
+              <com-menu-item index="2-1">选项1</com-menu-item>
+              <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
+              <com-menu-item index="2-3">选项3</com-menu-item>
             </el-submenu>
-            <el-menu-item index="3">订单管理</el-menu-item>
-          </el-menu>
+            <com-menu-item index="3">订单管理</com-menu-item>
+          </com-menu>
         `,
         data() {
           return {
@@ -223,21 +223,21 @@ describe('Menu', () => {
     it('default opened', done => {
       vm = createVue({
         template: `
-          <el-menu :default-openeds="defaultOpeneds">
-            <el-menu-item index="1">default opened处理中心</el-menu-item>
+          <com-menu :default-openeds="defaultOpeneds">
+            <com-menu-item index="1">default opened处理中心</com-menu-item>
             <el-submenu index="2" ref="submenu1">
               <template slot="title">default opened我的工作台</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2" ref="submenu1Item2">选项2</el-menu-item>
-              <el-menu-item index="2-3">选项3</el-menu-item>
+              <com-menu-item index="2-1">选项1</com-menu-item>
+              <com-menu-item index="2-2" ref="submenu1Item2">选项2</com-menu-item>
+              <com-menu-item index="2-3">选项3</com-menu-item>
             </el-submenu>
             <el-submenu index="3" ref="submenu2">
               <template slot="title">default opened订单管理</template>
-              <el-menu-item index="3-1">选项1</el-menu-item>
-              <el-menu-item index="3-2" ref="submenu2Item2">选项2</el-menu-item>
-              <el-menu-item index="3-3">选项3</el-menu-item>
+              <com-menu-item index="3-1">选项1</com-menu-item>
+              <com-menu-item index="3-2" ref="submenu2Item2">选项2</com-menu-item>
+              <com-menu-item index="3-3">选项3</com-menu-item>
             </el-submenu>
-          </el-menu>
+          </com-menu>
         `,
         data() {
           return {
@@ -257,16 +257,16 @@ describe('Menu', () => {
     it('disabled', done => {
       vm = createVue({
         template: `
-          <el-menu>
-            <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
+          <com-menu>
+            <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
             <el-submenu index="2" ref="submenu" disabled>
               <template slot="title">我的工作台</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-              <el-menu-item index="2-3">选项3</el-menu-item>
+              <com-menu-item index="2-1">选项1</com-menu-item>
+              <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
+              <com-menu-item index="2-3">选项3</com-menu-item>
             </el-submenu>
-            <el-menu-item index="3">订单管理</el-menu-item>
-          </el-menu>
+            <com-menu-item index="3">订单管理</com-menu-item>
+          </com-menu>
         `
       }, true);
       var submenu = vm.$refs.submenu;
@@ -280,21 +280,21 @@ describe('Menu', () => {
   it('unique-opened', done => {
     vm = createVue({
       template: `
-        <el-menu unique-opened default-active="2-2">
-          <el-menu-item index="1">处理中心</el-menu-item>
+        <com-menu unique-opened default-active="2-2">
+          <com-menu-item index="1">处理中心</com-menu-item>
           <el-submenu index="2" ref="submenu1">
             <template slot="title">我的工作台</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2" ref="submenu1Item2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
+            <com-menu-item index="2-1">选项1</com-menu-item>
+            <com-menu-item index="2-2" ref="submenu1Item2">选项2</com-menu-item>
+            <com-menu-item index="2-3">选项3</com-menu-item>
           </el-submenu>
           <el-submenu index="3" ref="submenu2">
             <template slot="title">订单管理</template>
-            <el-menu-item index="3-1">选项1</el-menu-item>
-            <el-menu-item index="3-2" ref="submenu2Item2">选项2</el-menu-item>
-            <el-menu-item index="3-3">选项3</el-menu-item>
+            <com-menu-item index="3-1">选项1</com-menu-item>
+            <com-menu-item index="3-2" ref="submenu2Item2">选项2</com-menu-item>
+            <com-menu-item index="3-3">选项3</com-menu-item>
           </el-submenu>
-        </el-menu>
+        </com-menu>
       `,
       data() {
         return {
@@ -310,16 +310,16 @@ describe('Menu', () => {
   it('horizontal mode', done => {
     vm = createVue({
       template: `
-        <el-menu mode="horizontal">
-          <el-menu-item index="1">处理中心</el-menu-item>
+        <com-menu mode="horizontal">
+          <com-menu-item index="1">处理中心</com-menu-item>
           <el-submenu index="2" ref="submenu">
             <template slot="title">我的工作台</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
+            <com-menu-item index="2-1">选项1</com-menu-item>
+            <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
+            <com-menu-item index="2-3">选项3</com-menu-item>
           </el-submenu>
-          <el-menu-item index="3">订单管理</el-menu-item>
-        </el-menu>
+          <com-menu-item index="3">订单管理</com-menu-item>
+        </com-menu>
       `,
       data() {
         return {
@@ -337,16 +337,16 @@ describe('Menu', () => {
   it('menu trigger click', done => {
     vm = createVue({
       template: `
-        <el-menu mode="horizontal" menu-trigger="click">
-          <el-menu-item index="1">处理中心</el-menu-item>
+        <com-menu mode="horizontal" menu-trigger="click">
+          <com-menu-item index="1">处理中心</com-menu-item>
           <el-submenu index="2" ref="submenu">
             <template slot="title">我的工作台</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
+            <com-menu-item index="2-1">选项1</com-menu-item>
+            <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
+            <com-menu-item index="2-3">选项3</com-menu-item>
           </el-submenu>
-          <el-menu-item index="3">订单管理</el-menu-item>
-        </el-menu>
+          <com-menu-item index="3">订单管理</com-menu-item>
+        </com-menu>
       `,
       data() {
         return {
@@ -372,19 +372,19 @@ describe('Menu', () => {
   it('menu group', () => {
     vm = createVue({
       template: `
-        <el-menu mode="vertical" default-active="1">
-          <el-menu-item-group title="分组一" ref="group1">
-            <el-menu-item index="1"><i class="el-icon-message"></i>导航一</el-menu-item>
-            <el-menu-item index="2"><i class="el-icon-message"></i>导航二</el-menu-item>
-          </el-menu-item-group>
+        <com-menu mode="vertical" default-active="1">
+          <com-menu-item-group title="分组一" ref="group1">
+            <com-menu-item index="1"><i class="el-icon-message"></i>导航一</com-menu-item>
+            <com-menu-item index="2"><i class="el-icon-message"></i>导航二</com-menu-item>
+          </com-menu-item-group>
           <el-submenu index="5">
             <template slot="title">导航五</template>
-            <el-menu-item-group title="分组二">
-              <el-menu-item index="5-1">选项1</el-menu-item>
-              <el-menu-item index="5-2">选项2</el-menu-item>
-            </el-menu-item-group>
+            <com-menu-item-group title="分组二">
+              <com-menu-item index="5-1">选项1</com-menu-item>
+              <com-menu-item index="5-2">选项2</com-menu-item>
+            </com-menu-item-group>
           </el-submenu>
-        </el-menu>
+        </com-menu>
       `
     }, true);
     expect(vm.$refs.group1.$el.querySelector('.el-menu-item-group__title').innerText).to.be.equal('分组一');
@@ -392,14 +392,14 @@ describe('Menu', () => {
   it('dynamic menus, issue 9092', done => {
     vm = createVue({
       template: `
-          <el-menu :default-active="active">
-            <el-menu-item
+          <com-menu :default-active="active">
+            <com-menu-item
               v-for="menu in menus"
               :index="menu.name"
               :key="menu.name">
               {{menu.description}}
-            </el-menu-item>
-          </el-menu>
+            </com-menu-item>
+          </com-menu>
         `,
       data() {
         return {

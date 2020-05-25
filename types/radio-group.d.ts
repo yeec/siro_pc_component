@@ -3,7 +3,7 @@ import { ElementUIComponent } from './component'
 export type RadioGroupSize = 'large' | 'small'
 
 /** Radio Group Component */
-export declare class ElRadioGroup extends ElementUIComponent {
+export declare class ComRadioGroup extends ElementUIComponent {
   /** The size of radio buttons */
   size: RadioGroupSize
 
