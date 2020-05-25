@@ -116,14 +116,14 @@
     </el-row>
     <h4>Select</h4>
     <el-row>
-      <el-select v-model="selectValue" placeholder="Select">
+      <com-select v-model="selectValue" placeholder="Select">
         <com-option
           v-for="item in selectOptions"
           :key="item.value"
           :label="item.label"
           :value="item.value"
         ></com-option>
-      </el-select>
+      </com-select>
     </el-row>
     <h4>Cascader</h4>
     <el-row>

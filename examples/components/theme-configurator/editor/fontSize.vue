@@ -6,7 +6,7 @@
       </el-tooltip>
     </div>
     <div class="config-content">
-      <el-select 
+      <com-select 
         v-model="value" 
         class="select"
         size="medium"
@@ -18,7 +18,7 @@
           :label="item.label"
           :value="item.value">
         </com-option>
-      </el-select>
+      </com-select>
     </div>
   </section>
 </template>

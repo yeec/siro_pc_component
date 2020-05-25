@@ -11,9 +11,9 @@
   import Popper from 'element-ui/src/utils/vue-popper';
 
   export default {
-    name: 'ElSelectDropdown',
+    name: 'ComSelectDropdown',
 
-    componentName: 'ElSelectDropdown',
+    componentName: 'ComSelectDropdown',
 
     mixins: [Popper],
 

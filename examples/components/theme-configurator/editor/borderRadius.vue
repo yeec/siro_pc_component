@@ -11,7 +11,7 @@
         :val="value"
         @change="onChange"
       ></theme-input>
-      <el-select 
+      <com-select 
         size="medium"
         v-if="!isGlobal"
         v-model="value" 
@@ -24,7 +24,7 @@
           :label="item.label"
           :value="item.value">
         </com-option>
-      </el-select>
+      </com-select>
     </div>
   </section>
 </template>

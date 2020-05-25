@@ -10,13 +10,13 @@
 ```html
 <el-form ref="form" :model="form" label-width="80px">
   <el-form-item label="活动名称">
-    <el-input v-model="form.name"></el-input>
+    <com-input v-model="form.name"></com-input>
   </el-form-item>
   <el-form-item label="活动区域">
-    <el-select v-model="form.region" placeholder="请选择活动区域">
+    <com-select v-model="form.region" placeholder="请选择活动区域">
       <com-option label="区域一" value="shanghai"></com-option>
       <com-option label="区域二" value="beijing"></com-option>
-    </el-select>
+    </com-select>
   </el-form-item>
   <el-form-item label="活动时间">
     <el-col :span="11">
@@ -45,7 +45,7 @@
     </com-radio-group>
   </el-form-item>
   <el-form-item label="活动形式">
-    <el-input type="textarea" v-model="form.desc"></el-input>
+    <com-input type="textarea" v-model="form.desc"></com-input>
   </el-form-item>
   <el-form-item>
     <com-button type="primary" @click="onSubmit">立即创建</com-button>
@@ -93,13 +93,13 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 ```html
 <el-form :inline="true" :model="formInline" class="demo-form-inline">
   <el-form-item label="审批人">
-    <el-input v-model="formInline.user" placeholder="审批人"></el-input>
+    <com-input v-model="formInline.user" placeholder="审批人"></com-input>
   </el-form-item>
   <el-form-item label="活动区域">
-    <el-select v-model="formInline.region" placeholder="活动区域">
+    <com-select v-model="formInline.region" placeholder="活动区域">
       <com-option label="区域一" value="shanghai"></com-option>
       <com-option label="区域二" value="beijing"></com-option>
-    </el-select>
+    </com-select>
   </el-form-item>
   <el-form-item>
     <com-button type="primary" @click="onSubmit">查询</com-button>
@@ -139,13 +139,13 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 <div style="margin: 20px;"></div>
 <el-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
   <el-form-item label="名称">
-    <el-input v-model="formLabelAlign.name"></el-input>
+    <com-input v-model="formLabelAlign.name"></com-input>
   </el-form-item>
   <el-form-item label="活动区域">
-    <el-input v-model="formLabelAlign.region"></el-input>
+    <com-input v-model="formLabelAlign.region"></com-input>
   </el-form-item>
   <el-form-item label="活动形式">
-    <el-input v-model="formLabelAlign.type"></el-input>
+    <com-input v-model="formLabelAlign.type"></com-input>
   </el-form-item>
 </el-form>
 <script>
@@ -173,13 +173,13 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 ```html
 <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
   <el-form-item label="活动名称" prop="name">
-    <el-input v-model="ruleForm.name"></el-input>
+    <com-input v-model="ruleForm.name"></com-input>
   </el-form-item>
   <el-form-item label="活动区域" prop="region">
-    <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
+    <com-select v-model="ruleForm.region" placeholder="请选择活动区域">
       <com-option label="区域一" value="shanghai"></com-option>
       <com-option label="区域二" value="beijing"></com-option>
-    </el-select>
+    </com-select>
   </el-form-item>
   <el-form-item label="活动时间" required>
     <el-col :span="11">
@@ -212,7 +212,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </com-radio-group>
   </el-form-item>
   <el-form-item label="活动形式" prop="desc">
-    <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+    <com-input type="textarea" v-model="ruleForm.desc"></com-input>
   </el-form-item>
   <el-form-item>
     <com-button type="primary" @click="submitForm('ruleForm')">立即创建</com-button>
@@ -287,13 +287,13 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 ```html
 <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
   <el-form-item label="密码" prop="pass">
-    <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
+    <com-input type="password" v-model="ruleForm.pass" autocomplete="off"></com-input>
   </el-form-item>
   <el-form-item label="确认密码" prop="checkPass">
-    <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></el-input>
+    <com-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></com-input>
   </el-form-item>
   <el-form-item label="年龄" prop="age">
-    <el-input v-model.number="ruleForm.age"></el-input>
+    <com-input v-model.number="ruleForm.age"></com-input>
   </el-form-item>
   <el-form-item>
     <com-button type="primary" @click="submitForm('ruleForm')">提交</com-button>
@@ -394,7 +394,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
       { type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }
     ]"
   >
-    <el-input v-model="dynamicValidateForm.email"></el-input>
+    <com-input v-model="dynamicValidateForm.email"></com-input>
   </el-form-item>
   <el-form-item
     v-for="(domain, index) in dynamicValidateForm.domains"
@@ -405,7 +405,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
       required: true, message: '域名不能为空', trigger: 'blur'
     }"
   >
-    <el-input v-model="domain.value"></el-input><com-button @click.prevent="removeDomain(domain)">删除</com-button>
+    <com-input v-model="domain.value"></com-input><com-button @click.prevent="removeDomain(domain)">删除</com-button>
   </el-form-item>
   <el-form-item>
     <com-button type="primary" @click="submitForm('dynamicValidateForm')">提交</com-button>
@@ -470,7 +470,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
       { type: 'number', message: '年龄必须为数字值'}
     ]"
   >
-    <el-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
+    <com-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></com-input>
   </el-form-item>
   <el-form-item>
     <com-button type="primary" @click="submitForm('numberValidateForm')">提交</com-button>
@@ -518,13 +518,13 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 ```html
 <el-form ref="form" :model="sizeForm" label-width="80px" size="mini">
   <el-form-item label="活动名称">
-    <el-input v-model="sizeForm.name"></el-input>
+    <com-input v-model="sizeForm.name"></com-input>
   </el-form-item>
   <el-form-item label="活动区域">
-    <el-select v-model="sizeForm.region" placeholder="请选择活动区域">
+    <com-select v-model="sizeForm.region" placeholder="请选择活动区域">
       <com-option label="区域一" value="shanghai"></com-option>
       <com-option label="区域二" value="beijing"></com-option>
-    </el-select>
+    </com-select>
   </el-form-item>
   <el-form-item label="活动时间">
     <el-col :span="11">

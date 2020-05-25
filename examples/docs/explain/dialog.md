@@ -73,10 +73,10 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
       <el-input v-model="form.name" autocomplete="off"></el-input>
     </el-form-item>
     <el-form-item label="活动区域" :label-width="formLabelWidth">
-      <el-select v-model="form.region" placeholder="请选择活动区域">
+      <com-select v-model="form.region" placeholder="请选择活动区域">
         <com-option label="区域一" value="shanghai"></com-option>
         <com-option label="区域二" value="beijing"></com-option>
-      </el-select>
+      </com-select>
     </el-form-item>
   </el-form>
   <div slot="footer" class="dialog-footer">

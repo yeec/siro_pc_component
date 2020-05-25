@@ -191,11 +191,11 @@ describe('Input', () => {
     vm = createVue({
       template: `
       <el-input v-model="value" clearable class="input-with-select" ref="input">
-        <el-select v-model="select" slot="prepend" placeholder="请选择">
+        <com-select v-model="select" slot="prepend" placeholder="请选择">
           <com-option label="餐厅名" value="1"></com-option>
           <com-option label="订单号" value="2"></com-option>
           <com-option label="用户电话" value="3"></com-option>
-        </el-select>
+        </com-select>
         <el-button slot="append" icon="el-icon-search"></el-button>
       </el-input>
       `,

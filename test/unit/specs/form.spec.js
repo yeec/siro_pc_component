@@ -450,10 +450,10 @@ describe('Form', () => {
         template: `
           <el-form :model="form" :rules="rules" ref="form">
             <el-form-item label="记住密码" prop="region" ref="field">
-              <el-select v-model="form.region" placeholder="请选择活动区域">
+              <com-select v-model="form.region" placeholder="请选择活动区域">
                 <com-option label="区域一" value="shanghai"></com-option>
                 <com-option label="区域二" ref="opt" value="beijing"></com-option>
-              </el-select>
+              </com-select>
             </el-form-item>
           </el-form>
         `,

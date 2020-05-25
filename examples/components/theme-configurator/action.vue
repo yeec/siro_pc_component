@@ -38,14 +38,14 @@
           </el-button>
         </div>
       </div>
-      <el-select v-model="selectedComponent" class="selector">
+      <com-select v-model="selectedComponent" class="selector">
         <com-option
           v-for="item in selectOptions"
           :key="item.value"
           :label="item.label"
           :value="item.value">
         </com-option>
-      </el-select>
+      </com-select>
       <div class="line"></div>
     </div>
 </template>
