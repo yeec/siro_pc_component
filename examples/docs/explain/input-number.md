@@ -4,10 +4,10 @@
 
 ### 基础用法
 
-:::demo 要使用它，只需要在`el-input-number`元素中使用`v-model`绑定变量即可，变量的初始值即为默认值。
+:::demo 要使用它，只需要在`com-input-number`元素中使用`v-model`绑定变量即可，变量的初始值即为默认值。
 ```html
 <template>
-  <el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
+  <com-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字"></com-input-number>
 </template>
 <script>
   export default {
@@ -32,7 +32,7 @@
 
 ```html
 <template>
-  <el-input-number v-model="num" :disabled="true"></el-input-number>
+  <com-input-number v-model="num" :disabled="true"></com-input-number>
 </template>
 <script>
   export default {
@@ -54,7 +54,7 @@
 
 ```html
 <template>
-  <el-input-number v-model="num" :step="2"></el-input-number>
+  <com-input-number v-model="num" :step="2"></com-input-number>
 </template>
 <script>
   export default {
@@ -74,7 +74,7 @@
 
 ```html
 <template>
-  <el-input-number v-model="num" :step="2" step-strictly></el-input-number>
+  <com-input-number v-model="num" :step="2" step-strictly></com-input-number>
 </template>
 <script>
   export default {
@@ -94,7 +94,7 @@
 
 ```html
 <template>
-  <el-input-number v-model="num" :precision="2" :step="0.1" :max="10"></el-input-number>
+  <com-input-number v-model="num" :precision="2" :step="0.1" :max="10"></com-input-number>
 </template>
 <script>
   export default {
@@ -121,10 +121,10 @@
 
 ```html
 <template>
-  <el-input-number v-model="num1"></el-input-number>
-  <el-input-number size="medium" v-model="num2"></el-input-number>
-  <el-input-number size="small" v-model="num3"></el-input-number>
-  <el-input-number size="mini" v-model="num4"></el-input-number>
+  <com-input-number v-model="num1"></com-input-number>
+  <com-input-number size="medium" v-model="num2"></com-input-number>
+  <com-input-number size="small" v-model="num3"></com-input-number>
+  <com-input-number size="mini" v-model="num4"></com-input-number>
 </template>
 <script>
   export default {
@@ -146,7 +146,7 @@
 :::demo 设置 `controls-position` 属性可以控制按钮位置。
 ```html
 <template>
-  <el-input-number v-model="num" controls-position="right" @change="handleChange" :min="1" :max="10"></el-input-number>
+  <com-input-number v-model="num" controls-position="right" @change="handleChange" :min="1" :max="10"></com-input-number>
 </template>
 <script>
   export default {

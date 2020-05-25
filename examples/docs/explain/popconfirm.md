@@ -8,11 +8,11 @@ Popconfirm 的属性与 Popover 很类似，因此对于重复属性，请参考
 :::demo 在 Popconfirm 中，只有 `title` 属性可用，`content` 属性不会被展示。
 ```html
 <template>
-<com-popconfirm
+<el-popconfirm
   title="这是一段内容确定删除吗？"
 >
-  <el-button slot="reference">删除</el-button>
-</com-popconfirm>
+  <com-button slot="reference">删除</com-button>
+</el-popconfirm>
 </template>
 ````
 :::
@@ -23,15 +23,15 @@ Popconfirm 的属性与 Popover 很类似，因此对于重复属性，请参考
 :::demo
 ```html
 <template>
-<com-popconfirm
+<el-popconfirm
   confirmButtonText='好的'
   cancelButtonText='不用了'
   icon="el-icon-info"
   iconColor="red"
   title="这是一段内容确定删除吗？"
 >
-  <el-button slot="reference">删除</el-button>
-</com-popconfirm>
+  <com-button slot="reference">删除</com-button>
+</el-popconfirm>
 </template>
 ```
 :::

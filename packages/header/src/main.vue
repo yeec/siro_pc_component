@@ -6,9 +6,9 @@
 
 <script>
   export default {
-    name: 'ElHeader',
+    name: 'ComHeader',
 
-    componentName: 'ElHeader',
+    componentName: 'ComHeader',
 
     props: {
       height: {

@@ -52,10 +52,10 @@
 
 <com-progress :percentage="percentage" :color="customColors"></com-progress>
 <div>
-  <el-button-group>
-    <el-button icon="el-icon-minus" @click="decrease"></el-button>
-    <el-button icon="el-icon-plus" @click="increase"></el-button>
-  </el-button-group>
+  <com-button-group>
+    <com-button icon="el-icon-minus" @click="decrease"></com-button>
+    <com-button icon="el-icon-plus" @click="increase"></com-button>
+  </com-button-group>
 </div>
 
 <script>
@@ -124,10 +124,10 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
 
 <com-progress type="dashboard" :percentage="percentage" :color="colors"></com-progress>
 <div>
-  <el-button-group>
-    <el-button icon="el-icon-minus" @click="decrease"></el-button>
-    <el-button icon="el-icon-plus" @click="increase"></el-button>
-  </el-button-group>
+  <com-button-group>
+    <com-button icon="el-icon-minus" @click="decrease"></com-button>
+    <com-button icon="el-icon-plus" @click="increase"></com-button>
+  </com-button-group>
 </div>
 
 <script>

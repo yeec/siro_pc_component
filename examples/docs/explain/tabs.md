@@ -206,12 +206,12 @@
 :::demo
 ```html
 <div style="margin-bottom: 20px;">
-  <el-button
+  <com-button
     size="small"
     @click="addTab(editableTabsValue)"
   >
     add tab
-  </el-button>
+  </com-button>
 </div>
 <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
   <el-tab-pane

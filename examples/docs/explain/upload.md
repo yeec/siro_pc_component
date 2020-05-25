@@ -16,7 +16,7 @@
   :limit="3"
   :on-exceed="handleExceed"
   :file-list="fileList">
-  <el-button size="small" type="primary">点击上传</el-button>
+  <com-button size="small" type="primary">点击上传</com-button>
   <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
 </el-upload>
 <script>
@@ -129,9 +129,9 @@
   :on-remove="handleRemove">
   <i class="el-icon-plus"></i>
 </el-upload>
-<el-dialog :visible.sync="dialogVisible">
+<com-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
-</el-dialog>
+</com-dialog>
 <script>
   export default {
     data() {
@@ -194,9 +194,9 @@
       </span>
     </div>
 </el-upload>
-<el-dialog :visible.sync="dialogVisible">
+<com-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
-</el-dialog>
+</com-dialog>
 <script>
   export default {
     data() {
@@ -234,7 +234,7 @@
   :on-remove="handleRemove"
   :file-list="fileList"
   list-type="picture">
-  <el-button size="small" type="primary">点击上传</el-button>
+  <com-button size="small" type="primary">点击上传</com-button>
   <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
 </el-upload>
 <script>
@@ -268,7 +268,7 @@
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-change="handleChange"
   :file-list="fileList">
-  <el-button size="small" type="primary">点击上传</el-button>
+  <com-button size="small" type="primary">点击上传</com-button>
   <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
 </el-upload>
 <script>
@@ -322,8 +322,8 @@
   :on-remove="handleRemove"
   :file-list="fileList"
   :auto-upload="false">
-  <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
-  <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
+  <com-button slot="trigger" size="small" type="primary">选取文件</com-button>
+  <com-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</com-button>
   <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
 </el-upload>
 <script>
