@@ -57,7 +57,7 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElCheckbox',
+    name: 'ComCheckbox',
 
     mixins: [Emitter],
 
@@ -70,7 +70,7 @@
       }
     },
 
-    componentName: 'ElCheckbox',
+    componentName: 'ComCheckbox',
 
     data() {
       return {
@@ -100,7 +100,7 @@
               (this.isLimitExceeded = true));
 
             this.isLimitExceeded === false &&
-            this.dispatch('ElCheckboxGroup', 'input', [val]);
+            this.dispatch('ComCheckboxGroup', 'input', [val]);
           } else {
             this.$emit('input', val);
             this.selfModel = val;
@@ -121,7 +121,7 @@
       isGroup() {
         let parent = this.$parent;
         while (parent) {
-          if (parent.$options.componentName !== 'ElCheckboxGroup') {
+          if (parent.$options.componentName !== 'ComSCheckboxGroup') {
             parent = parent.$parent;
           } else {
             this._checkboxGroup = parent;
@@ -198,7 +198,7 @@
         this.$emit('change', value, ev);
         this.$nextTick(() => {
           if (this.isGroup) {
-            this.dispatch('ElCheckboxGroup', 'change', [this._checkboxGroup.value]);
+            this.dispatch('ComCheckboxGroup', 'change', [this._checkboxGroup.value]);
           }
         });
       }

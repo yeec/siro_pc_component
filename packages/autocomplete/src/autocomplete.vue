@@ -7,7 +7,7 @@
     :aria-expanded="suggestionVisible"
     :aria-owns="id"
   >
-    <el-input
+    <com-input
       ref="input"
       v-bind="[$props, $attrs]"
       @input="handleChange"
@@ -31,8 +31,8 @@
       <template slot="suffix" v-if="$slots.suffix">
         <slot name="suffix"></slot>
       </template>
-    </el-input>
-    <el-autocomplete-suggestions
+    </com-input>
+    <com-autocomplete-suggestions
       visible-arrow
       :class="[popperClass ? popperClass : '']"
       :popper-options="popperOptions"
@@ -53,31 +53,31 @@
           {{ item[valueKey] }}
         </slot>
       </li>
-    </el-autocomplete-suggestions>
+    </com-autocomplete-suggestions>
   </div>
 </template>
 <script>
   import debounce from 'throttle-debounce/debounce';
-  import ElInput from 'element-ui/packages/input';
+  import ComInput from 'element-ui/packages/input';
   import Clickoutside from 'element-ui/src/utils/clickoutside';
-  import ElAutocompleteSuggestions from './autocomplete-suggestions.vue';
+  import ComAutocompleteSuggestions from './autocomplete-suggestions.vue';
   import Emitter from 'element-ui/src/mixins/emitter';
   import Migrating from 'element-ui/src/mixins/migrating';
   import { generateId } from 'element-ui/src/utils/util';
   import Focus from 'element-ui/src/mixins/focus';
 
   export default {
-    name: 'ElAutocomplete',
+    name: 'ComAutocomplete',
 
     mixins: [Emitter, Focus('input'), Migrating],
 
     inheritAttrs: false,
 
-    componentName: 'ElAutocomplete',
+    componentName: 'ComAutocomplete',
 
     components: {
-      ElInput,
-      ElAutocompleteSuggestions
+      ComInput,
+      ComAutocompleteSuggestions
     },
 
     directives: { Clickoutside },
@@ -155,7 +155,7 @@
       suggestionVisible(val) {
         let $input = this.getInput();
         if ($input) {
-          this.broadcast('ElAutocompleteSuggestions', 'visible', [val, $input.offsetWidth]);
+          this.broadcast('ComAutocompleteSuggestions', 'visible', [val, $input.offsetWidth]);
         }
       }
     },

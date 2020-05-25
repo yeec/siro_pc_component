@@ -12,7 +12,7 @@
     @click="() => toggleDropDownVisible(readonly ? undefined : true)"
     @keydown="handleKeyDown">
 
-    <el-input
+    <com-input
       ref="input"
       v-model="multiple ? presentText : inputValue"
       :size="realSize"
@@ -40,10 +40,10 @@
           ]"
           @click.stop="toggleDropDownVisible()"></i>
       </template>
-    </el-input>
+    </com-input>
 
     <div v-if="multiple" class="el-cascader__tags">
-      <el-tag
+      <com-tag
         v-for="(tag, index) in presentTags"
         :key="tag.key"
         type="info"
@@ -53,7 +53,7 @@
         disable-transitions
         @close="deleteTag(index)">
         <span>{{ tag.text }}</span>
-      </el-tag>
+      </com-tag>
       <input
         v-if="filterable && !isDisabled"
         v-model.trim="inputValue"
@@ -70,7 +70,7 @@
         v-show="dropDownVisible"
         ref="popper"
         :class="['el-popper', 'el-cascader__dropdown', popperClass]">
-        <el-cascader-panel
+        <com-cascader-panel
           ref="panel"
           v-show="!filtering"
           v-model="checkedValue"
@@ -79,8 +79,8 @@
           :border="false"
           :render-label="$scopedSlots.default"
           @expand-change="handleExpandChange"
-          @close="toggleDropDownVisible(false)"></el-cascader-panel>
-        <el-scrollbar
+          @close="toggleDropDownVisible(false)"></com-cascader-panel>
+        <com-scrollbar
           ref="suggestionPanel"
           v-if="filterable"
           v-show="filtering"
@@ -105,7 +105,7 @@
           <slot v-else name="empty">
             <li class="el-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>
           </slot>
-        </el-scrollbar>
+        </com-scrollbar>
       </div>
     </transition>
   </div>
@@ -117,10 +117,10 @@ import Clickoutside from 'element-ui/src/utils/clickoutside';
 import Emitter from 'element-ui/src/mixins/emitter';
 import Locale from 'element-ui/src/mixins/locale';
 import Migrating from 'element-ui/src/mixins/migrating';
-import ElInput from 'element-ui/packages/input';
-import ElTag from 'element-ui/packages/tag';
-import ElScrollbar from 'element-ui/packages/scrollbar';
-import ElCascaderPanel from 'element-ui/packages/cascader-panel';
+import ComInput from 'element-ui/packages/input';
+import ComTag from 'element-ui/packages/tag';
+import ComScrollbar from 'element-ui/packages/scrollbar';
+import ComCascaderPanel from 'element-ui/packages/cascader-panel';
 import AriaUtils from 'element-ui/src/utils/aria-utils';
 import { t } from 'element-ui/src/locale';
 import { isEqual, isEmpty, kebabCase } from 'element-ui/src/utils/util';
@@ -173,7 +173,7 @@ const InputSizeMap = {
 };
 
 export default {
-  name: 'ElCascader',
+  name: 'ComCascader',
 
   directives: { Clickoutside },
 
@@ -189,10 +189,10 @@ export default {
   },
 
   components: {
-    ElInput,
-    ElTag,
-    ElScrollbar,
-    ElCascaderPanel
+    ComInput,
+    ComTag,
+    ComScrollbar,
+    ComCascaderPanel
   },
 
   props: {

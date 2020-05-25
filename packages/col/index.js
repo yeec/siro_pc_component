@@ -1,9 +1,9 @@
-import ElCol from './src/col';
+import ComCol from './src/col';
 
 /* istanbul ignore next */
-ElCol.install = function(Vue) {
-  Vue.component(ElCol.name, ElCol);
+ComCol.install = function(Vue) {
+  Vue.component(ComCol.name, ComCol);
 };
 
-export default ElCol;
+export default ComCol;
 

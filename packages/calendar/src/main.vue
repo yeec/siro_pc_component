@@ -7,26 +7,26 @@
       <div
         class="el-calendar__button-group"
         v-if="validatedRange.length === 0">
-        <el-button-group>
-          <el-button
+        <com-button-group>
+          <com-button
             type="plain"
             size="mini"
             @click="selectDate('prev-month')">
             {{ t('el.datepicker.prevMonth') }}
-          </el-button>
-          <el-button
+          </com-button>
+          <com-button
             type="plain"
             size="mini"
             @click="selectDate('today')">
             {{ t('el.datepicker.today') }}
-          </el-button>
-          <el-button
+          </com-button>
+          <com-button
             type="plain"
             size="mini"
             @click="selectDate('next-month')">
             {{ t('el.datepicker.nextMonth') }}
-          </el-button>
-        </el-button-group>
+          </com-button>
+        </com-button-group>
       </div>
     </div>
     <div
@@ -59,8 +59,8 @@
 <script>
 import Locale from 'element-ui/src/mixins/locale';
 import fecha from 'element-ui/src/utils/date';
-import ElButton from 'element-ui/packages/button';
-import ElButtonGroup from 'element-ui/packages/button-group';
+import ComButton from 'element-ui/packages/button';
+import ComButtonGroup from 'element-ui/packages/button-group';
 import DateTable from './date-table';
 import { validateRangeInOneMonth } from 'element-ui/src/utils/date-util';
 
@@ -69,14 +69,14 @@ const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 const oneDay = 86400000;
 
 export default {
-  name: 'ElCalendar',
+  name: 'ComCalendar',
 
   mixins: [Locale],
 
   components: {
     DateTable,
-    ElButton,
-    ElButtonGroup
+    ComButton,
+    ComButtonGroup
   },
 
   props: {

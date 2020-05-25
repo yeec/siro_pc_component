@@ -8,18 +8,18 @@
 :::demo 定义`value`属性，它接受`Number`或者`String`。
 
 ```html
-<el-badge :value="12" class="item">
+<com-badge :value="12" class="item">
   <com-button size="small">评论</com-button>
-</el-badge>
-<el-badge :value="3" class="item">
+</com-badge>
+<com-badge :value="3" class="item">
   <com-button size="small">回复</com-button>
-</el-badge>
-<el-badge :value="1" class="item" type="primary">
+</com-badge>
+<com-badge :value="1" class="item" type="primary">
   <com-button size="small">评论</com-button>
-</el-badge>
-<el-badge :value="2" class="item" type="warning">
+</com-badge>
+<com-badge :value="2" class="item" type="warning">
   <com-button size="small">回复</com-button>
-</el-badge>
+</com-badge>
 
 <com-dropdown trigger="click">
   <span class="com-dropdown-link">
@@ -28,11 +28,11 @@
   <com-dropdown-menu slot="dropdown">
     <com-dropdown-item class="clearfix">
       评论
-      <el-badge class="mark" :value="12" />
+      <com-badge class="mark" :value="12" />
     </com-dropdown-item>
     <com-dropdown-item class="clearfix">
       回复
-      <el-badge class="mark" :value="3" />
+      <com-badge class="mark" :value="3" />
     </com-dropdown-item>
   </com-dropdown-menu>
 </com-dropdown>
@@ -52,12 +52,12 @@
 :::demo 由`max`属性定义，它接受一个`Number`，需要注意的是，只有当`value`为`Number`时，它才会生效。
 
 ```html
-<el-badge :value="200" :max="99" class="item">
+<com-badge :value="200" :max="99" class="item">
   <com-button size="small">评论</com-button>
-</el-badge>
-<el-badge :value="100" :max="10" class="item">
+</com-badge>
+<com-badge :value="100" :max="10" class="item">
   <com-button size="small">回复</com-button>
-</el-badge>
+</com-badge>
 
 <style>
 .item {
@@ -74,12 +74,12 @@
 :::demo 定义`value`为`String`类型是时可以用于显示自定义文本。
 
 ```html
-<el-badge value="new" class="item">
+<com-badge value="new" class="item">
   <com-button size="small">评论</com-button>
-</el-badge>
-<el-badge value="hot" class="item">
+</com-badge>
+<com-badge value="hot" class="item">
   <com-button size="small">回复</com-button>
-</el-badge>
+</com-badge>
 
 <style>
 .item {
@@ -96,10 +96,10 @@
 :::demo 除了数字外，设置`is-dot`属性，它接受一个`Boolean`。
 
 ```html
-<el-badge is-dot class="item">数据查询</el-badge>
-<el-badge is-dot class="item">
+<com-badge is-dot class="item">数据查询</com-badge>
+<com-badge is-dot class="item">
   <com-button class="share-button" icon="el-icon-share" type="primary"></com-button>
-</el-badge>
+</com-badge>
 
 <style>
 .item {

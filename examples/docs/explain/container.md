@@ -5,7 +5,7 @@
 
 `<com-header>`：顶栏容器。
 
-`<el-aside>`：侧边栏容器。
+`<com-aside>`：侧边栏容器。
 
 `<com-main>`：主要区域容器。
 
@@ -31,14 +31,14 @@
 </el-container>
 
 <el-container>
-  <el-aside width="200px">Aside</el-aside>
+  <com-aside width="200px">Aside</com-aside>
   <com-main>Main</com-main>
 </el-container>
 
 <el-container>
   <com-header>Header</com-header>
   <el-container>
-    <el-aside width="200px">Aside</el-aside>
+    <com-aside width="200px">Aside</com-aside>
     <com-main>Main</com-main>
   </el-container>
 </el-container>
@@ -46,7 +46,7 @@
 <el-container>
   <com-header>Header</com-header>
   <el-container>
-    <el-aside width="200px">Aside</el-aside>
+    <com-aside width="200px">Aside</com-aside>
     <el-container>
       <com-main>Main</com-main>
       <com-footer>Footer</com-footer>
@@ -55,7 +55,7 @@
 </el-container>
 
 <el-container>
-  <el-aside width="200px">Aside</el-aside>
+  <com-aside width="200px">Aside</com-aside>
   <el-container>
     <com-header>Header</com-header>
     <com-main>Main</com-main>
@@ -63,7 +63,7 @@
 </el-container>
 
 <el-container>
-  <el-aside width="200px">Aside</el-aside>
+  <com-aside width="200px">Aside</com-aside>
   <el-container>
     <com-header>Header</com-header>
     <com-main>Main</com-main>
@@ -114,7 +114,7 @@
 :::demo
 ```html
 <el-container style="height: 500px; border: 1px solid #eee">
-  <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+  <com-aside width="200px" style="background-color: rgb(238, 241, 246)">
     <com-menu :default-openeds="['1', '3']">
       <el-submenu index="1">
         <template slot="title"><i class="el-icon-message"></i>导航一</template>
@@ -162,7 +162,7 @@
         </el-submenu>
       </el-submenu>
     </com-menu>
-  </el-aside>
+  </com-aside>
   
   <el-container>
     <com-header style="text-align: right; font-size: 12px">

@@ -80,7 +80,7 @@ const checkNode = el => {
 };
 
 export default {
-  name: 'ElCascaderPanel',
+  name: 'ComCascaderPanel',
 
   components: {
     CascaderMenu

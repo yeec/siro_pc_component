@@ -1,5 +1,5 @@
 <script>
-  import ElCheckbox from 'element-ui/packages/checkbox';
+  import ComCheckbox from 'element-ui/packages/checkbox';
   import ComRadio from 'element-ui/packages/radio';
   import { isEqual } from 'element-ui/src/utils/util';
 
@@ -9,7 +9,7 @@
     inject: ['panel'],
 
     components: {
-      ElCheckbox,
+      ComCheckbox,
       ComRadio
     },
 

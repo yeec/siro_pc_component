@@ -45,7 +45,7 @@
     },
 
     components: {
-      'el-menu-collapse-transition': {
+      'com-menu-collapse-transition': {
         functional: true,
         render(createElement, context) {
           const data = {

@@ -1,5 +1,5 @@
 export default {
-  name: 'ElCol',
+  name: 'ComCol',
 
   props: {
     span: {

@@ -6,9 +6,9 @@
 
 <script>
   export default {
-    name: 'ElAside',
+    name: 'ComAside',
 
-    componentName: 'ElAside',
+    componentName: 'ComAside',
 
     props: {
       width: {

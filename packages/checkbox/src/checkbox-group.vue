@@ -2,9 +2,9 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElCheckboxGroup',
+    name: 'ComCheckboxGroup',
 
-    componentName: 'ElCheckboxGroup',
+    componentName: 'ComCheckboxGroup',
 
     mixins: [Emitter],
 

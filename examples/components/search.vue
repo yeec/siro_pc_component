@@ -1,5 +1,5 @@
 <template>
-  <el-autocomplete
+  <com-autocomplete
     v-model="query"
     size="small"
     :popper-class="`algolia-search${ isEmpty ? ' is-empty' : '' }`"
@@ -32,7 +32,7 @@
         class="algolia-search-empty"
         v-if="props.item.isEmpty">{{ emptyText }}</p>
     </template>
-  </el-autocomplete>
+  </com-autocomplete>
 </template>
 
 <style lang="scss">
