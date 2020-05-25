@@ -27,7 +27,7 @@
 <template>
   <div>
     <h2>设计原则</h2>
-    <el-row :gutter="14" class="cards">
+    <com-row :gutter="14" class="cards">
       <el-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/consistency.png" alt="Consistency">
@@ -56,7 +56,7 @@
           <span>Controllability</span>
         </div>
       </el-col>
-    </el-row>
+    </com-row>
     <h3>一致性 Consistency</h3>
     <ul>
       <li><strong>与现实生活一致：</strong>与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</li>

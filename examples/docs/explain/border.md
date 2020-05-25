@@ -89,7 +89,7 @@
 
 我们提供了以下几种圆角样式，以供选择。
 
-<el-row :gutter="12" class="demo-radius">
+<com-row :gutter="12" class="demo-radius">
   <el-col :span="6" :xs="{span: 12}">
     <div class="title">无圆角</div>
     <div class="value">border-radius: 0px</div>
@@ -116,7 +116,7 @@
     <div class="value">border-radius: 30px</div>
     <div class="radius radius-30"></div>
   </el-col>
-</el-row>
+</com-row>
 
 ### 投影
 

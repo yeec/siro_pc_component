@@ -49,10 +49,10 @@ describe('Col', () => {
   it('gutter', () => {
     vm = createVue({
       template: `
-        <el-row :gutter="20">
+        <com-row :gutter="20">
           <el-col :span="12" ref="col">
           </el-col>
-        </el-row>
+        </com-row>
       `
     }, true);
     let colElm = vm.$refs.col.$el;
@@ -62,10 +62,10 @@ describe('Col', () => {
   it('responsive', () => {
     vm = createVue({
       template: `
-        <el-row :gutter="20">
+        <com-row :gutter="20">
           <el-col ref="col" :sm="{ span: 4, offset: 2 }" :md="8" :lg="{ span: 6, offset: 3 }">
           </el-col>
-        </el-row>
+        </com-row>
       `
     }, true);
     let colElm = vm.$refs.col.$el;

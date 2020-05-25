@@ -171,12 +171,12 @@ describe('Checkbox', () => {
     vm = createVue({
       template: `
         <el-checkbox-group v-model="checkList">
-          <el-row>
+          <com-row>
             <el-checkbox label="a" ref="a"></el-checkbox>
             <el-checkbox label="b" ref="b"></el-checkbox>
             <el-checkbox label="c" ref="c"></el-checkbox>
             <el-checkbox label="d" ref="d"></el-checkbox>
-          </el-row>
+          </com-row>
         </el-checkbox-group>
       `,
       data() {
@@ -439,12 +439,12 @@ describe('Checkbox', () => {
       vm = createVue({
         template: `
           <el-checkbox-group v-model="checkList">
-            <el-row>
+            <com-row>
               <el-checkbox-button label="a" ref="a"></el-checkbox-button>
               <el-checkbox-button label="b" ref="b"></el-checkbox-button>
               <el-checkbox-button label="c" ref="c"></el-checkbox-button>
               <el-checkbox-button label="d" ref="d"></el-checkbox-button>
-            </el-row>
+            </com-row>
           </el-checkbox-group>
         `,
         data() {

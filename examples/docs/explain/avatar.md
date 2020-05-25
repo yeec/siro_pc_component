@@ -9,7 +9,7 @@
 :::demo
 ```html
 <template>
-  <el-row class="demo-avatar demo-basic">
+  <com-row class="demo-avatar demo-basic">
     <el-col :span="12">
       <div class="sub-title">circle</div>
       <div class="demo-basic--circle">
@@ -28,7 +28,7 @@
         </div>
       </div>
     </el-col> 
-  </el-row>
+  </com-row>
 </template>
 <script>
   export default {

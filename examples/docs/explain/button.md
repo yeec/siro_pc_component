@@ -8,41 +8,41 @@
 :::demo 使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
 
 ```html
-<el-row>
+<com-row>
   <com-button>默认按钮</com-button>
   <com-button type="primary">主要按钮</com-button>
   <com-button type="success">成功按钮</com-button>
   <com-button type="info">信息按钮</com-button>
   <com-button type="warning">警告按钮</com-button>
   <com-button type="danger">危险按钮</com-button>
-</el-row>
+</com-row>
 
-<el-row>
+<com-row>
   <com-button plain>朴素按钮</com-button>
   <com-button type="primary" plain>主要按钮</com-button>
   <com-button type="success" plain>成功按钮</com-button>
   <com-button type="info" plain>信息按钮</com-button>
   <com-button type="warning" plain>警告按钮</com-button>
   <com-button type="danger" plain>危险按钮</com-button>
-</el-row>
+</com-row>
 
-<el-row>
+<com-row>
   <com-button round>圆角按钮</com-button>
   <com-button type="primary" round>主要按钮</com-button>
   <com-button type="success" round>成功按钮</com-button>
   <com-button type="info" round>信息按钮</com-button>
   <com-button type="warning" round>警告按钮</com-button>
   <com-button type="danger" round>危险按钮</com-button>
-</el-row>
+</com-row>
 
-<el-row>
+<com-row>
   <com-button icon="el-icon-search" circle></com-button>
   <com-button type="primary" icon="el-icon-edit" circle></com-button>
   <com-button type="success" icon="el-icon-check" circle></com-button>
   <com-button type="info" icon="el-icon-message" circle></com-button>
   <com-button type="warning" icon="el-icon-star-off" circle></com-button>
   <com-button type="danger" icon="el-icon-delete" circle></com-button>
-</el-row>
+</com-row>
 ```
 :::
 
@@ -53,23 +53,23 @@
 :::demo 你可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。
 
 ```html
-<el-row>
+<com-row>
   <com-button disabled>默认按钮</com-button>
   <com-button type="primary" disabled>主要按钮</com-button>
   <com-button type="success" disabled>成功按钮</com-button>
   <com-button type="info" disabled>信息按钮</com-button>
   <com-button type="warning" disabled>警告按钮</com-button>
   <com-button type="danger" disabled>危险按钮</com-button>
-</el-row>
+</com-row>
 
-<el-row>
+<com-row>
   <com-button plain disabled>朴素按钮</com-button>
   <com-button type="primary" plain disabled>主要按钮</com-button>
   <com-button type="success" plain disabled>成功按钮</com-button>
   <com-button type="info" plain disabled>信息按钮</com-button>
   <com-button type="warning" plain disabled>警告按钮</com-button>
   <com-button type="danger" plain disabled>危险按钮</com-button>
-</el-row>
+</com-row>
 ```
 :::
 
@@ -136,18 +136,18 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 :::demo 额外的尺寸：`medium`、`small`、`mini`，通过设置`size`属性来配置它们。
 
 ```html
-<el-row>
+<com-row>
   <com-button>默认按钮</com-button>
   <com-button size="medium">中等按钮</com-button>
   <com-button size="small">小型按钮</com-button>
   <com-button size="mini">超小按钮</com-button>
-</el-row>
-<el-row>
+</com-row>
+<com-row>
   <com-button round>默认按钮</com-button>
   <com-button size="medium" round>中等按钮</com-button>
   <com-button size="small" round>小型按钮</com-button>
   <com-button size="mini" round>超小按钮</com-button>
-</el-row>
+</com-row>
 ```
 :::
 

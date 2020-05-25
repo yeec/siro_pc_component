@@ -27,7 +27,7 @@
 <template>
   <div>
     <h2><%= 1 ></h2>
-    <el-row :gutter="14" class="cards">
+    <com-row :gutter="14" class="cards">
       <el-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/consistency.png" alt="Consistency">
@@ -56,7 +56,7 @@
           <span><%= 9 ></span>
         </div>
       </el-col>
-    </el-row>
+    </com-row>
     <h3><%= 10 ></h3>
     <ul>
       <li><strong><%= 11 ></strong><%= 12 ></li>

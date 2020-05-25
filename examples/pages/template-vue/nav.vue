@@ -86,7 +86,7 @@
     </div>
     <div class="block">
       <h3>侧栏导航</h3>
-      <el-row :gutter="20">
+      <com-row :gutter="20">
         <el-col :span="9">
           <p>可将导航栏固定在左侧，提高导航可见性，方便页面之间切换；顶部可放置常用工具，如搜索条、帮助按钮、通知按钮等。适用于中后台的管理型、工具型网站。</p>
         </el-col>
@@ -101,11 +101,11 @@
           <h5>三级类目</h5>
           <p>适用于较复杂的工具型后台，左侧栏为一级导航，中间栏可显示其对应的二级导航，也可放置其他的工具型选项。</p>
         </el-col>
-      </el-row>
+      </com-row>
     </div>
     <div class="block">
       <h3>顶部导航</h3>
-      <el-row>
+      <com-row>
         <el-col :span="10">
           <p>顺应了从上至下的正常浏览顺序，方便浏览信息；顶部宽度限制了导航的数量和文本长度。</p>
         </el-col>
@@ -113,7 +113,7 @@
           <img src="~examples/assets/images/navbar_0.png" alt="" @click="enlarge(846, $event)">
           <p>适用于导航较少，页面篇幅较长的网站。</p>
         </el-col>
-      </el-row>
+      </com-row>
     </div>
     <transition name="fade">
       <div class="mask" v-show="showDialog" @click="showDialog = false"></div>

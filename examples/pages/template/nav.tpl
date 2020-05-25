@@ -86,7 +86,7 @@
     </div>
     <div class="block">
       <h3><%= 5 ></h3>
-      <el-row :gutter="20">
+      <com-row :gutter="20">
         <el-col :span="9">
           <p><%= 6 ></p>
         </el-col>
@@ -101,11 +101,11 @@
           <h5><%= 11 ></h5>
           <p><%= 12 ></p>
         </el-col>
-      </el-row>
+      </com-row>
     </div>
     <div class="block">
       <h3><%= 13 ></h3>
-      <el-row>
+      <com-row>
         <el-col :span="10">
           <p><%= 14 ></p>
         </el-col>
@@ -113,7 +113,7 @@
           <img src="~examples/assets/images/navbar_0.png" alt="" @click="enlarge(846, $event)">
           <p><%= 15 ></p>
         </el-col>
-      </el-row>
+      </com-row>
     </div>
     <transition name="fade">
       <div class="mask" v-show="showDialog" @click="showDialog = false"></div>

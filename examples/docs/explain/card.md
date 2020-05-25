@@ -77,7 +77,7 @@
 
 :::demo 配置`body-style`属性来自定义`body`部分的`style`，我们还使用了布局组件。
 ```html
-<el-row>
+<com-row>
   <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
     <el-card :body-style="{ padding: '0px' }">
       <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
@@ -90,7 +90,7 @@
       </div>
     </el-card>
   </el-col>
-</el-row>
+</com-row>
 
 <style>
   .time {
@@ -142,7 +142,7 @@ export default {
 
 :::demo 通过`shadow`属性设置卡片阴影出现的时机：`always`、`hover`或`never`。
 ```html
-<el-row :gutter="12">
+<com-row :gutter="12">
   <el-col :span="8">
     <el-card shadow="always">
       总是显示
@@ -158,7 +158,7 @@ export default {
       从不显示
     </el-card>
   </el-col>
-</el-row>
+</com-row>
 ```
 :::
 

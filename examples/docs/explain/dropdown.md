@@ -95,7 +95,7 @@
 
 :::demo 在`trigger`属性设置为`click`即可。
 ```html
-<el-row class="block-col-2">
+<com-row class="block-col-2">
   <el-col :span="12">
     <span class="demonstration">hover 激活</span>
     <com-dropdown>
@@ -126,7 +126,7 @@
       </com-dropdown-menu>
     </com-dropdown>
   </el-col>
-</el-row>
+</com-row>
 
 <style>
   .com-dropdown-link {
