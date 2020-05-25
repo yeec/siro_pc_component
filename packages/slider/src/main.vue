@@ -80,7 +80,7 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElSlider',
+    name: 'ComSlider',
 
     mixins: [Emitter],
 

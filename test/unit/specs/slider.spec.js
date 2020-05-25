@@ -16,8 +16,8 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider v-model="value" :min="50">
-          </el-slider>
+          <com-slider v-model="value" :min="50">
+          </com-slider>
         </div>
       `,
 
@@ -44,8 +44,8 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider v-model="value">
-          </el-slider>
+          <com-slider v-model="value">
+          </com-slider>
         </div>
       `,
 
@@ -66,8 +66,8 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider v-model="value" :show-tooltip="false">
-          </el-slider>
+          <com-slider v-model="value" :show-tooltip="false">
+          </com-slider>
         </div>
       `,
 
@@ -85,8 +85,8 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider ref="slider" v-model="value" :format-tooltip="formatTooltip">
-          </el-slider>
+          <com-slider ref="slider" v-model="value" :format-tooltip="formatTooltip">
+          </com-slider>
         </div>
       `,
 
@@ -110,7 +110,7 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider v-model="value" :vertical="vertical"></el-slider>
+          <com-slider v-model="value" :vertical="vertical"></com-slider>
         </div>
       `,
 
@@ -146,7 +146,7 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider v-model="value"></el-slider>
+          <com-slider v-model="value"></com-slider>
         </div>
       `,
 
@@ -172,7 +172,7 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div style="width: 200px;">
-          <el-slider v-model="value" :min="0" :max="1" :step="0.1"></el-slider>
+          <com-slider v-model="value" :min="0" :max="1" :step="0.1"></com-slider>
         </div>
       `,
 
@@ -196,7 +196,7 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider v-model="value"></el-slider>
+          <com-slider v-model="value"></com-slider>
         </div>
       `,
 
@@ -220,8 +220,8 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider v-model="value" @change="onChange">
-          </el-slider>
+          <com-slider v-model="value" @change="onChange">
+          </com-slider>
         </div>
       `,
 
@@ -253,7 +253,7 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider v-model="value" disabled></el-slider>
+          <com-slider v-model="value" disabled></com-slider>
         </div>
       `,
 
@@ -277,7 +277,7 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider v-model="value" show-input></el-slider>
+          <com-slider v-model="value" show-input></com-slider>
         </div>
       `,
 
@@ -303,7 +303,7 @@ describe('Slider', () => {
       showStops: true,
       step: 10
     }, true);
-    const stops = vm.$el.querySelectorAll('.el-slider__stop');
+    const stops = vm.$el.querySelectorAll('.com-slider__stop');
     expect(stops.length).to.equal(9);
   });
 
@@ -311,7 +311,7 @@ describe('Slider', () => {
     vm = createVue({
       template: `
         <div>
-          <el-slider vertical v-model="value" height="200px"></el-slider>
+          <com-slider vertical v-model="value" height="200px"></com-slider>
         </div>
       `,
 
@@ -336,7 +336,7 @@ describe('Slider', () => {
       vm = createVue({
         template: `
         <div>
-          <el-slider v-model="value" range></el-slider>
+          <com-slider v-model="value" range></com-slider>
         </div>
       `,
 
@@ -354,8 +354,8 @@ describe('Slider', () => {
       vm = createVue({
         template: `
         <div>
-          <el-slider v-model="value" range :min="50">
-          </el-slider>
+          <com-slider v-model="value" range :min="50">
+          </com-slider>
         </div>
       `,
 
@@ -382,7 +382,7 @@ describe('Slider', () => {
       vm = createVue({
         template: `
         <div style="width: 200px;">
-          <el-slider range v-model="value"></el-slider>
+          <com-slider range v-model="value"></com-slider>
         </div>
       `,
 
@@ -407,8 +407,8 @@ describe('Slider', () => {
       vm = createVue({
         template: `
         <div>
-          <el-slider v-model="value" range :min="min" :max="max">
-          </el-slider>
+          <com-slider v-model="value" range :min="min" :max="max">
+          </com-slider>
         </div>
       `,
 
@@ -438,11 +438,11 @@ describe('Slider', () => {
       vm = createVue({
         template: `
         <div>
-          <el-slider
+          <com-slider
             v-model="value"
             range
             :step="10"
-            show-stops></el-slider>
+            show-stops></com-slider>
         </div>
       `,
 
@@ -453,7 +453,7 @@ describe('Slider', () => {
         }
       }, true);
       setTimeout(() => {
-        const stops = vm.$el.querySelectorAll('.el-slider__stop');
+        const stops = vm.$el.querySelectorAll('.com-slider__stop');
         expect(stops.length).to.equal(5);
         done();
       }, 10);
@@ -463,13 +463,13 @@ describe('Slider', () => {
       vm = createVue({
         template: `
         <div>
-          <el-slider
+          <com-slider
             v-model="value"
             range
             :step="10"
             :marks="marks"
             :min="20"
-            show-stops></el-slider>
+            show-stops></com-slider>
         </div>
       `,
 
@@ -492,8 +492,8 @@ describe('Slider', () => {
       }, true);
 
       waitImmediate();
-      const stops = vm.$el.querySelectorAll('.el-slider__marks-stop.el-slider__stop');
-      const marks = vm.$el.querySelectorAll('.el-slider__marks .el-slider__marks-text');
+      const stops = vm.$el.querySelectorAll('.com-slider__marks-stop.com-slider__stop');
+      const marks = vm.$el.querySelectorAll('.com-slider__marks .com-slider__marks-text');
       expect(marks.length).to.equal(2);
       expect(stops.length).to.equal(2);
     });

@@ -31,7 +31,7 @@
   import ElTooltip from 'element-ui/packages/tooltip';
 
   export default {
-    name: 'ElSliderButton',
+    name: 'ComSliderButton',
 
     components: {
       ElTooltip

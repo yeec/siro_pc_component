@@ -141,7 +141,7 @@
     </el-row>
     <h4>Slider</h4>
     <el-row style="width: 380px">
-      <el-slider v-model="slider"></el-slider>
+      <com-slider v-model="slider"></com-slider>
     </el-row>
     <h4>DatePicker</h4>
     <el-row>
