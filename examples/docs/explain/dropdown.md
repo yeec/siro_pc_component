@@ -96,7 +96,7 @@
 :::demo 在`trigger`属性设置为`click`即可。
 ```html
 <com-row class="block-col-2">
-  <el-col :span="12">
+  <com-col :span="12">
     <span class="demonstration">hover 激活</span>
     <com-dropdown>
       <span class="com-dropdown-link">
@@ -110,8 +110,8 @@
         <com-dropdown-item icon="el-icon-circle-check">蚵仔煎</com-dropdown-item>
       </com-dropdown-menu>
     </com-dropdown>
-  </el-col>
-  <el-col :span="12">
+  </com-col>
+  <com-col :span="12">
     <span class="demonstration">click 激活</span>
     <com-dropdown trigger="click">
       <span class="com-dropdown-link">
@@ -125,7 +125,7 @@
         <com-dropdown-item icon="el-icon-circle-check">蚵仔煎</com-dropdown-item>
       </com-dropdown-menu>
     </com-dropdown>
-  </el-col>
+  </com-col>
 </com-row>
 
 <style>
