@@ -139,7 +139,7 @@
   import Locale from 'element-ui/src/mixins/locale';
   import ElInput from 'element-ui/packages/input';
   import ElSelectMenu from './select-dropdown.vue';
-  import ElOption from './option.vue';
+  import ComOption from './option.vue';
   import ElTag from 'element-ui/packages/tag';
   import ElScrollbar from 'element-ui/packages/scrollbar';
   import debounce from 'throttle-debounce/debounce';
@@ -241,7 +241,7 @@
     components: {
       ElInput,
       ElSelectMenu,
-      ElOption,
+      ComOption,
       ElTag,
       ElScrollbar
     },
@@ -408,8 +408,8 @@
               this.$refs.input.focus();
             } else {
               if (!this.remote) {
-                this.broadcast('ElOption', 'queryChange', '');
-                this.broadcast('ElOptionGroup', 'queryChange');
+                this.broadcast('ComOption', 'queryChange', '');
+                this.broadcast('ComOptionGroup', 'queryChange');
               }
 
               if (this.selectedLabel) {
@@ -478,11 +478,11 @@
           this.remoteMethod(val);
         } else if (typeof this.filterMethod === 'function') {
           this.filterMethod(val);
-          this.broadcast('ElOptionGroup', 'queryChange');
+          this.broadcast('ComOptionGroup', 'queryChange');
         } else {
           this.filteredOptionsCount = this.optionsCount;
-          this.broadcast('ElOption', 'queryChange', val);
-          this.broadcast('ElOptionGroup', 'queryChange');
+          this.broadcast('ComOption', 'queryChange', val);
+          this.broadcast('ComOptionGroup', 'queryChange');
         }
         if (this.defaultFirstOption && (this.filterable || this.remote) && this.filteredOptionsCount) {
           this.checkDefaultFirstOption();
