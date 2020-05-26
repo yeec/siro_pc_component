@@ -19,24 +19,24 @@
     </com-select>
   </el-form-item>
   <el-form-item label="活动时间">
-    <el-col :span="11">
+    <com-col :span="11">
       <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
+    </com-col>
+    <com-col class="line" :span="2">-</com-col>
+    <com-col :span="11">
       <el-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></el-time-picker>
-    </el-col>
+    </com-col>
   </el-form-item>
   <el-form-item label="即时配送">
     <el-switch v-model="form.delivery"></el-switch>
   </el-form-item>
   <el-form-item label="活动性质">
-    <el-checkbox-group v-model="form.type">
-      <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
-      <el-checkbox label="地推活动" name="type"></el-checkbox>
-      <el-checkbox label="线下主题活动" name="type"></el-checkbox>
-      <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
-    </el-checkbox-group>
+    <com-checkbox-group v-model="form.type">
+      <com-checkbox label="美食/餐厅线上活动" name="type"></com-checkbox>
+      <com-checkbox label="地推活动" name="type"></com-checkbox>
+      <com-checkbox label="线下主题活动" name="type"></com-checkbox>
+      <com-checkbox label="单纯品牌曝光" name="type"></com-checkbox>
+    </com-checkbox-group>
   </el-form-item>
   <el-form-item label="特殊资源">
     <com-radio-group v-model="form.resource">
@@ -182,28 +182,28 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </com-select>
   </el-form-item>
   <el-form-item label="活动时间" required>
-    <el-col :span="11">
+    <com-col :span="11">
       <el-form-item prop="date1">
         <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
       </el-form-item>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
+    </com-col>
+    <com-col class="line" :span="2">-</com-col>
+    <com-col :span="11">
       <el-form-item prop="date2">
         <el-time-picker placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
       </el-form-item>
-    </el-col>
+    </com-col>
   </el-form-item>
   <el-form-item label="即时配送" prop="delivery">
     <el-switch v-model="ruleForm.delivery"></el-switch>
   </el-form-item>
   <el-form-item label="活动性质" prop="type">
-    <el-checkbox-group v-model="ruleForm.type">
-      <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
-      <el-checkbox label="地推活动" name="type"></el-checkbox>
-      <el-checkbox label="线下主题活动" name="type"></el-checkbox>
-      <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
-    </el-checkbox-group>
+    <com-checkbox-group v-model="ruleForm.type">
+      <com-checkbox label="美食/餐厅线上活动" name="type"></com-checkbox>
+      <com-checkbox label="地推活动" name="type"></com-checkbox>
+      <com-checkbox label="线下主题活动" name="type"></com-checkbox>
+      <com-checkbox label="单纯品牌曝光" name="type"></com-checkbox>
+    </com-checkbox-group>
   </el-form-item>
   <el-form-item label="特殊资源" prop="resource">
     <com-radio-group v-model="ruleForm.resource">
@@ -527,20 +527,20 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </com-select>
   </el-form-item>
   <el-form-item label="活动时间">
-    <el-col :span="11">
+    <com-col :span="11">
       <el-date-picker type="date" placeholder="选择日期" v-model="sizeForm.date1" style="width: 100%;"></el-date-picker>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
+    </com-col>
+    <com-col class="line" :span="2">-</com-col>
+    <com-col :span="11">
       <el-time-picker placeholder="选择时间" v-model="sizeForm.date2" style="width: 100%;"></el-time-picker>
-    </el-col>
+    </com-col>
   </el-form-item>
   <el-form-item label="活动性质">
-    <el-checkbox-group v-model="sizeForm.type">
-      <el-checkbox-button label="美食/餐厅线上活动" name="type"></el-checkbox-button>
-      <el-checkbox-button label="地推活动" name="type"></el-checkbox-button>
-      <el-checkbox-button label="线下主题活动" name="type"></el-checkbox-button>
-    </el-checkbox-group>
+    <com-checkbox-group v-model="sizeForm.type">
+      <com-checkbox-button label="美食/餐厅线上活动" name="type"></com-checkbox-button>
+      <com-checkbox-button label="地推活动" name="type"></com-checkbox-button>
+      <com-checkbox-button label="线下主题活动" name="type"></com-checkbox-button>
+    </com-checkbox-group>
   </el-form-item>
   <el-form-item label="特殊资源">
     <com-radio-group v-model="sizeForm.resource" size="medium">

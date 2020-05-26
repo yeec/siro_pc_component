@@ -1437,7 +1437,7 @@
     <el-table-column
       align="right">
       <template slot="header" slot-scope="scope">
-        <el-input
+        <com-input
           v-model="search"
           size="mini"
           placeholder="输入关键字搜索"/>

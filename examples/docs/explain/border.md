@@ -90,32 +90,32 @@
 我们提供了以下几种圆角样式，以供选择。
 
 <com-row :gutter="12" class="demo-radius">
-  <el-col :span="6" :xs="{span: 12}">
+  <com-col :span="6" :xs="{span: 12}">
     <div class="title">无圆角</div>
     <div class="value">border-radius: 0px</div>
     <div class="radius"></div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </com-col>
+  <com-col :span="6" :xs="{span: 12}">
     <div class="title">小圆角</div>
     <div class="value">border-radius: {{borderRadiusSmall}}</div>
     <div 
       class="radius" 
       :style="{ borderRadius: borderRadiusSmall }"
     ></div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </com-col>
+  <com-col :span="6" :xs="{span: 12}">
     <div class="title">大圆角</div>
     <div class="value">border-radius: {{borderRadiusBase}}</div>
     <div 
       class="radius"
       :style="{ borderRadius: borderRadiusBase }"
     ></div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </com-col>
+  <com-col :span="6" :xs="{span: 12}">
     <div class="title">圆形圆角</div>
     <div class="value">border-radius: 30px</div>
     <div class="radius radius-30"></div>
-  </el-col>
+  </com-col>
 </com-row>
 
 ### 投影

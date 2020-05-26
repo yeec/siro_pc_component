@@ -130,12 +130,12 @@
         }
 
         return (
-          <el-checkbox
+          <com-checkbox
             value={ node.checked }
             indeterminate={ node.indeterminate }
             disabled={ isDisabled }
             { ...events }
-          ></el-checkbox>
+          ></com-checkbox>
         );
       },
 

@@ -300,27 +300,27 @@ export default {
 :::demo autocomplete 是一个可带输入建议的输入框组件，`fetch-suggestions` 是一个返回输入建议的方法属性，如 querySearch(queryString, cb)，在该方法中你可以在你的输入建议数据准备好时通过 cb(data) 返回到 autocomplete 组件中。
 ```html
 <com-row class="demo-autocomplete">
-  <el-col :span="12">
+  <com-col :span="12">
     <div class="sub-title">激活即列出输入建议</div>
-    <el-autocomplete
+    <com-autocomplete
       class="inline-input"
       v-model="state1"
       :fetch-suggestions="querySearch"
       placeholder="请输入内容"
       @select="handleSelect"
-    ></el-autocomplete>
-  </el-col>
-  <el-col :span="12">
+    ></com-autocomplete>
+  </com-col>
+  <com-col :span="12">
     <div class="sub-title">输入后匹配输入建议</div>
-    <el-autocomplete
+    <com-autocomplete
       class="inline-input"
       v-model="state2"
       :fetch-suggestions="querySearch"
       placeholder="请输入内容"
       :trigger-on-focus="false"
       @select="handleSelect"
-    ></el-autocomplete>
-  </el-col>
+    ></com-autocomplete>
+  </com-col>
 </com-row>
 <script>
   export default {
@@ -413,7 +413,7 @@ export default {
 
 :::demo 使用`scoped slot`自定义输入建议的模板。该 scope 的参数为`item`，表示当前输入建议对象。
 ```html
-<el-autocomplete
+<com-autocomplete
   popper-class="my-autocomplete"
   v-model="state"
   :fetch-suggestions="querySearch"
@@ -428,7 +428,7 @@ export default {
     <div class="name">{{ item.value }}</div>
     <span class="addr">{{ item.address }}</span>
   </template>
-</el-autocomplete>
+</com-autocomplete>
 
 <style>
 .my-autocomplete {
@@ -545,12 +545,12 @@ export default {
 
 :::demo
 ```html
-<el-autocomplete
+<com-autocomplete
   v-model="state"
   :fetch-suggestions="querySearchAsync"
   placeholder="请输入内容"
   @select="handleSelect"
-></el-autocomplete>
+></com-autocomplete>
 <script>
   export default {
     data() {
