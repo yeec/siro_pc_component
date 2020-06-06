@@ -1,8 +1,8 @@
-import ElTabs from './src/tabs';
+import ComTabs from './src/tabs';
 
 /* istanbul ignore next */
-ElTabs.install = function(Vue) {
-  Vue.component(ElTabs.name, ElTabs);
+ComTabs.install = function(Vue) {
+  Vue.component(ComTabs.name, ComTabs);
 };
 
-export default ElTabs;
+export default ComTabs;

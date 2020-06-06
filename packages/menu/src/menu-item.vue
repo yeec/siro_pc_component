@@ -13,7 +13,7 @@
     @blur="onMouseLeave"
     @mouseleave="onMouseLeave"
   >
-    <el-tooltip
+    <com-tooltip
       v-if="parentMenu.$options.componentName === 'ComMenu' && rootMenu.collapse && $slots.title"
       effect="dark"
       placement="right">
@@ -21,7 +21,7 @@
       <div style="position: absolute;left: 0;top: 0;height: 100%;width: 100%;display: inline-block;box-sizing: border-box;padding: 0 20px;">
         <slot></slot>
       </div>
-    </el-tooltip>
+    </com-tooltip>
     <template v-else>
       <slot></slot>
       <slot name="title"></slot>
@@ -30,7 +30,7 @@
 </template>
 <script>
   import Menu from './menu-mixin';
-  import ElTooltip from 'element-ui/packages/tooltip';
+  import ComTooltip from 'element-ui/packages/tooltip';
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
@@ -40,7 +40,7 @@
 
     mixins: [Menu, Emitter],
 
-    components: { ElTooltip },
+    components: { ComTooltip },
 
     props: {
       index: {

@@ -1,20 +1,20 @@
 <template>
   <div class="configurator-action">
       <div class="action-group">
-        <el-tooltip :content="getActionDisplayName('undo')">
+        <com-tooltip :content="getActionDisplayName('undo')">
           <img 
             src="../../assets/images/icon-undo.svg"
             @click="onUndo"
             :class="{ 'active': userConfigHistory.length > 0 }"
           />
-        </el-tooltip>
-        <el-tooltip :content="getActionDisplayName('redo')">
+        </com-tooltip>
+        <com-tooltip :content="getActionDisplayName('redo')">
           <img 
             src="../../assets/images/icon-redo.svg"
             @click="onRedo"
             :class="{ 'active': userConfigRedoHistory.length > 0 }"
           />
-        </el-tooltip>
+        </com-tooltip>
         <div class="button-group">
           <el-button 
             class="reset"

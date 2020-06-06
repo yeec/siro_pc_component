@@ -9,14 +9,14 @@ describe('Timeline', () => {
   it('create', () => {
     vm = createVue({
       template: `
-        <el-timeline>
-          <el-timeline-item
+        <com-timeline>
+          <com-timeline-item
             v-for="(activity, index) in activities"
             :key="index"
             :timestamp="activity.timestamp">
             {{activity.content}}
-          </el-timeline-item>
-        </el-timeline>
+          </com-timeline-item>
+        </com-timeline>
       `,
       data() {
         return {
@@ -46,14 +46,14 @@ describe('Timeline', () => {
   it('reverse', done => {
     vm = createVue({
       template: `
-        <el-timeline :reverse="reverse">
-          <el-timeline-item
+        <com-timeline :reverse="reverse">
+          <com-timeline-item
             v-for="(activity, index) in activities"
             :key="index"
             :timestamp="activity.timestamp">
             {{activity.content}}
-          </el-timeline-item>
-        </el-timeline>
+          </com-timeline-item>
+        </com-timeline>
       `,
 
       data() {
@@ -91,15 +91,15 @@ describe('Timeline', () => {
   it('placement', () => {
     vm = createVue({
       template: `
-        <el-timeline>
-          <el-timeline-item
+        <com-timeline>
+          <com-timeline-item
             v-for="(activity, index) in activities"
             :key="index"
             :timestamp="activity.timestamp"
             :placement="activity.placement">
             {{activity.content}}
-          </el-timeline-item>
-        </el-timeline>
+          </com-timeline-item>
+        </com-timeline>
       `,
 
       data() {
@@ -126,15 +126,15 @@ describe('Timeline', () => {
   it('hide-timestamp', () => {
     vm = createVue({
       template: `
-        <el-timeline>
-          <el-timeline-item
+        <com-timeline>
+          <com-timeline-item
             v-for="(activity, index) in activities"
             :key="index"
             :timestamp="activity.timestamp"
             :hide-timestamp="activity.hideTimestamp">
             {{activity.content}}
-          </el-timeline-item>
-        </el-timeline>
+          </com-timeline-item>
+        </com-timeline>
       `,
 
       data() {
@@ -161,13 +161,13 @@ describe('Timeline', () => {
   it('color', () => {
     vm = createVue({
       template: `
-        <el-timeline>
-          <el-timeline-item
+        <com-timeline>
+          <com-timeline-item
             timestamp="2018-04-11"
             color="#f00">
             创建成功
-          </el-timeline-item>
-        </el-timeline>
+          </com-timeline-item>
+        </com-timeline>
       `
     }, true);
 
@@ -178,13 +178,13 @@ describe('Timeline', () => {
   it('type', () => {
     vm = createVue({
       template: `
-        <el-timeline>
-          <el-timeline-item
+        <com-timeline>
+          <com-timeline-item
             timestamp="2018-04-11"
             type="primary">
             创建成功
-          </el-timeline-item>
-        </el-timeline>
+          </com-timeline-item>
+        </com-timeline>
       `
     }, true);
 
@@ -195,13 +195,13 @@ describe('Timeline', () => {
   it('size', () => {
     vm = createVue({
       template: `
-        <el-timeline>
-          <el-timeline-item
+        <com-timeline>
+          <com-timeline-item
             timestamp="2018-04-11"
             type="large">
             创建成功
-          </el-timeline-item>
-        </el-timeline>
+          </com-timeline-item>
+        </com-timeline>
       `
     }, true);
 
@@ -212,13 +212,13 @@ describe('Timeline', () => {
   it('icon', () => {
     vm = createVue({
       template: `
-        <el-timeline>
-          <el-timeline-item
+        <com-timeline>
+          <com-timeline-item
             timestamp="2018-04-11"
             icon="el-icon-more">
             创建成功
-          </el-timeline-item>
-        </el-timeline>
+          </com-timeline-item>
+        </com-timeline>
       `
     }, true);
 

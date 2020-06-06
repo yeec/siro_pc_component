@@ -37,11 +37,11 @@ describe('Switch', () => {
     vm = createVue({
       template: `
         <div>
-          <el-switch
+          <com-switch
             v-model="value"
             activeColor="#0f0"
             inactiveColor="#f00">
-          </el-switch>
+            </com-switch>
         </div>
       `,
 
@@ -70,10 +70,10 @@ describe('Switch', () => {
     vm = createVue({
       template: `
         <div>
-          <el-switch
+          <com-switch
             v-model="value"
             @change="handleChange">  
-          </el-switch>
+            </com-switch>
         </div>
       `,
       mounted() {
@@ -109,7 +109,7 @@ describe('Switch', () => {
     vm = createVue({
       template: `
         <div>
-          <el-switch disabled v-model="value"></el-switch>
+          <com-switch disabled v-model="value"></com-switch>
         </div>
       `,
 
@@ -131,7 +131,7 @@ describe('Switch', () => {
     vm = createVue({
       template: `
         <div>
-          <el-switch v-model="value" :active-value="onValue" :inactive-value="offValue"></el-switch>
+          <com-switch v-model="value" :active-value="onValue" :inactive-value="offValue"></com-switch>
         </div>
       `,
       data() {
@@ -159,7 +159,7 @@ describe('Switch', () => {
     vm = createVue({
       template: `
         <div>
-          <el-switch :value="true"></el-switch>
+          <com-switch :value="true"></com-switch>
         </div>
       `
     }, true);
@@ -186,7 +186,7 @@ describe('Switch', () => {
     vm = createVue({
       template: `
         <div>
-          <el-switch v-model="value"></el-switch>
+          <com-switch v-model="value"></com-switch>
         </div>
       `,
       data() {

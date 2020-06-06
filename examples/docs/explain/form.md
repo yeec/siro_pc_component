@@ -28,7 +28,7 @@
     </com-col>
   </el-form-item>
   <el-form-item label="即时配送">
-    <el-switch v-model="form.delivery"></el-switch>
+    <com-switch v-model="form.delivery"></com-switch>
   </el-form-item>
   <el-form-item label="活动性质">
     <com-checkbox-group v-model="form.type">
@@ -195,7 +195,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </com-col>
   </el-form-item>
   <el-form-item label="即时配送" prop="delivery">
-    <el-switch v-model="ruleForm.delivery"></el-switch>
+    <com-switch v-model="ruleForm.delivery"></com-switch>
   </el-form-item>
   <el-form-item label="活动性质" prop="type">
     <com-checkbox-group v-model="ruleForm.type">

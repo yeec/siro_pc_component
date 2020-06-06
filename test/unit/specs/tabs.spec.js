@@ -23,12 +23,12 @@ describe('Tabs', () => {
   it('create', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理" ref="pane-click">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs ref="tabs">
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="角色管理" ref="pane-click">C</com-tab-pane>
+          <com-tab-pane label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `
     }, true);
 
@@ -54,12 +54,12 @@ describe('Tabs', () => {
   it('active-name', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" :active-name="activeName" @click="handleClick">
-          <el-tab-pane name="tab-A" label="用户管理">A</el-tab-pane>
-          <el-tab-pane name="tab-B" label="配置管理">B</el-tab-pane>
-          <el-tab-pane name="tab-C" label="角色管理">C</el-tab-pane>
-          <el-tab-pane name="tab-D" label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs ref="tabs" :active-name="activeName" @click="handleClick">
+          <com-tab-pane name="tab-A" label="用户管理">A</com-tab-pane>
+          <com-tab-pane name="tab-B" label="配置管理">B</com-tab-pane>
+          <com-tab-pane name="tab-C" label="角色管理">C</com-tab-pane>
+          <com-tab-pane name="tab-D" label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `,
       data() {
         return {
@@ -91,12 +91,12 @@ describe('Tabs', () => {
   it('card', () => {
     vm = createVue({
       template: `
-        <el-tabs type="card">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs type="card">
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="角色管理">C</com-tab-pane>
+          <com-tab-pane label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `
     }, true);
 
@@ -105,12 +105,12 @@ describe('Tabs', () => {
   it('border card', () => {
     vm = createVue({
       template: `
-        <el-tabs type="border-card">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs type="border-card">
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="角色管理">C</com-tab-pane>
+          <com-tab-pane label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `
     }, true);
 
@@ -119,9 +119,9 @@ describe('Tabs', () => {
   it('dynamic', (done) => {
     vm = createVue({
       template: `
-        <el-tabs type="card" ref="tabs">
-          <el-tab-pane :label="tab.label" :name="tab.name" v-for="tab in tabs" :key="tab.name">Test Content</el-tab-pane>
-        </el-tabs>
+        <com-tabs type="card" ref="tabs">
+          <com-tab-pane :label="tab.label" :name="tab.name" v-for="tab in tabs" :key="tab.name">Test Content</com-tab-pane>
+        </com-tabs>
       `,
       data() {
         return {
@@ -157,16 +157,16 @@ describe('Tabs', () => {
   it('editable', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
-          <el-tab-pane
+        <com-tabs ref="tabs" v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+          <com-tab-pane
             v-for="(item, index) in editableTabs"
             :key="item.name"
             :label="item.title"
             :name="item.name"
           >
             {{item.content}}
-          </el-tab-pane>
-        </el-tabs>
+          </com-tab-pane>
+        </com-tabs>
       `,
       data() {
         return {
@@ -241,7 +241,7 @@ describe('Tabs', () => {
   it('addable & closable', done => {
     vm = createVue({
       template: `
-        <el-tabs
+        <com-tabs
           ref="tabs"
           v-model="editableTabsValue"
           type="card"
@@ -250,15 +250,15 @@ describe('Tabs', () => {
           @tab-add="addTab"
           @tab-remove="removeTab"
         >
-          <el-tab-pane
+          <com-tab-pane
             v-for="(item, index) in editableTabs"
             :label="item.title"
             :key="item.name"
             :name="item.name"
           >
             {{item.content}}
-          </el-tab-pane>
-        </el-tabs>
+          </com-tab-pane>
+        </com-tabs>
       `,
       data() {
         return {
@@ -328,12 +328,12 @@ describe('Tabs', () => {
   it('closable in tab-pane', (done) => {
     vm = createVue({
       template: `
-        <el-tabs type="card" ref="tabs">
-          <el-tab-pane label="用户管理" closable>A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理" closable>C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs type="card" ref="tabs">
+          <com-tab-pane label="用户管理" closable>A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="角色管理" closable>C</com-tab-pane>
+          <com-tab-pane label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `
     }, true);
 
@@ -345,12 +345,12 @@ describe('Tabs', () => {
   it('disabled', done => {
     vm = createVue({
       template: `
-        <el-tabs type="card" ref="tabs">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane disabled label="配置管理" ref="disabled">B</el-tab-pane>
-          <el-tab-pane label="角色管理">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs type="card" ref="tabs">
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane disabled label="配置管理" ref="disabled">B</com-tab-pane>
+          <com-tab-pane label="角色管理">C</com-tab-pane>
+          <com-tab-pane label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `
     }, true);
 
@@ -367,12 +367,12 @@ describe('Tabs', () => {
   it('tab-position', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" tab-position="left">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理" ref="pane-click">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs ref="tabs" tab-position="left">
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="角色管理" ref="pane-click">C</com-tab-pane>
+          <com-tab-pane label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `
     }, true);
 
@@ -398,12 +398,12 @@ describe('Tabs', () => {
   it('stretch', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" stretch :tab-position="tabPosition">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理" ref="pane-click">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs ref="tabs" stretch :tab-position="tabPosition">
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="角色管理" ref="pane-click">C</com-tab-pane>
+          <com-tab-pane label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `,
       data() {
         return {
@@ -426,15 +426,15 @@ describe('Tabs', () => {
   it('horizonal-scrollable', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" style="width: 200px;">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs ref="tabs" style="width: 200px;">
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `
     }, true);
 
@@ -464,15 +464,15 @@ describe('Tabs', () => {
   it('vertical-scrollable', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" tab-position="left" style="height: 200px;">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs ref="tabs" tab-position="left" style="height: 200px;">
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="用户管理">A</com-tab-pane>
+          <com-tab-pane label="配置管理">B</com-tab-pane>
+          <com-tab-pane label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `
     }, true);
 
@@ -502,12 +502,12 @@ describe('Tabs', () => {
   it('should work with lazy', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs">
-          <el-tab-pane label="用户管理" name="A">A</el-tab-pane>
-          <el-tab-pane label="配置管理" name="B">B</el-tab-pane>
-          <el-tab-pane label="角色管理" name="C">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿" lazy name="D">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs ref="tabs">
+          <com-tab-pane label="用户管理" name="A">A</com-tab-pane>
+          <com-tab-pane label="配置管理" name="B">B</com-tab-pane>
+          <com-tab-pane label="角色管理" name="C">C</com-tab-pane>
+          <com-tab-pane label="定时任务补偿" lazy name="D">D</com-tab-pane>
+        </com-tabs>
       `
     }, true);
 
@@ -532,12 +532,12 @@ describe('Tabs', () => {
   it('before leave', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" v-model="activeName" :before-leave="beforeLeave">
-          <el-tab-pane name="tab-A" label="用户管理">A</el-tab-pane>
-          <el-tab-pane name="tab-B" label="配置管理">B</el-tab-pane>
-          <el-tab-pane name="tab-C" label="角色管理">C</el-tab-pane>
-          <el-tab-pane name="tab-D" label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs ref="tabs" v-model="activeName" :before-leave="beforeLeave">
+          <com-tab-pane name="tab-A" label="用户管理">A</com-tab-pane>
+          <com-tab-pane name="tab-B" label="配置管理">B</com-tab-pane>
+          <com-tab-pane name="tab-C" label="角色管理">C</com-tab-pane>
+          <com-tab-pane name="tab-D" label="定时任务补偿">D</com-tab-pane>
+        </com-tabs>
       `,
       data() {
         return {
@@ -573,12 +573,12 @@ describe('Tabs', () => {
   it('keyboard event', done => {
     vm = createVue({
       template: `
-        <el-tabs v-model="activeName">
-          <el-tab-pane label="用户管理" name="first">A</el-tab-pane>
-          <el-tab-pane label="配置管理" name="second">B</el-tab-pane>
-          <el-tab-pane label="角色管理" name="third">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿" name="fourth">D</el-tab-pane>
-        </el-tabs>
+        <com-tabs v-model="activeName">
+          <com-tab-pane label="用户管理" name="first">A</com-tab-pane>
+          <com-tab-pane label="配置管理" name="second">B</com-tab-pane>
+          <com-tab-pane label="角色管理" name="third">C</com-tab-pane>
+          <com-tab-pane label="定时任务补偿" name="fourth">D</com-tab-pane>
+        </com-tabs>
       `,
       data() {
         return {

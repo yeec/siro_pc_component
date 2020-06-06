@@ -10,12 +10,12 @@
 
 ```html
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-    <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <com-tabs v-model="activeName" @tab-click="handleClick">
+    <com-tab-pane label="用户管理" name="first">用户管理</com-tab-pane>
+    <com-tab-pane label="配置管理" name="second">配置管理</com-tab-pane>
+    <com-tab-pane label="角色管理" name="third">角色管理</com-tab-pane>
+    <com-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</com-tab-pane>
+  </com-tabs>
 </template>
 <script>
   export default {
@@ -42,12 +42,12 @@
 
 ```html
 <template>
-  <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-    <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <com-tabs v-model="activeName" type="card" @tab-click="handleClick">
+    <com-tab-pane label="用户管理" name="first">用户管理</com-tab-pane>
+    <com-tab-pane label="配置管理" name="second">配置管理</com-tab-pane>
+    <com-tab-pane label="角色管理" name="third">角色管理</com-tab-pane>
+    <com-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</com-tab-pane>
+  </com-tabs>
 </template>
 <script>
   export default {
@@ -72,12 +72,12 @@
 
 :::demo 将`type`设置为`border-card`。
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane label="用户管理">用户管理</el-tab-pane>
-  <el-tab-pane label="配置管理">配置管理</el-tab-pane>
-  <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-  <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-</el-tabs>
+<com-tabs type="border-card">
+  <com-tab-pane label="用户管理">用户管理</com-tab-pane>
+  <com-tab-pane label="配置管理">配置管理</com-tab-pane>
+  <com-tab-pane label="角色管理">角色管理</com-tab-pane>
+  <com-tab-pane label="定时任务补偿">定时任务补偿</com-tab-pane>
+</com-tabs>
 ```
 :::
 
@@ -96,12 +96,12 @@
     <com-radio-button label="left">left</com-radio-button>
   </com-radio-group>
 
-  <el-tabs :tab-position="tabPosition" style="height: 200px;">
-    <el-tab-pane label="用户管理">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <com-tabs :tab-position="tabPosition" style="height: 200px;">
+    <com-tab-pane label="用户管理">用户管理</com-tab-pane>
+    <com-tab-pane label="配置管理">配置管理</com-tab-pane>
+    <com-tab-pane label="角色管理">角色管理</com-tab-pane>
+    <com-tab-pane label="定时任务补偿">定时任务补偿</com-tab-pane>
+  </com-tabs>
 </template>
 <script>
   export default {
@@ -121,15 +121,15 @@
 
 :::demo
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane>
+<com-tabs type="border-card">
+  <com-tab-pane>
     <span slot="label"><i class="el-icon-date"></i> 我的行程</span>
     我的行程
-  </el-tab-pane>
-  <el-tab-pane label="消息中心">消息中心</el-tab-pane>
-  <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-  <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-</el-tabs>
+  </com-tab-pane>
+  <com-tab-pane label="消息中心">消息中心</com-tab-pane>
+  <com-tab-pane label="角色管理">角色管理</com-tab-pane>
+  <com-tab-pane label="定时任务补偿">定时任务补偿</com-tab-pane>
+</com-tabs>
 ```
 :::
 
@@ -139,16 +139,16 @@
 
 :::demo
 ```html
-<el-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
-  <el-tab-pane
+<com-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+  <com-tab-pane
     :key="item.name"
     v-for="(item, index) in editableTabs"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </com-tab-pane>
+</com-tabs>
 <script>
   export default {
     data() {
@@ -213,16 +213,16 @@
     add tab
   </com-button>
 </div>
-<el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
-  <el-tab-pane
+<com-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+  <com-tab-pane
     v-for="(item, index) in editableTabs"
     :key="item.name"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </com-tab-pane>
+</com-tabs>
 <script>
   export default {
     data() {

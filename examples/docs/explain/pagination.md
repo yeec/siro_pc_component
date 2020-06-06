@@ -147,8 +147,8 @@
 :::demo
 ```html
 <div>
- <el-switch v-model="value">
- </el-switch>
+ <com-switch v-model="value">
+ </com-switch>
  <com-pagination
   :hide-on-single-page="value"
   :total="5"

@@ -1,6 +1,6 @@
 <script>
   export default {
-    name: 'ElTimeline',
+    name: 'ComTimeline',
 
     props: {
       reverse: {

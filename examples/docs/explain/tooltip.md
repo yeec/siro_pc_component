@@ -11,49 +11,49 @@
 ```html
 <div class="box">
   <div class="top">
-    <el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
+    <com-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
       <com-button>上左</com-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Top Center 提示文字" placement="top">
+    </com-tooltip>
+    <com-tooltip class="item" effect="dark" content="Top Center 提示文字" placement="top">
       <com-button>上边</com-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Top Right 提示文字" placement="top-end">
+    </com-tooltip>
+    <com-tooltip class="item" effect="dark" content="Top Right 提示文字" placement="top-end">
       <com-button>上右</com-button>
-    </el-tooltip>
+    </com-tooltip>
   </div>
   <div class="left">
-    <el-tooltip class="item" effect="dark" content="Left Top 提示文字" placement="left-start">
+    <com-tooltip class="item" effect="dark" content="Left Top 提示文字" placement="left-start">
       <com-button>左上</com-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Left Center 提示文字" placement="left">
+    </com-tooltip>
+    <com-tooltip class="item" effect="dark" content="Left Center 提示文字" placement="left">
       <com-button>左边</com-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Left Bottom 提示文字" placement="left-end">
+    </com-tooltip>
+    <com-tooltip class="item" effect="dark" content="Left Bottom 提示文字" placement="left-end">
       <com-button>左下</com-button>
-    </el-tooltip>
+    </com-tooltip>
   </div>
 
   <div class="right">
-    <el-tooltip class="item" effect="dark" content="Right Top 提示文字" placement="right-start">
+    <com-tooltip class="item" effect="dark" content="Right Top 提示文字" placement="right-start">
       <com-button>右上</com-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Right Center 提示文字" placement="right">
+    </com-tooltip>
+    <com-tooltip class="item" effect="dark" content="Right Center 提示文字" placement="right">
       <com-button>右边</com-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Right Bottom 提示文字" placement="right-end">
+    </com-tooltip>
+    <com-tooltip class="item" effect="dark" content="Right Bottom 提示文字" placement="right-end">
       <com-button>右下</com-button>
-    </el-tooltip>
+    </com-tooltip>
   </div>
   <div class="bottom">
-    <el-tooltip class="item" effect="dark" content="Bottom Left 提示文字" placement="bottom-start">
+    <com-tooltip class="item" effect="dark" content="Bottom Left 提示文字" placement="bottom-start">
       <com-button>下左</com-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
+    </com-tooltip>
+    <com-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
       <com-button>下边</com-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Bottom Right 提示文字" placement="bottom-end">
+    </com-tooltip>
+    <com-tooltip class="item" effect="dark" content="Bottom Right 提示文字" placement="bottom-end">
       <com-button>下右</com-button>
-    </el-tooltip>
+    </com-tooltip>
   </div>
 </div>
 
@@ -84,8 +84,8 @@
       margin: 4px;
     }
 
-    .left .el-tooltip__popper,
-    .right .el-tooltip__popper {
+    .left .com-tooltip__popper,
+    .right .com-tooltip__popper {
       padding: 8px 10px;
     }
   }
@@ -100,12 +100,12 @@ Tooltip 组件提供了两个不同的主题：`dark`和`light`。
 
 :::demo 通过设置`effect`属性来改变主题，默认为`dark`。
 ```html
-<el-tooltip content="Top center" placement="top">
+<com-tooltip content="Top center" placement="top">
   <com-button>Dark</com-button>
-</el-tooltip>
-<el-tooltip content="Bottom center" placement="bottom" effect="light">
+</com-tooltip>
+<com-tooltip content="Bottom center" placement="bottom" effect="light">
   <com-button>Light</com-button>
-</el-tooltip>
+</com-tooltip>
 ```
 :::
 
@@ -115,10 +115,10 @@ Tooltip 组件提供了两个不同的主题：`dark`和`light`。
 
 :::demo 用具名 slot 分发`content`，替代`tooltip`中的`content`属性。
 ```html
-<el-tooltip placement="top">
+<com-tooltip placement="top">
   <div slot="content">多行信息<br/>第二行信息</div>
   <com-button>Top center</com-button>
-</el-tooltip>
+</com-tooltip>
 ```
 :::
 
@@ -135,9 +135,9 @@ Tooltip 组件提供了两个不同的主题：`dark`和`light`。
 :::demo
 ```html
 <template>
-  <el-tooltip :disabled="disabled" content="点击关闭 tooltip 功能" placement="bottom" effect="light">
+  <com-tooltip :disabled="disabled" content="点击关闭 tooltip 功能" placement="bottom" effect="light">
     <com-button @click="disabled = !disabled">点击{{disabled ? '开启' : '关闭'}} tooltip 功能</com-button>
-  </el-tooltip>
+  </com-tooltip>
 </template>
 <script>
   export default {

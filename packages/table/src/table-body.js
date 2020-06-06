@@ -1,8 +1,8 @@
 import { arrayFindIndex } from 'element-ui/src/utils/util';
 import { getCell, getColumnByCell, getRowIdentity } from './util';
 import { getStyle, hasClass, removeClass, addClass } from 'element-ui/src/utils/dom';
-import ElCheckbox from 'element-ui/packages/checkbox';
-import ElTooltip from 'element-ui/packages/tooltip';
+import ComCheckbox from 'element-ui/packages/checkbox';
+import ComTooltip from 'element-ui/packages/tooltip';
 import debounce from 'throttle-debounce/debounce';
 import LayoutObserver from './layout-observer';
 import { mapStates } from './store/helper';
@@ -13,8 +13,8 @@ export default {
   mixins: [LayoutObserver],
 
   components: {
-    ElCheckbox,
-    ElTooltip
+    ComCheckbox,
+    ComTooltip
   },
 
   props: {
@@ -48,7 +48,7 @@ export default {
               return acc.concat(this.wrappedRowRender(row, acc.length));
             }, [])
           }
-          <el-tooltip effect={ this.table.tooltipEffect } placement="top" ref="tooltip" content={ this.tooltipContent }></el-tooltip>
+          <com-tooltip effect={ this.table.tooltipEffect } placement="top" ref="tooltip" content={ this.tooltipContent }></com-tooltip>
         </tbody>
       </table>
     );

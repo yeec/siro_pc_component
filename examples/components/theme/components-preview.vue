@@ -131,13 +131,13 @@
     </el-row>
     <h4>Switch</h4>
     <el-row>
-      <el-switch v-model="switchValue"></el-switch>
-      <el-switch
+      <com-switch v-model="switchValue"></com-switch>
+      <com-switch
         style="margin-left: 40px"
         v-model="switchValue"
         active-text="Pay by month"
         inactive-text="Pay by year">
-      </el-switch>
+      </com-switch>
     </el-row>
     <h4>Slider</h4>
     <el-row style="width: 380px">
@@ -189,7 +189,7 @@
     </el-row>
     <h4>Tree</h4>
     <el-row style="width: 380px">
-      <el-tree :data="treeData" :props="defaultTreeProps" ></el-tree>
+      <com-tree :data="treeData" :props="defaultTreeProps" ></com-tree>
     </el-row>
     <h4>Pagination</h4>
     <el-row>
@@ -308,18 +308,18 @@
     </el-row>
     <h4>Tabs</h4>
     <el-row>
-      <el-tabs v-model="tab" class="demo-item">
-        <el-tab-pane label="User" name="first">User</el-tab-pane>
-        <el-tab-pane label="Config" name="second">Config</el-tab-pane>
-        <el-tab-pane label="Role" name="third">Role</el-tab-pane>
-        <el-tab-pane label="Task" name="fourth">Task</el-tab-pane>
-      </el-tabs>
-      <el-tabs type="card" class="demo-item">
-        <el-tab-pane label="User">User</el-tab-pane>
-        <el-tab-pane label="Config">Config</el-tab-pane>
-        <el-tab-pane label="Role">Role</el-tab-pane>
-        <el-tab-pane label="Task">Task</el-tab-pane>
-      </el-tabs>
+      <com-tabs v-model="tab" class="demo-item">
+        <com-tab-pane label="User" name="first">User</com-tab-pane>
+        <com-tab-pane label="Config" name="second">Config</com-tab-pane>
+        <com-tab-pane label="Role" name="third">Role</com-tab-pane>
+        <com-tab-pane label="Task" name="fourth">Task</com-tab-pane>
+      </com-tabs>
+      <com-tabs type="card" class="demo-item">
+        <com-tab-pane label="User">User</com-tab-pane>
+        <com-tab-pane label="Config">Config</com-tab-pane>
+        <com-tab-pane label="Role">Role</com-tab-pane>
+        <com-tab-pane label="Task">Task</com-tab-pane>
+      </com-tabs>
     </el-row>
     <h4>Dialog</h4>
     <el-row>

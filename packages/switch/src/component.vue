@@ -41,7 +41,7 @@
   import Migrating from 'element-ui/src/mixins/migrating';
 
   export default {
-    name: 'ElSwitch',
+    name: 'ComSwitch',
     mixins: [Focus('input'), Migrating, emitter],
     inject: {
       elForm: {

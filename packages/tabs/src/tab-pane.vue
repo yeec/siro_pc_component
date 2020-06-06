@@ -13,9 +13,9 @@
 </template>
 <script>
   export default {
-    name: 'ElTabPane',
+    name: 'ComTabPane',
 
-    componentName: 'ElTabPane',
+    componentName: 'ComTabPane',
 
     props: {
       label: String,

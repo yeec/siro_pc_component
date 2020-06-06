@@ -123,9 +123,9 @@ describe('Upload', () => {
       uploader = createVue({
         render(h) {
           return (
-            <el-upload {...props} ref="upload">
+            <com-upload {...props} ref="upload">
               <el-button size="small" type="primary">点击上传</el-button>
-            </el-upload>
+            </com-upload>
           );
         }
       }, true).$refs.upload;

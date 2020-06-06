@@ -1,17 +1,17 @@
 <template>
   <div class="el-transfer-panel">
     <p class="el-transfer-panel__header">
-      <el-checkbox
+      <com-checkbox
         v-model="allChecked"
         @change="handleAllCheckedChange"
         :indeterminate="isIndeterminate">
         {{ title }}
         <span>{{ checkedSummary }}</span>
-      </el-checkbox>
+      </com-checkbox>
     </p>
     
     <div :class="['el-transfer-panel__body', hasFooter ? 'is-with-footer' : '']">
-      <el-input
+      <com-input
         class="el-transfer-panel__filter"
         v-model="query"
         size="small"
@@ -23,21 +23,21 @@
           :class="['el-input__icon', 'el-icon-' + inputIcon]"
           @click="clearQuery"
         ></i>
-      </el-input>
-      <el-checkbox-group
+      </com-input>
+      <com-checkbox-group
         v-model="checked"
         v-show="!hasNoMatch && data.length > 0"
         :class="{ 'is-filterable': filterable }"
         class="el-transfer-panel__list">
-        <el-checkbox
+        <com-checkbox
           class="el-transfer-panel__item"
           :label="item[keyProp]"
           :disabled="item[disabledProp]"
           :key="item[keyProp]"
           v-for="item in filteredData">
           <option-content :option="item"></option-content>
-        </el-checkbox>
-      </el-checkbox-group>
+        </com-checkbox>
+      </com-checkbox-group>
       <p
         class="el-transfer-panel__empty"
         v-show="hasNoMatch">{{ t('el.transfer.noMatch') }}</p>
@@ -52,22 +52,22 @@
 </template>
 
 <script>
-  import ElCheckboxGroup from 'element-ui/packages/checkbox-group';
-  import ElCheckbox from 'element-ui/packages/checkbox';
-  import ElInput from 'element-ui/packages/input';
+  import ComCheckboxGroup from 'element-ui/packages/checkbox-group';
+  import ComCheckbox from 'element-ui/packages/checkbox';
+  import ComInput from 'element-ui/packages/input';
   import Locale from 'element-ui/src/mixins/locale';
 
   export default {
     mixins: [Locale],
 
-    name: 'ElTransferPanel',
+    name: 'ComTransferPanel',
 
-    componentName: 'ElTransferPanel',
+    componentName: 'ComTransferPanel',
 
     components: {
-      ElCheckboxGroup,
-      ElCheckbox,
-      ElInput,
+      ComCheckboxGroup,
+      ComCheckbox,
+      ComInput,
       OptionContent: {
         props: {
           option: Object

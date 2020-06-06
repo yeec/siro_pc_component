@@ -11,22 +11,22 @@
       <slot name="left-footer"></slot>
     </transfer-panel>
     <div class="el-transfer__buttons">
-      <el-button
+      <com-button
         type="primary"
         :class="['el-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToLeft"
         :disabled="rightChecked.length === 0">
         <i class="el-icon-arrow-left"></i>
         <span v-if="buttonTexts[0] !== undefined">{{ buttonTexts[0] }}</span>
-      </el-button>
-      <el-button
+      </com-button>
+      <com-button
         type="primary"
         :class="['el-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToRight"
         :disabled="leftChecked.length === 0">
         <span v-if="buttonTexts[1] !== undefined">{{ buttonTexts[1] }}</span>
         <i class="el-icon-arrow-right"></i>
-      </el-button>
+      </com-button>
     </div>
     <transfer-panel
       v-bind="$props"
@@ -42,20 +42,20 @@
 </template>
 
 <script>
-  import ElButton from 'element-ui/packages/button';
+  import ComButton from 'element-ui/packages/button';
   import Emitter from 'element-ui/src/mixins/emitter';
   import Locale from 'element-ui/src/mixins/locale';
   import TransferPanel from './transfer-panel.vue';
   import Migrating from 'element-ui/src/mixins/migrating';
 
   export default {
-    name: 'ElTransfer',
+    name: 'ComTransfer',
 
     mixins: [Emitter, Locale, Migrating],
 
     components: {
       TransferPanel,
-      ElButton
+      ComButton
     },
 
     props: {

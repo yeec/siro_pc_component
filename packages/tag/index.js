@@ -1,8 +1,8 @@
-import ElTag from './src/tag';
+import ComTag from './src/tag';
 
 /* istanbul ignore next */
-ElTag.install = function(Vue) {
-  Vue.component(ElTag.name, ElTag);
+ComTag.install = function(Vue) {
+  Vue.component(ComTag.name, ComTag);
 };
 
-export default ElTag;
+export default ComTag;

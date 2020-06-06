@@ -7,7 +7,7 @@ import Migrating from 'element-ui/src/mixins/migrating';
 function noop() {}
 
 export default {
-  name: 'ElUpload',
+  name: 'ComUpload',
 
   mixins: [Migrating],
 

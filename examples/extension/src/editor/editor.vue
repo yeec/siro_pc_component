@@ -3,24 +3,24 @@
     <img class="entrance touch-icon" src="./icon-entrance.png" v-show="!showSidebar" @click="toggleSidebar" />
     <img class="close touch-icon" src="./icon-close.png" v-show="showSidebar" @click="toggleSidebar" />
     <div class="editor" :style="{height: `${height}px`}" v-show="showSidebar">
-      <el-tabs v-model="activeTab" @tab-click="onTabClick">
-        <el-tab-pane label="Config" name="config">
+      <com-tabs v-model="activeTab" @tab-click="onTabClick">
+        <com-tab-pane label="Config" name="config">
           <theme-configurator
             :themeConfig="themeConfig"
             :previewConfig="previewConfig"
             :onUserConfigUpdate="onUserConfigUpdate"
             from="extension"
           ></theme-configurator>
-        </el-tab-pane>
-        <el-tab-pane label="Gallery" name="gallery">
+        </com-tab-pane>
+        <com-tab-pane label="Gallery" name="gallery">
           <gallery 
             ref='gallery'
             :height="height"
             :width="width - 7"
             @action="onGalleryAction"
           />
-        </el-tab-pane>
-      </el-tabs>
+        </com-tab-pane>
+      </com-tabs>
     </div>
   </div>
 </template>

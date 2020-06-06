@@ -5,7 +5,7 @@ import { generateId } from 'element-ui/src/utils/util';
 import Vue from 'vue';
 
 export default {
-  name: 'ElTooltip',
+  name: 'ComTooltip',
 
   mixins: [Popper],
 

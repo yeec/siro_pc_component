@@ -11,7 +11,7 @@ describe('Tree', () => {
   const getTreeVm = (props, options) => {
     return createVue(Object.assign({
       template: `
-        <el-tree ref="tree" :data="data" ${ props }></el-tree>
+        <com-tree ref="tree" :data="data" ${ props }></com-tree>
         `,
 
       data() {
@@ -64,7 +64,7 @@ describe('Tree', () => {
   const getDisableTreeVm = (props, options) => {
     return createVue(Object.assign({
       template: `
-        <el-tree ref="tree" :data="data" ${ props }></el-tree>
+        <com-tree ref="tree" :data="data" ${ props }></com-tree>
         `,
 
       data() {
@@ -584,12 +584,12 @@ describe('Tree', () => {
   it('scoped slot', () => {
     vm = createVue({
       template: `
-        <el-tree ref="tree" :data="data">
+        <com-tree ref="tree" :data="data">
           <div slot-scope="scope" class="custom-tree-template">
             <span>{{ scope.node.label }}</span>
             <el-button></el-button>
           </div>
-        </el-tree>
+        </com-tree>
         `,
 
       data() {
@@ -836,8 +836,8 @@ describe('Tree', () => {
     const vm = createVue({
       template: `
         <div>
-          <el-tree ref="tree1" :data="data" node-key="id" :props="defaultProps"></el-tree>
-          <el-tree ref="tree2" :data="data" node-key="id" :props="defaultProps"></el-tree>
+          <com-tree ref="tree1" :data="data" node-key="id" :props="defaultProps"></com-tree>
+          <com-tree ref="tree2" :data="data" node-key="id" :props="defaultProps"></com-tree>
         </div>
         `,
 

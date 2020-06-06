@@ -9,7 +9,7 @@
     }"
     role="tree"
   >
-    <el-tree-node
+    <com-tree-node
       v-for="child in root.childNodes"
       :node="child"
       :props="props"
@@ -18,7 +18,7 @@
       :key="getNodeKey(child)"
       :render-content="renderContent"
       @node-expand="handleNodeExpand">
-    </el-tree-node>
+    </com-tree-node>
     <div class="el-tree__empty-block" v-if="isEmpty">
       <span class="el-tree__empty-text">{{ emptyText }}</span>
     </div>
@@ -33,18 +33,18 @@
 <script>
   import TreeStore from './model/tree-store';
   import { getNodeKey, findNearestComponent } from './model/util';
-  import ElTreeNode from './tree-node.vue';
+  import ComTreeNode from './tree-node.vue';
   import {t} from 'element-ui/src/locale';
   import emitter from 'element-ui/src/mixins/emitter';
   import { addClass, removeClass } from 'element-ui/src/utils/dom';
 
   export default {
-    name: 'ElTree',
+    name: 'ComTree',
 
     mixins: [emitter],
 
     components: {
-      ElTreeNode
+      ComTreeNode
     },
 
     data() {

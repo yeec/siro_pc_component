@@ -34,7 +34,7 @@
         ]"
       >
       </span>
-      <el-checkbox
+      <com-checkbox
         v-if="showCheckbox"
         v-model="node.checked"
         :indeterminate="node.indeterminate"
@@ -42,7 +42,7 @@
         @click.native.stop
         @change="handleCheckChange"
       >
-      </el-checkbox>
+      </com-checkbox>
       <span
         v-if="node.loading"
         class="el-tree-node__loading-icon el-icon-loading">
@@ -57,7 +57,7 @@
         role="group"
         :aria-expanded="expanded"
       >
-        <el-tree-node
+        <com-tree-node
           :render-content="renderContent"
           v-for="child in node.childNodes"
           :render-after-expand="renderAfterExpand"
@@ -65,7 +65,7 @@
           :key="getNodeKey(child)"
           :node="child"
           @node-expand="handleChildNodeExpand">
-        </el-tree-node>
+        </com-tree-node>
       </div>
     </el-collapse-transition>
   </div>
@@ -73,14 +73,14 @@
 
 <script type="text/jsx">
   import ElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
-  import ElCheckbox from 'element-ui/packages/checkbox';
+  import ComCheckbox from 'element-ui/packages/checkbox';
   import emitter from 'element-ui/src/mixins/emitter';
   import { getNodeKey } from './model/util';
 
   export default {
-    name: 'ElTreeNode',
+    name: 'ComTreeNode',
 
-    componentName: 'ElTreeNode',
+    componentName: 'ComTreeNode',
 
     mixins: [emitter],
 
@@ -104,7 +104,7 @@
 
     components: {
       ElCollapseTransition,
-      ElCheckbox,
+      ComCheckbox,
       NodeContent: {
         props: {
           node: {

@@ -77,7 +77,7 @@
 :::demo 通过`el-menu-item-group`组件可以实现菜单进行分组，分组名可以通过`title`属性直接设定，也可以通过具名 slot 来设定。
 ```html
 <com-row class="tac">
-  <el-col :span="12">
+  <com-col :span="12">
     <h5>默认颜色</h5>
     <com-menu
       default-active="2"
@@ -115,8 +115,8 @@
         <span slot="title">导航四</span>
       </com-menu-item>
     </com-menu>
-  </el-col>
-  <el-col :span="12">
+  </com-col>
+  <com-col :span="12">
     <h5>自定义颜色</h5>
     <com-menu
       default-active="2"
@@ -157,7 +157,7 @@
         <span slot="title">导航四</span>
       </com-menu-item>
     </com-menu>
-  </el-col>
+  </com-col>
 </com-row>
 
 <script>

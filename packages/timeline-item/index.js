@@ -1,8 +1,8 @@
-import ElTimelineItem from '../timeline/src/item';
+import ComTimelineItem from '../timeline/src/item';
 
 /* istanbul ignore next */
-ElTimelineItem.install = function(Vue) {
-  Vue.component(ElTimelineItem.name, ElTimelineItem);
+ComTimelineItem.install = function(Vue) {
+  Vue.component(ComTimelineItem.name, ComTimelineItem);
 };
 
-export default ElTimelineItem;
+export default ComTimelineItem;
