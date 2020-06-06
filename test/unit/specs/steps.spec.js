@@ -9,9 +9,9 @@ describe('Steps', () => {
   it('create', () => {
     vm = createVue(`
       <el-steps>
-        <el-step title="step1"></el-step>
-        <el-step title="step2"></el-step>
-        <el-step title="step3"></el-step>
+        <com-step title="step1"></com-step> 
+        <com-step title="step2"></com-step> 
+        <com-step title="step3"></com-step> 
       </el-steps>
     `);
 
@@ -21,18 +21,18 @@ describe('Steps', () => {
   it('space', async() => {
     vm = createVue(`
       <el-steps>
-        <el-step title="step1"></el-step>
-        <el-step title="step2"></el-step>
-        <el-step title="step3"></el-step>
+        <com-step title="step1"></com-step> 
+        <com-step title="step2"></com-step> 
+        <com-step title="step3"></com-step> 
       </el-steps>
     `, true);
 
     const vm2 = createVue(`
       <el-steps :space="100">
-        <el-step title="step1"></el-step>
-        <el-step title="step2"></el-step>
-        <el-step title="step3"></el-step>
-        <el-step title="step4"></el-step>
+        <com-step title="step1"></com-step> 
+        <com-step title="step2"></com-step> 
+        <com-step title="step3"></com-step> 
+        <com-step title="step4"></com-step> 
       </el-steps>
     `, true);
 
@@ -46,9 +46,9 @@ describe('Steps', () => {
   it('processStatus', done => {
     vm = createVue(`
       <el-steps :active="1" process-status="error">
-        <el-step title="step1"></el-step>
-        <el-step title="step2"></el-step>
-        <el-step title="step3"></el-step>
+        <com-step title="step1"></com-step> 
+        <com-step title="step2"></com-step> 
+        <com-step title="step3"></com-step> 
       </el-steps>
     `);
 
@@ -62,8 +62,8 @@ describe('Steps', () => {
     vm = createVue({
       template: `
         <el-steps :active="1" :process-status="processStatus">
-          <el-step title="abc"></el-step>
-          <el-step title="abc2"></el-step>
+          <com-step title="abc"></com-step> 
+          <com-step title="abc2"></com-step> 
         </el-steps>
       `,
       data() {
@@ -84,8 +84,8 @@ describe('Steps', () => {
   it('finishStatus', done => {
     vm = createVue(`
       <el-steps :active="1" finish-status="error">
-        <el-step title="abc"></el-step>
-        <el-step title="abc2"></el-step>
+        <com-step title="abc"></com-step> 
+        <com-step title="abc2"></com-step> 
       </el-steps>
     `);
 
@@ -99,8 +99,8 @@ describe('Steps', () => {
     vm = createVue({
       template: `
         <el-steps :active="active" finish-status="error">
-          <el-step title="abc"></el-step>
-          <el-step title="abc2"></el-step>
+          <com-step title="abc"></com-step> 
+          <com-step title="abc2"></com-step> 
         </el-steps>
       `,
 
@@ -122,8 +122,8 @@ describe('Steps', () => {
   it('create vertical', () => {
     vm = createVue(`
       <el-steps direction="vertical">
-        <el-step title="aaa"></el-step>
-        <el-step title="bbb"></el-step>
+        <com-step title="aaa"></com-step> 
+        <com-step title="bbb"></com-step> 
       </el-steps>
     `);
 
@@ -133,8 +133,8 @@ describe('Steps', () => {
   it('vertical:height', async() => {
     vm = createVue(`
       <el-steps direction="vertical" :space="200">
-        <el-step title="aaa"></el-step>
-        <el-step title="bbb"></el-step>
+        <com-step title="aaa"></com-step> 
+        <com-step title="bbb"></com-step> 
       </el-steps>
     `, true);
 
@@ -146,9 +146,9 @@ describe('Steps', () => {
   it('step:status=error', done => {
     vm = createVue(`
       <el-steps :active="2" process-status="process" finish-status="success" direction="horizontal">
-        <el-step title="step1"></el-step>
-        <el-step title="step2" status="error"></el-step>
-        <el-step title="step3"></el-step>
+        <com-step title="step1"></com-step> 
+        <com-step title="step2" status="error"></com-step> 
+        <com-step title="step3"></com-step> 
       </el-steps>
     `);
 
