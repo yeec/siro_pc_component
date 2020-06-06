@@ -26,13 +26,13 @@ describe('Table', () => {
   describe('rendering data is correct', () => {
     const vm = createVue({
       template: `
-        <el-table :data="testData">
-          <el-table-column prop="id" />
-          <el-table-column prop="name" label="片名" />
-          <el-table-column prop="release" label="发行日期" />
-          <el-table-column prop="director" label="导演" />
-          <el-table-column prop="runtime" label="时长（分）" />
-        </el-table>
+        <com-table :data="testData">
+          <com-table-column prop="id" />
+          <com-table-column prop="name" label="片名" />
+          <com-table-column prop="release" label="发行日期" />
+          <com-table-column prop="director" label="导演" />
+          <com-table-column prop="runtime" label="时长（分）" />
+        </com-table>
       `,
 
       created() {
@@ -67,12 +67,12 @@ describe('Table', () => {
     const createTable = function(props, opts) {
       return createVue(Object.assign({
         template: `
-          <el-table :data="testData" ${props}>
-            <el-table-column prop="name" label="片名" />
-            <el-table-column prop="release" label="发行日期" />
-            <el-table-column prop="director" label="导演" />
-            <el-table-column prop="runtime" label="时长（分）" />
-          </el-table>
+          <com-table :data="testData" ${props}>
+            <com-table-column prop="name" label="片名" />
+            <com-table-column prop="release" label="发行日期" />
+            <com-table-column prop="director" label="导演" />
+            <com-table-column prop="runtime" label="时长（分）" />
+          </com-table>
         `,
 
         created() {
@@ -205,12 +205,12 @@ describe('Table', () => {
     it('current-row-key', done => {
       const vm = createVue({
         template: `
-        <el-table :data="testData" row-key="id" highlight-current-row :current-row-key="currentRowKey">
-          <el-table-column prop="name" label="片名" />
-          <el-table-column prop="release" label="发行日期" />
-          <el-table-column prop="director" label="导演" />
-          <el-table-column prop="runtime" label="时长（分）" />
-        </el-table>
+        <com-table :data="testData" row-key="id" highlight-current-row :current-row-key="currentRowKey">
+          <com-table-column prop="name" label="片名" />
+          <com-table-column prop="release" label="发行日期" />
+          <com-table-column prop="director" label="导演" />
+          <com-table-column prop="runtime" label="时长（分）" />
+        </com-table>
       `,
 
         created() {
@@ -242,13 +242,13 @@ describe('Table', () => {
     it('select-on-indeterminate', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData" @selection-change="change" :select-on-indeterminate="false" ref="table">
-            <el-table-column type="selection" />
-            <el-table-column prop="name" label="name" />
-            <el-table-column prop="release" label="release" />
-            <el-table-column prop="director" label="director" />
-            <el-table-column prop="runtime" label="runtime" />
-          </el-table>
+          <com-table :data="testData" @selection-change="change" :select-on-indeterminate="false" ref="table">
+            <com-table-column type="selection" />
+            <com-table-column prop="name" label="name" />
+            <com-table-column prop="release" label="release" />
+            <com-table-column prop="director" label="director" />
+            <com-table-column prop="runtime" label="runtime" />
+          </com-table>
         `,
 
         created() {
@@ -287,10 +287,10 @@ describe('Table', () => {
     beforeEach(done => {
       vm = createVue({
         template: `
-          <el-table ref="table" :data="testData" @filter-change="handleFilterChange">
-            <el-table-column prop="name" label="片名" />
-            <el-table-column prop="release" label="发行日期" />
-            <el-table-column
+          <com-table ref="table" :data="testData" @filter-change="handleFilterChange">
+            <com-table-column prop="name" label="片名" />
+            <com-table-column prop="release" label="发行日期" />
+            <com-table-column
               prop="director"
               column-key="director"
               :filters="[
@@ -300,8 +300,8 @@ describe('Table', () => {
               ]"
               :filter-method="filterMethod"
               label="导演" />
-            <el-table-column prop="runtime" label="时长（分）" />
-          </el-table>
+            <com-table-column prop="runtime" label="时长（分）" />
+          </com-table>
         `,
 
         created() {
@@ -388,13 +388,13 @@ describe('Table', () => {
     const createTable = function(prop = '', opts) {
       return createVue({
         template: `
-          <el-table :data="testData" @${prop}="handleEvent">
-            <el-table-column type="selection" />
-            <el-table-column prop="name" />
-            <el-table-column prop="release" />
-            <el-table-column prop="director" />
-            <el-table-column prop="runtime"/>
-          </el-table>
+          <com-table :data="testData" @${prop}="handleEvent">
+            <com-table-column type="selection" />
+            <com-table-column prop="name" />
+            <com-table-column prop="release" />
+            <com-table-column prop="director" />
+            <com-table-column prop="runtime"/>
+          </com-table>
         `,
 
         methods: {
@@ -563,12 +563,12 @@ describe('Table', () => {
     it('sort-change', async() => {
       const vm = createVue({
         template: `
-          <el-table ref="table" :data="testData" :default-sort = "{prop: 'runtime', order: 'ascending'}">
-            <el-table-column prop="name" />
-            <el-table-column prop="release" />
-            <el-table-column prop="director" />
-            <el-table-column prop="runtime" sortable/>
-          </el-table>
+          <com-table ref="table" :data="testData" :default-sort = "{prop: 'runtime', order: 'ascending'}">
+            <com-table-column prop="name" />
+            <com-table-column prop="release" />
+            <com-table-column prop="director" />
+            <com-table-column prop="runtime" sortable/>
+          </com-table>
         `,
 
         data() {
@@ -593,12 +593,12 @@ describe('Table', () => {
     const createTable = function(props1, props2, props3, props4, opts, tableProps) {
       return createVue(Object.assign({
         template: `
-          <el-table :data="testData" ${tableProps || ''}>
-            <el-table-column prop="name" ${props1 || ''} />
-            <el-table-column prop="release" ${props2 || ''} />
-            <el-table-column prop="director" ${props3 || ''} />
-            <el-table-column prop="runtime" ${props4 || ''} />
-          </el-table>
+          <com-table :data="testData" ${tableProps || ''}>
+            <com-table-column prop="name" ${props1 || ''} />
+            <com-table-column prop="release" ${props2 || ''} />
+            <com-table-column prop="director" ${props3 || ''} />
+            <com-table-column prop="runtime" ${props4 || ''} />
+          </com-table>
         `,
 
         created() {
@@ -707,16 +707,16 @@ describe('Table', () => {
     it('render-header', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData">
-            <el-table-column prop="name" label="name">
+          <com-table :data="testData">
+            <com-table-column prop="name" label="name">
               <template slot="header" slot-scope="{ column, $index }">
               {{ $index }}:{{column.label}}
               </template>
-            </el-table-column>
-            <el-table-column prop="release"/>
-            <el-table-column prop="director"/>
-            <el-table-column prop="runtime"/>
-          </el-table>
+            </com-table-column>
+            <com-table-column prop="release"/>
+            <com-table-column prop="director"/>
+            <com-table-column prop="runtime"/>
+          </com-table>
         `,
 
         created() {
@@ -759,13 +759,13 @@ describe('Table', () => {
     it('selectable', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData" @selection-change="change">
-            <el-table-column type="selection" :selectable="filterSelect" />
-            <el-table-column prop="name" label="name" />
-            <el-table-column prop="release" label="release" />
-            <el-table-column prop="director" label="director" />
-            <el-table-column prop="runtime" label="runtime" />
-          </el-table>
+          <com-table :data="testData" @selection-change="change">
+            <com-table-column type="selection" :selectable="filterSelect" />
+            <com-table-column prop="name" label="name" />
+            <com-table-column prop="release" label="release" />
+            <com-table-column prop="director" label="director" />
+            <com-table-column prop="runtime" label="runtime" />
+          </com-table>
         `,
 
         created() {
@@ -800,13 +800,13 @@ describe('Table', () => {
     it('selectable === false & check selectAll status', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData" @selection-change="change">
-            <el-table-column type="selection" :selectable="filterSelect" />
-            <el-table-column prop="name" label="name" />
-            <el-table-column prop="release" label="release" />
-            <el-table-column prop="director" label="director" />
-            <el-table-column prop="runtime" label="runtime" />
-          </el-table>
+          <com-table :data="testData" @selection-change="change">
+            <com-table-column type="selection" :selectable="filterSelect" />
+            <com-table-column prop="name" label="name" />
+            <com-table-column prop="release" label="release" />
+            <com-table-column prop="director" label="director" />
+            <com-table-column prop="runtime" label="runtime" />
+          </com-table>
         `,
 
         created() {
@@ -842,13 +842,13 @@ describe('Table', () => {
     it('emit selection-change after row has been removed', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData" @selection-change="change">
-            <el-table-column type="selection" />
-            <el-table-column prop="name" label="name" />
-            <el-table-column prop="release" label="release" />
-            <el-table-column prop="director" label="director" />
-            <el-table-column prop="runtime" label="runtime" />
-          </el-table>
+          <com-table :data="testData" @selection-change="change">
+            <com-table-column type="selection" />
+            <com-table-column prop="name" label="name" />
+            <com-table-column prop="release" label="release" />
+            <com-table-column prop="director" label="director" />
+            <com-table-column prop="runtime" label="runtime" />
+          </com-table>
         `,
 
         created() {
@@ -888,13 +888,13 @@ describe('Table', () => {
       const createTable = function(type) {
         return createVue({
           template: `
-            <el-table :data="testData" @selection-change="change">
-              <el-table-column type="${type}" />
-              <el-table-column prop="name" label="name" />
-              <el-table-column prop="release" label="release" />
-              <el-table-column prop="director" label="director" />
-              <el-table-column prop="runtime" label="runtime" />
-            </el-table>
+            <com-table :data="testData" @selection-change="change">
+              <com-table-column type="${type}" />
+              <com-table-column prop="name" label="name" />
+              <com-table-column prop="release" label="release" />
+              <com-table-column prop="director" label="director" />
+              <com-table-column prop="runtime" label="runtime" />
+            </com-table>
           `,
 
           created() {
@@ -976,16 +976,16 @@ describe('Table', () => {
           extra = extra || '';
           return createVue({
             template: `
-            <el-table row-key="id" :data="testData" @expand-change="handleExpand" ${extra}>
-              <el-table-column type="expand">
+            <com-table row-key="id" :data="testData" @expand-change="handleExpand" ${extra}>
+              <com-table-column type="expand">
                 <template slot-scope="props">
                   <div>{{props.row.name}}</div>
                 </template>
-              </el-table-column>
-              <el-table-column prop="release" label="release" />
-              <el-table-column prop="director" label="director" />
-              <el-table-column prop="runtime" label="runtime" />
-            </el-table>
+              </com-table-column>
+              <com-table-column prop="release" label="release" />
+              <com-table-column prop="director" label="director" />
+              <com-table-column prop="runtime" label="runtime" />
+            </com-table>
           `,
 
             data() {
@@ -1212,12 +1212,12 @@ describe('Table', () => {
     it('should render', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData" show-summary>
-            <el-table-column prop="name" />
-            <el-table-column prop="release"/>
-            <el-table-column prop="director"/>
-            <el-table-column prop="runtime"/>
-          </el-table>
+          <com-table :data="testData" show-summary>
+            <com-table-column prop="name" />
+            <com-table-column prop="release"/>
+            <com-table-column prop="director"/>
+            <com-table-column prop="runtime"/>
+          </com-table>
         `,
 
         created() {
@@ -1238,12 +1238,12 @@ describe('Table', () => {
     it('custom sum text', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData" show-summary sum-text="Time">
-            <el-table-column prop="name" />
-            <el-table-column prop="release"/>
-            <el-table-column prop="director"/>
-            <el-table-column prop="runtime"/>
-          </el-table>
+          <com-table :data="testData" show-summary sum-text="Time">
+            <com-table-column prop="name" />
+            <com-table-column prop="release"/>
+            <com-table-column prop="director"/>
+            <com-table-column prop="runtime"/>
+          </com-table>
         `,
 
         created() {
@@ -1262,12 +1262,12 @@ describe('Table', () => {
     it('custom summary method', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData" show-summary :summary-method="getSummary">
-            <el-table-column prop="name" />
-            <el-table-column prop="release"/>
-            <el-table-column prop="director"/>
-            <el-table-column prop="runtime"/>
-          </el-table>
+          <com-table :data="testData" show-summary :summary-method="getSummary">
+            <com-table-column prop="name" />
+            <com-table-column prop="release"/>
+            <com-table-column prop="director"/>
+            <com-table-column prop="runtime"/>
+          </com-table>
         `,
 
         created() {
@@ -1308,14 +1308,14 @@ describe('Table', () => {
     it('should works', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData">
-            <el-table-column prop="name" />
-            <el-table-column label="group">
-              <el-table-column prop="release"/>
-              <el-table-column prop="director"/>
-            </el-table-column>
-            <el-table-column prop="runtime"/>
-          </el-table>
+          <com-table :data="testData">
+            <com-table-column prop="name" />
+            <com-table-column label="group">
+              <com-table-column prop="release"/>
+              <com-table-column prop="director"/>
+            </com-table-column>
+            <com-table-column prop="runtime"/>
+          </com-table>
         `,
 
         created() {
@@ -1341,17 +1341,17 @@ describe('Table', () => {
     it('should works', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData">
-            <el-table-column prop="name" />
-            <el-table-column label="group">
-              <el-table-column label="group's group">
-                <el-table-column prop="release" />
-                <el-table-column prop="runtime"/>
-              </el-table-column>
-              <el-table-column prop="director" />
-            </el-table-column>
-            <el-table-column prop="runtime"/>
-          </el-table>
+          <com-table :data="testData">
+            <com-table-column prop="name" />
+            <com-table-column label="group">
+              <com-table-column label="group's group">
+                <com-table-column prop="release" />
+                <com-table-column prop="runtime"/>
+              </com-table-column>
+              <com-table-column prop="director" />
+            </com-table-column>
+            <com-table-column prop="runtime"/>
+          </com-table>
         `,
 
         created() {
@@ -1382,11 +1382,11 @@ describe('Table', () => {
     it('should work in one column', done => {
       const vm = createVue({
         template: `
-          <el-table :data="testData">
-            <el-table-column label="group">
-              <el-table-column prop="release"/>
-            </el-table-column>
-          </el-table>
+          <com-table :data="testData">
+            <com-table-column label="group">
+              <com-table-column prop="release"/>
+            </com-table-column>
+          </com-table>
         `,
 
         created() {
@@ -1416,12 +1416,12 @@ describe('Table', () => {
     it('label', (done) => {
       const vm = createVue({
         template: `
-          <el-table :data="testData">
-            <el-table-column prop="name" :label="label"/>
-            <el-table-column prop="release" />
-            <el-table-column prop="director" />
-            <el-table-column prop="runtime" />
-          </el-table>
+          <com-table :data="testData">
+            <com-table-column prop="name" :label="label"/>
+            <com-table-column prop="release" />
+            <com-table-column prop="director" />
+            <com-table-column prop="runtime" />
+          </com-table>
         `,
 
         data() {
@@ -1449,9 +1449,9 @@ describe('Table', () => {
     it('align', (done) => {
       const vm = createVue({
         template: `
-          <el-table :data="testData">
-            <el-table-column prop="name" :align="align"/>
-          </el-table>
+          <com-table :data="testData">
+            <com-table-column prop="name" :align="align"/>
+          </com-table>
         `,
 
         data() {
@@ -1479,9 +1479,9 @@ describe('Table', () => {
     it('header-align', (done) => {
       const vm = createVue({
         template: `
-           <el-table :data="testData">
-            <el-table-column prop="name" :align="align" :header-align="headerAlign"/>
-          </el-table>
+           <com-table :data="testData">
+            <com-table-column prop="name" :align="align" :header-align="headerAlign"/>
+          </com-table>
         `,
 
         data() {
@@ -1526,9 +1526,9 @@ describe('Table', () => {
     it('width', (done) => {
       const vm = createVue({
         template: `
-          <el-table :data="testData" :fit="false">
-            <el-table-column prop="name" :width="width"/>
-          </el-table>
+          <com-table :data="testData" :fit="false">
+            <com-table-column prop="name" :width="width"/>
+          </com-table>
         `,
 
         data() {
@@ -1556,9 +1556,9 @@ describe('Table', () => {
     it('min-width', (done) => {
       const vm = createVue({
         template: `
-          <el-table :data="testData" :fit="false">
-            <el-table-column prop="name" :min-width="width"/>
-          </el-table>
+          <com-table :data="testData" :fit="false">
+            <com-table-column prop="name" :min-width="width"/>
+          </com-table>
         `,
 
         data() {
@@ -1586,12 +1586,12 @@ describe('Table', () => {
     it('fixed', (done) => {
       const vm = createVue({
         template: `
-          <el-table :data="testData">
-            <el-table-column :fixed="fixed" />
-            <el-table-column prop="release" />
-            <el-table-column prop="director" />
-            <el-table-column prop="runtime" />
-          </el-table>
+          <com-table :data="testData">
+            <com-table-column :fixed="fixed" />
+            <com-table-column prop="release" />
+            <com-table-column prop="director" />
+            <com-table-column prop="runtime" />
+          </com-table>
         `,
 
         data() {
@@ -1619,12 +1619,12 @@ describe('Table', () => {
     it('prop', (done) => {
       const vm = createVue({
         template: `
-          <el-table :data="testData">
-            <el-table-column :prop="prop" />
-            <el-table-column prop="release" />
-            <el-table-column prop="director" />
-            <el-table-column prop="runtime" />
-          </el-table>
+          <com-table :data="testData">
+            <com-table-column :prop="prop" />
+            <com-table-column prop="release" />
+            <com-table-column prop="director" />
+            <com-table-column prop="runtime" />
+          </com-table>
         `,
 
         data() {
@@ -1658,13 +1658,13 @@ describe('Table', () => {
     const createTable = function(prop = '', opts) {
       return createVue({
         template: `
-          <el-table ref="table" :data="testData" @${prop}="handleEvent">
-            <el-table-column type="selection" />
-            <el-table-column prop="name" />
-            <el-table-column prop="release" />
-            <el-table-column prop="director" />
-            <el-table-column prop="runtime"/>
-          </el-table>
+          <com-table ref="table" :data="testData" @${prop}="handleEvent">
+            <com-table-column type="selection" />
+            <com-table-column prop="name" />
+            <com-table-column prop="release" />
+            <com-table-column prop="director" />
+            <com-table-column prop="runtime"/>
+          </com-table>
         `,
 
         methods: {
@@ -1721,14 +1721,14 @@ describe('Table', () => {
       const vm = createVue({
         template: `
         <div>
-          <el-table ref="table" :data="testData" @selection-change="change">
-            <el-table-column type="selection" />
-            <el-table-column prop="name" />
-          </el-table>
-          <el-table ref="table1" :data="testData1" @selection-change="change">
-            <el-table-column type="selection" />
-            <el-table-column prop="name" />
-          </el-table>
+          <com-table ref="table" :data="testData" @selection-change="change">
+            <com-table-column type="selection" />
+            <com-table-column prop="name" />
+          </com-table>
+          <com-table ref="table1" :data="testData1" @selection-change="change">
+            <com-table-column type="selection" />
+            <com-table-column prop="name" />
+          </com-table>
         </div>
         `,
 
@@ -1778,12 +1778,12 @@ describe('Table', () => {
     it('sort', done => {
       const vm = createVue({
         template: `
-          <el-table ref="table" :data="testData" :default-sort = "{prop: 'runtime', order: 'ascending'}">
-            <el-table-column prop="name" />
-            <el-table-column prop="release" />
-            <el-table-column prop="director" />
-            <el-table-column prop="runtime"/>
-          </el-table>
+          <com-table ref="table" :data="testData" :default-sort = "{prop: 'runtime', order: 'ascending'}">
+            <com-table-column prop="name" />
+            <com-table-column prop="release" />
+            <com-table-column prop="director" />
+            <com-table-column prop="runtime"/>
+          </com-table>
         `,
 
         created() {
@@ -1821,12 +1821,12 @@ describe('Table', () => {
 
       const vm = createVue({
         template: `
-          <el-table ref="table" :data="testData" >
-            <el-table-column prop="name" sortable />
-            <el-table-column prop="release" sortable />
-            <el-table-column prop="director" sortable />
-            <el-table-column prop="runtime" sortable />
-          </el-table>
+          <com-table ref="table" :data="testData" >
+            <com-table-column prop="name" sortable />
+            <com-table-column prop="release" sortable />
+            <com-table-column prop="director" sortable />
+            <com-table-column prop="runtime" sortable />
+          </com-table>
         `,
         data() {
           return { testData: getTestData() };
@@ -1852,12 +1852,12 @@ describe('Table', () => {
       const vm = createVue({
         template: `
         <div>
-          <el-table ref="table" :data="testData" highlight-current-row>
-            <el-table-column prop="name" sortable />
-            <el-table-column prop="release" sortable />
-            <el-table-column prop="director" sortable />
-            <el-table-column prop="runtime" sortable />
-          </el-table>
+          <com-table ref="table" :data="testData" highlight-current-row>
+            <com-table-column prop="name" sortable />
+            <com-table-column prop="release" sortable />
+            <com-table-column prop="director" sortable />
+            <com-table-column prop="runtime" sortable />
+          </com-table>
           <button class="clear" @click="clear">clear</button>
         </div>
         `,
@@ -1887,12 +1887,12 @@ describe('Table', () => {
   it('hover', async() => {
     const vm = createVue({
       template: `
-        <el-table :data="testData">
-          <el-table-column prop="name" label="片名" fixed />
-          <el-table-column prop="release" label="发行日期" />
-          <el-table-column prop="director" label="导演" />
-          <el-table-column prop="runtime" label="时长（分）" />
-        </el-table>
+        <com-table :data="testData">
+          <com-table-column prop="name" label="片名" fixed />
+          <com-table-column prop="release" label="发行日期" />
+          <com-table-column prop="director" label="导演" />
+          <com-table-column prop="runtime" label="时长（分）" />
+        </com-table>
       `,
       data() {
         return {
@@ -1916,12 +1916,12 @@ describe('Table', () => {
   it('highlight-current-row', done => {
     const vm = createVue({
       template: `
-        <el-table :data="testData" highlight-current-row>
-          <el-table-column prop="name" label="片名" />
-          <el-table-column prop="release" label="发行日期" />
-          <el-table-column prop="director" label="导演" />
-          <el-table-column prop="runtime" label="时长（分）" sortable />
-        </el-table>
+        <com-table :data="testData" highlight-current-row>
+          <com-table-column prop="name" label="片名" />
+          <com-table-column prop="release" label="发行日期" />
+          <com-table-column prop="director" label="导演" />
+          <com-table-column prop="runtime" label="时长（分）" sortable />
+        </com-table>
       `,
 
       created() {
@@ -1959,12 +1959,12 @@ describe('Table', () => {
   it('keep highlight row when data change', done => {
     const vm = createVue({
       template: `
-        <el-table :data="testData" highlight-current-row row-key="release">
-          <el-table-column prop="name" label="片名" />
-          <el-table-column prop="release" label="发行日期" />
-          <el-table-column prop="director" label="导演" />
-          <el-table-column prop="runtime" label="时长（分）" sortable />
-        </el-table>
+        <com-table :data="testData" highlight-current-row row-key="release">
+          <com-table-column prop="name" label="片名" />
+          <com-table-column prop="release" label="发行日期" />
+          <com-table-column prop="director" label="导演" />
+          <com-table-column prop="runtime" label="时长（分）" sortable />
+        </com-table>
       `,
       data() {
         return {
@@ -2001,12 +2001,12 @@ describe('Table', () => {
   it('keep highlight row after sort', done => {
     const vm = createVue({
       template: `
-        <el-table :data="testData" row-key="release" highlight-current-row >
-          <el-table-column prop="name" label="片名" />
-          <el-table-column prop="release" label="发行日期" />
-          <el-table-column prop="director" label="导演" />
-          <el-table-column prop="runtime" label="时长（分）" sortable />
-        </el-table>
+        <com-table :data="testData" row-key="release" highlight-current-row >
+          <com-table-column prop="name" label="片名" />
+          <com-table-column prop="release" label="发行日期" />
+          <com-table-column prop="director" label="导演" />
+          <com-table-column prop="runtime" label="时长（分）" sortable />
+        </com-table>
       `,
       data() {
         return {
@@ -2035,17 +2035,17 @@ describe('Table', () => {
   it('table append is visible in viewport if height is 100%', async() => {
     const vm = createVue({
       template: `
-      <el-table :data="[]" height="100%">
-        <el-table-column prop="name" label="片名" />
-        <el-table-column prop="release" label="发行日期" />
-        <el-table-column prop="director" label="导演" />
-        <el-table-column prop="runtime" label="时长（分）" />
+      <com-table :data="[]" height="100%">
+        <com-table-column prop="name" label="片名" />
+        <com-table-column prop="release" label="发行日期" />
+        <com-table-column prop="director" label="导演" />
+        <com-table-column prop="runtime" label="时长（分）" />
         <template slot="append">
           <div class="append-content" style="height: 48px;">
             append 区域始终出现在视图内
           </div>
         </template>
-      </el-table>
+      </com-table>
       `
     }, true);
     await waitImmediate();
@@ -2060,12 +2060,12 @@ describe('Table', () => {
     it('render tree structual data', async() => {
       vm = createVue({
         template: `
-          <el-table :data="testData" row-key="release">
-            <el-table-column prop="name" label="片名" />
-            <el-table-column prop="release" label="发行日期" />
-            <el-table-column prop="director" label="导演" />
-            <el-table-column prop="runtime" label="时长（分）" />
-          </el-table>
+          <com-table :data="testData" row-key="release">
+            <com-table-column prop="name" label="片名" />
+            <com-table-column prop="release" label="发行日期" />
+            <com-table-column prop="director" label="导演" />
+            <com-table-column prop="runtime" label="时长（分）" />
+          </com-table>
         `,
         data() {
           const testData = getTestData();
@@ -2102,12 +2102,12 @@ describe('Table', () => {
     it('load substree row data', async() => {
       vm = createVue({
         template: `
-          <el-table :data="testData" row-key="release" lazy :load="load">
-            <el-table-column prop="name" label="片名" />
-            <el-table-column prop="release" label="发行日期" />
-            <el-table-column prop="director" label="导演" />
-            <el-table-column prop="runtime" label="时长（分）" />
-          </el-table>
+          <com-table :data="testData" row-key="release" lazy :load="load">
+            <com-table-column prop="name" label="片名" />
+            <com-table-column prop="release" label="发行日期" />
+            <com-table-column prop="director" label="导演" />
+            <com-table-column prop="runtime" label="时长（分）" />
+          </com-table>
         `,
         data() {
           const testData = getTestData();
@@ -2149,14 +2149,14 @@ describe('Table', () => {
       const spy = sinon.spy();
       vm = createVue({
         template: `
-          <el-table
+          <com-table
             :data="testData" lazy default-expand-all row-key="release" :tree-props="{children: 'childrenTest', hasChildren: 'hasChildrenTest'}"
             :load="load" @expand-change="change">
-            <el-table-column prop="name" label="片名" />
-            <el-table-column prop="release" label="发行日期" />
-            <el-table-column prop="director" label="导演" />
-            <el-table-column prop="runtime" label="时长（分）" />
-          </el-table>
+            <com-table-column prop="name" label="片名" />
+            <com-table-column prop="release" label="发行日期" />
+            <com-table-column prop="director" label="导演" />
+            <com-table-column prop="runtime" label="时长（分）" />
+          </com-table>
         `,
         data() {
           const testData = getTestData();
@@ -2203,12 +2203,12 @@ describe('Table', () => {
     it('expand-row-keys & toggleRowExpansion', async() => {
       vm = createVue({
         template: `
-          <el-table :data="testData" row-key="release" lazy :load="load" :expand-row-keys="['2003-5-30']" ref="table">
-            <el-table-column prop="name" label="片名" />
-            <el-table-column prop="release" label="发行日期" />
-            <el-table-column prop="director" label="导演" />
-            <el-table-column prop="runtime" label="时长（分）" />
-          </el-table>
+          <com-table :data="testData" row-key="release" lazy :load="load" :expand-row-keys="['2003-5-30']" ref="table">
+            <com-table-column prop="name" label="片名" />
+            <com-table-column prop="release" label="发行日期" />
+            <com-table-column prop="director" label="导演" />
+            <com-table-column prop="runtime" label="时长（分）" />
+          </com-table>
         `,
         data() {
           const testData = getTestData();

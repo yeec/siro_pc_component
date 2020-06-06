@@ -21,11 +21,11 @@
   
   使用 [Scoped slot](https://vuejs.org/v2/guide/components.html#Scoped-Slots) 即可：
   ```html
-  <el-table-column label="操作">
+  <com-table-column label="操作">
     <template slot-scope="props">
       <com-button @click.native="showDetail(props.row)">查看详情</com-button>
     </template>
-  </el-table-column>
+  </com-table-column>
   ```
   参数 `row` 即为对应行的数据。
 </details>
@@ -51,7 +51,7 @@
 <details>
   <summary>在项目中引入 Element，但是 CSS 报错/字体文件报错/组件没有样式是什么原因？</summary>
   
-  请参考我们提供的 [starter kit](https://github.com/ElementUI/element-starter)，在 webpack 的 loaders 中正确配置 file-loader、css-loader 和 style-loader。此外，我们还提供了基于 [cooking](https://github.com/ElementUI/element-cooking-starter) 和 [laravel](https://github.com/ElementUI/element-in-laravel-starter) 的项目模板。
+  请参考我们提供的 [starter kit](https://github.com/ElementUI/element-starter)，在 webpack 的 loaders 中正确配置 file-loader、css-loader 和 com-table-loader。此外，我们还提供了基于 [cooking](https://github.com/ElementUI/element-cooking-starter) 和 [laravel](https://github.com/ElementUI/element-in-laravel-starter) 的项目模板。
 </details>
 
 <details>
@@ -93,11 +93,11 @@
   
   Just use [Scoped slot](https://vuejs.org/v2/guide/components.html#Scoped-Slots):
   ```html
-  <el-table-column label="Operations">
+  <com-table-column label="Operations">
     <template slot-scope="props">
       <com-button @click.native="showDetail(props.row)">Details</com-button>
     </template>
-  </el-table-column>
+  </com-table-column>
   ```
   The parameter `row` is the data object of corresponding row.
 </details>
@@ -121,9 +121,9 @@
 </details>
 
 <details>
-  <summary>I imported Element in my project, but why does it report CSS error/font file error/components have no style?</summary>
+  <summary>I imported Element in my project, but why does it report CSS error/font file error/components have no com-table?</summary>
   
-  Please refer to our [starter kit](https://github.com/ElementUI/element-starter) and correctly configure file-loader, css-loader and style-loader in webpack config file. Besides, we also provide templated based on [cooking](https://github.com/ElementUI/element-cooking-starter) and [laravel](https://github.com/ElementUI/element-in-laravel-starter).
+  Please refer to our [starter kit](https://github.com/ElementUI/element-starter) and correctly configure file-loader, css-loader and com-table-loader in webpack config file. Besides, we also provide templated based on [cooking](https://github.com/ElementUI/element-cooking-starter) and [laravel](https://github.com/ElementUI/element-in-laravel-starter).
 </details>
 
 <details>
@@ -167,11 +167,11 @@
   
   Simplemente agregue [“Scoped slot”](https://vuejs.org/v2/guide/components.html#Scoped-Slots):
   ```html
-  <el-table-column label="Operaciones">
+  <com-table-column label="Operaciones">
     <template slot-scope="props">
       <com-button @click.native="verDetalles(props.row)">Detalles</com-button>
     </template>
-  </el-table-column>
+  </com-table-column>
   ```
   El parámetro `row` contiene los datos de la linea correspondiente de la tabla.
 </details>
@@ -197,7 +197,7 @@
 <details>
   <summary>¿Importé `Element` a mi proyecto pero tengo errores con `CSS` y/o fuentes y mis componentes no tienen ningún estilo?</summary>
   
-  Refiérase a [nuestro ‘kit’ de inicio](https://github.com/ElementUI/element-starter) y configure correctamente `file-loader`, `css-loader` y `style-loader` en el archivo `webpack config`. Además, proveemos un ejemplar para [cooking](https://github.com/ElementUI/element-cooking-starter) y para [laravel](https://github.com/ElementUI/element-in-laravel-starter).
+  Refiérase a [nuestro ‘kit’ de inicio](https://github.com/ElementUI/element-starter) y configure correctamente `file-loader`, `css-loader` y `com-table-loader` en el archivo `webpack config`. Además, proveemos un ejemplar para [cooking](https://github.com/ElementUI/element-cooking-starter) y para [laravel](https://github.com/ElementUI/element-in-laravel-starter).
 </details>
 
 <details>

@@ -167,11 +167,11 @@
     </el-row>
     <h4>Table</h4>
     <el-row>
-      <el-table :data="tableData" style="width: 70%">
-        <el-table-column prop="date" label="Date" width="180"></el-table-column>
-        <el-table-column prop="name" label="Name" width="180"></el-table-column>
-        <el-table-column prop="address" label="Address"></el-table-column>
-      </el-table>
+      <com-table :data="tableData" style="width: 70%">
+        <com-table-column prop="date" label="Date" width="180"></com-table-column>
+        <com-table-column prop="name" label="Name" width="180"></com-table-column>
+        <com-table-column prop="address" label="Address"></com-table-column>
+      </com-table>
     </el-row>
     <h4>Tag</h4>
     <el-row>
@@ -225,11 +225,11 @@
     </el-row>
     <h4>Loading</h4>
     <el-row>
-      <el-table :data="tableData" style="width: 90%" v-loading="true">
-        <el-table-column prop="date" label="Date" width="180"></el-table-column>
-        <el-table-column prop="name" label="Name" width="180"></el-table-column>
-        <el-table-column prop="address" label="Address"></el-table-column>
-      </el-table>
+      <com-table :data="tableData" style="width: 90%" v-loading="true">
+        <com-table-column prop="date" label="Date" width="180"></com-table-column>
+        <com-table-column prop="name" label="Name" width="180"></com-table-column>
+        <com-table-column prop="address" label="Address"></com-table-column>
+      </com-table>
     </el-row>
     <h4>Message</h4>
     <el-row>

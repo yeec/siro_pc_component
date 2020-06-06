@@ -67,11 +67,11 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
   placement="right"
   width="400"
   trigger="click">
-  <el-table :data="gridData">
-    <el-table-column width="150" property="date" label="日期"></el-table-column>
-    <el-table-column width="100" property="name" label="姓名"></el-table-column>
-    <el-table-column width="300" property="address" label="地址"></el-table-column>
-  </el-table>
+  <com-table :data="gridData">
+    <com-table-column width="150" property="date" label="日期"></com-table-column>
+    <com-table-column width="100" property="name" label="姓名"></com-table-column>
+    <com-table-column width="300" property="address" label="地址"></com-table-column>
+  </com-table>
   <com-button slot="reference">click 激活</com-button>
 </com-popover>
 

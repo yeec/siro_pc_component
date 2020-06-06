@@ -1,8 +1,8 @@
-import ElTableColumn from '../table/src/table-column';
+import ComTableColumn from '../table/src/table-column';
 
 /* istanbul ignore next */
-ElTableColumn.install = function(Vue) {
-  Vue.component(ElTableColumn.name, ElTableColumn);
+ComTableColumn.install = function(Vue) {
+  Vue.component(ComTableColumn.name, ComTableColumn);
 };
 
-export default ElTableColumn;
+export default ComTableColumn;
