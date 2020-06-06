@@ -1,8 +1,8 @@
-import Steps from './src/steps';
+import ComSteps from './src/steps';
 
 /* istanbul ignore next */
-Steps.install = function(Vue) {
-  Vue.component(Steps.name, Steps);
+ComSteps.install = function(Vue) {
+  Vue.component(ComSteps.name, ComSteps);
 };
 
-export default Steps;
+export default ComSteps;

@@ -8,11 +8,11 @@ describe('Steps', () => {
 
   it('create', () => {
     vm = createVue(`
-      <el-steps>
+      <com-steps>
         <com-step title="step1"></com-step> 
         <com-step title="step2"></com-step> 
         <com-step title="step3"></com-step> 
-      </el-steps>
+      </com-steps>
     `);
 
     expect(vm.$el.querySelectorAll('.el-step')).to.length(3);
@@ -20,20 +20,20 @@ describe('Steps', () => {
 
   it('space', async() => {
     vm = createVue(`
-      <el-steps>
+      <com-steps>
         <com-step title="step1"></com-step> 
         <com-step title="step2"></com-step> 
         <com-step title="step3"></com-step> 
-      </el-steps>
+      </com-steps>
     `, true);
 
     const vm2 = createVue(`
-      <el-steps :space="100">
+      <com-steps :space="100">
         <com-step title="step1"></com-step> 
         <com-step title="step2"></com-step> 
         <com-step title="step3"></com-step> 
         <com-step title="step4"></com-step> 
-      </el-steps>
+      </com-steps>
     `, true);
 
     await waitImmediate();
@@ -45,11 +45,11 @@ describe('Steps', () => {
 
   it('processStatus', done => {
     vm = createVue(`
-      <el-steps :active="1" process-status="error">
+      <com-steps :active="1" process-status="error">
         <com-step title="step1"></com-step> 
         <com-step title="step2"></com-step> 
         <com-step title="step3"></com-step> 
-      </el-steps>
+      </com-steps>
     `);
 
     vm.$nextTick(_ => {
@@ -61,10 +61,10 @@ describe('Steps', () => {
   it('update processStatus', done => {
     vm = createVue({
       template: `
-        <el-steps :active="1" :process-status="processStatus">
+        <com-steps :active="1" :process-status="processStatus">
           <com-step title="abc"></com-step> 
           <com-step title="abc2"></com-step> 
-        </el-steps>
+        </com-steps>
       `,
       data() {
         return { processStatus: 'error' };
@@ -83,10 +83,10 @@ describe('Steps', () => {
 
   it('finishStatus', done => {
     vm = createVue(`
-      <el-steps :active="1" finish-status="error">
+      <com-steps :active="1" finish-status="error">
         <com-step title="abc"></com-step> 
         <com-step title="abc2"></com-step> 
-      </el-steps>
+      </com-steps>
     `);
 
     vm.$nextTick(_ => {
@@ -98,10 +98,10 @@ describe('Steps', () => {
   it('active', done => {
     vm = createVue({
       template: `
-        <el-steps :active="active" finish-status="error">
+        <com-steps :active="active" finish-status="error">
           <com-step title="abc"></com-step> 
           <com-step title="abc2"></com-step> 
-        </el-steps>
+        </com-steps>
       `,
 
       data() {
@@ -121,10 +121,10 @@ describe('Steps', () => {
 
   it('create vertical', () => {
     vm = createVue(`
-      <el-steps direction="vertical">
+      <com-steps direction="vertical">
         <com-step title="aaa"></com-step> 
         <com-step title="bbb"></com-step> 
-      </el-steps>
+      </com-steps>
     `);
 
     expect(vm.$el.querySelector('.is-vertical')).to.exist;
@@ -132,10 +132,10 @@ describe('Steps', () => {
 
   it('vertical:height', async() => {
     vm = createVue(`
-      <el-steps direction="vertical" :space="200">
+      <com-steps direction="vertical" :space="200">
         <com-step title="aaa"></com-step> 
         <com-step title="bbb"></com-step> 
-      </el-steps>
+      </com-steps>
     `, true);
 
     await waitImmediate();
@@ -145,11 +145,11 @@ describe('Steps', () => {
 
   it('step:status=error', done => {
     vm = createVue(`
-      <el-steps :active="2" process-status="process" finish-status="success" direction="horizontal">
+      <com-steps :active="2" process-status="process" finish-status="success" direction="horizontal">
         <com-step title="step1"></com-step> 
         <com-step title="step2" status="error"></com-step> 
         <com-step title="step3"></com-step> 
-      </el-steps>
+      </com-steps>
     `);
 
     vm.$nextTick(_ => {

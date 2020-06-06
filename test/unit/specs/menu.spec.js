@@ -139,12 +139,12 @@ describe('Menu', () => {
           <div>
             <com-menu default-active="2-2">
               <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
-              <el-submenu index="2" ref="submenu">
+              <com-submenu index="2" ref="submenu">
                 <template slot="title">我的工作台</template>
                 <com-menu-item index="2-1">选项1</com-menu-item>
                 <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
                 <com-menu-item index="2-3">选项3</com-menu-item>
-              </el-submenu>
+              </com-submenu>
               <com-menu-item index="3">订单管理</com-menu-item>
             </com-menu>
           </div>
@@ -164,12 +164,12 @@ describe('Menu', () => {
           <div>
             <com-menu default-active="2-2">
               <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
-              <el-submenu index="2" ref="submenu">
+              <com-submenu index="2" ref="submenu">
                 <template slot="title">我的工作台</template>
                 <com-menu-item index="2-1">选项1</com-menu-item>
                 <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
                 <com-menu-item index="2-3">选项3</com-menu-item>
-              </el-submenu>
+              </com-submenu>
               <com-menu-item index="3">订单管理</com-menu-item>
             </com-menu>
           </div>
@@ -190,12 +190,12 @@ describe('Menu', () => {
         template: `
           <com-menu>
             <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
-            <el-submenu index="2" ref="submenu">
+            <com-submenu index="2" ref="submenu">
               <template slot="title">我的工作台</template>
               <com-menu-item index="2-1">选项1</com-menu-item>
               <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
               <com-menu-item index="2-3">选项3</com-menu-item>
-            </el-submenu>
+            </com-submenu>
             <com-menu-item index="3">订单管理</com-menu-item>
           </com-menu>
         `,
@@ -225,18 +225,18 @@ describe('Menu', () => {
         template: `
           <com-menu :default-openeds="defaultOpeneds">
             <com-menu-item index="1">default opened处理中心</com-menu-item>
-            <el-submenu index="2" ref="submenu1">
+            <com-submenu index="2" ref="submenu1">
               <template slot="title">default opened我的工作台</template>
               <com-menu-item index="2-1">选项1</com-menu-item>
               <com-menu-item index="2-2" ref="submenu1Item2">选项2</com-menu-item>
               <com-menu-item index="2-3">选项3</com-menu-item>
-            </el-submenu>
-            <el-submenu index="3" ref="submenu2">
+            </com-submenu>
+            <com-submenu index="3" ref="submenu2">
               <template slot="title">default opened订单管理</template>
               <com-menu-item index="3-1">选项1</com-menu-item>
               <com-menu-item index="3-2" ref="submenu2Item2">选项2</com-menu-item>
               <com-menu-item index="3-3">选项3</com-menu-item>
-            </el-submenu>
+            </com-submenu>
           </com-menu>
         `,
         data() {
@@ -259,12 +259,12 @@ describe('Menu', () => {
         template: `
           <com-menu>
             <com-menu-item index="1" ref="item1">处理中心</com-menu-item>
-            <el-submenu index="2" ref="submenu" disabled>
+            <com-submenu index="2" ref="submenu" disabled>
               <template slot="title">我的工作台</template>
               <com-menu-item index="2-1">选项1</com-menu-item>
               <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
               <com-menu-item index="2-3">选项3</com-menu-item>
-            </el-submenu>
+            </com-submenu>
             <com-menu-item index="3">订单管理</com-menu-item>
           </com-menu>
         `
@@ -282,18 +282,18 @@ describe('Menu', () => {
       template: `
         <com-menu unique-opened default-active="2-2">
           <com-menu-item index="1">处理中心</com-menu-item>
-          <el-submenu index="2" ref="submenu1">
+          <com-submenu index="2" ref="submenu1">
             <template slot="title">我的工作台</template>
             <com-menu-item index="2-1">选项1</com-menu-item>
             <com-menu-item index="2-2" ref="submenu1Item2">选项2</com-menu-item>
             <com-menu-item index="2-3">选项3</com-menu-item>
-          </el-submenu>
-          <el-submenu index="3" ref="submenu2">
+          </com-submenu>
+          <com-submenu index="3" ref="submenu2">
             <template slot="title">订单管理</template>
             <com-menu-item index="3-1">选项1</com-menu-item>
             <com-menu-item index="3-2" ref="submenu2Item2">选项2</com-menu-item>
             <com-menu-item index="3-3">选项3</com-menu-item>
-          </el-submenu>
+          </com-submenu>
         </com-menu>
       `,
       data() {
@@ -312,12 +312,12 @@ describe('Menu', () => {
       template: `
         <com-menu mode="horizontal">
           <com-menu-item index="1">处理中心</com-menu-item>
-          <el-submenu index="2" ref="submenu">
+          <com-submenu index="2" ref="submenu">
             <template slot="title">我的工作台</template>
             <com-menu-item index="2-1">选项1</com-menu-item>
             <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
             <com-menu-item index="2-3">选项3</com-menu-item>
-          </el-submenu>
+          </com-submenu>
           <com-menu-item index="3">订单管理</com-menu-item>
         </com-menu>
       `,
@@ -339,12 +339,12 @@ describe('Menu', () => {
       template: `
         <com-menu mode="horizontal" menu-trigger="click">
           <com-menu-item index="1">处理中心</com-menu-item>
-          <el-submenu index="2" ref="submenu">
+          <com-submenu index="2" ref="submenu">
             <template slot="title">我的工作台</template>
             <com-menu-item index="2-1">选项1</com-menu-item>
             <com-menu-item index="2-2" ref="submenuItem2">选项2</com-menu-item>
             <com-menu-item index="2-3">选项3</com-menu-item>
-          </el-submenu>
+          </com-submenu>
           <com-menu-item index="3">订单管理</com-menu-item>
         </com-menu>
       `,
@@ -377,13 +377,13 @@ describe('Menu', () => {
             <com-menu-item index="1"><i class="el-icon-message"></i>导航一</com-menu-item>
             <com-menu-item index="2"><i class="el-icon-message"></i>导航二</com-menu-item>
           </com-menu-item-group>
-          <el-submenu index="5">
+          <com-submenu index="5">
             <template slot="title">导航五</template>
             <com-menu-item-group title="分组二">
               <com-menu-item index="5-1">选项1</com-menu-item>
               <com-menu-item index="5-2">选项2</com-menu-item>
             </com-menu-item-group>
-          </el-submenu>
+          </com-submenu>
         </com-menu>
       `
     }, true);

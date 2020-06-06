@@ -254,18 +254,18 @@
     <el-row>
       <com-menu :default-active="menu" class="el-menu-demo" mode="horizontal">
         <com-menu-item index="1">Processing Center</com-menu-item>
-        <el-submenu index="2">
+        <com-submenu index="2">
           <template slot="title">Workspace</template>
           <com-menu-item index="2-1">item one</com-menu-item>
           <com-menu-item index="2-2">item two</com-menu-item>
           <com-menu-item index="2-3">item three</com-menu-item>
-          <el-submenu index="2-4">
+          <com-submenu index="2-4">
             <template slot="title">item four</template>
             <com-menu-item index="2-4-1">item one</com-menu-item>
             <com-menu-item index="2-4-2">item two</com-menu-item>
             <com-menu-item index="2-4-3">item three</com-menu-item>
-          </el-submenu>
-        </el-submenu>
+          </com-submenu>
+        </com-submenu>
         <com-menu-item index="3" disabled>Info</com-menu-item>
         <com-menu-item index="4">
           <a href="https://www.ele.me" target="_blank">Orders</a>
@@ -275,7 +275,7 @@
         default-active="2"
         class="demo-line"
       >
-        <el-submenu index="1">
+        <com-submenu index="1">
           <template slot="title">
             <i class="el-icon-location"></i>
             <span>Navigator One</span>
@@ -287,11 +287,11 @@
           <com-menu-item-group title="Group Two">
             <com-menu-item index="1-3">item three</com-menu-item>
           </com-menu-item-group>
-          <el-submenu index="1-4">
+          <com-submenu index="1-4">
             <template slot="title">item four</template>
             <com-menu-item index="1-4-1">item one</com-menu-item>
-          </el-submenu>
-        </el-submenu>
+          </com-submenu>
+        </com-submenu>
         <com-menu-item index="2">
           <i class="el-icon-menu"></i>
           <span>Navigator Two</span>

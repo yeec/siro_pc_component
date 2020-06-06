@@ -13,7 +13,7 @@
 import Migrating from 'element-ui/src/mixins/migrating';
 
 export default {
-  name: 'ElSteps',
+  name: 'ComSteps',
 
   mixins: [Migrating],
 

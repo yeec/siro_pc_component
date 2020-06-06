@@ -21,9 +21,9 @@
   };
 
   export default {
-    name: 'ElSubmenu',
+    name: 'ComSubmenu',
 
-    componentName: 'ElSubmenu',
+    componentName: 'ComSubmenu',
 
     mixins: [menuMixin, Emitter, poperMixins],
 

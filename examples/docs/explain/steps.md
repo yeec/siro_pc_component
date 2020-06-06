@@ -7,11 +7,11 @@
 
 :::demo 设置`active`属性，接受一个`Number`，表明步骤的 index，从 0 开始。需要定宽的步骤条时，设置`space`属性即可，它接受`Boolean`，单位为`px`，如果不设置，则为自适应。设置`finish-status`属性可以改变已经完成的步骤的状态。
 ```html
-<el-steps :active="active" finish-status="success">
+<com-steps :active="active" finish-status="success">
   <com-step title="步骤 1"></com-step> 
   <com-step title="步骤 2"></com-step> 
   <com-step title="步骤 3"></com-step> 
-</el-steps>
+</com-steps>
 
 <com-button style="margin-top: 12px;" @click="next">下一步</com-button>
 
@@ -39,11 +39,11 @@
 
 :::demo 也可以使用`title`具名分发，可以用`slot`的方式来取代属性的设置，在本文档最后的列表中有所有的 slot name 可供参考。
 ```html
-<el-steps :space="200" :active="1" finish-status="success">
+<com-steps :space="200" :active="1" finish-status="success">
   <com-step title="已完成"></com-step> 
   <com-step title="进行中"></com-step> 
   <com-step title="步骤 3"></com-step> 
-</el-steps>
+</com-steps>
 ```
 :::
 
@@ -53,11 +53,11 @@
 
 :::demo
 ```html
-<el-steps :active="1">
+<com-steps :active="1">
   <com-step title="步骤 1" description="这是一段很长很长很长的描述性文字"></com-step> 
   <com-step title="步骤 2" description="这是一段很长很长很长的描述性文字"></com-step> 
   <com-step title="步骤 3" description="这段就没那么长了"></com-step> 
-</el-steps>
+</com-steps>
 ```
 :::
 
@@ -67,12 +67,12 @@
 
 :::demo
 ```html
-<el-steps :active="2" align-center>
+<com-steps :active="2" align-center>
   <com-step title="步骤1" description="这是一段很长很长很长的描述性文字"></com-step> 
   <com-step title="步骤2" description="这是一段很长很长很长的描述性文字"></com-step> 
   <com-step title="步骤3" description="这是一段很长很长很长的描述性文字"></com-step> 
   <com-step title="步骤4" description="这是一段很长很长很长的描述性文字"></com-step> 
-</el-steps>
+</com-steps>
 ```
 :::
 
@@ -82,11 +82,11 @@
 :::demo 通过`icon`属性来设置图标，图标的类型可以参考 Icon 组件的文档，除此以外，还能通过具名`slot`来使用自定义的图标。
 ```html
 
-<el-steps :active="1">
+<com-steps :active="1">
   <com-step title="步骤 1" icon="el-icon-edit"></com-step> 
   <com-step title="步骤 2" icon="el-icon-upload"></com-step> 
   <com-step title="步骤 3" icon="el-icon-picture"></com-step> 
-</el-steps>
+</com-steps>
 ```
 :::
 
@@ -94,14 +94,14 @@
 
 竖直方向的步骤条。
 
-:::demo 只需要在`el-steps`元素中设置`direction`属性为`vertical`即可。
+:::demo 只需要在`com-steps`元素中设置`direction`属性为`vertical`即可。
 ```html
 <div style="height: 300px;">
-  <el-steps direction="vertical" :active="1">
+  <com-steps direction="vertical" :active="1">
     <com-step title="步骤 1"></com-step> 
     <com-step title="步骤 2"></com-step> 
     <com-step title="步骤 3" description="这是一段很长很长很长的描述性文字"></com-step> 
-  </el-steps>
+  </com-steps>
 </div>
 ```
 :::
@@ -112,17 +112,17 @@
 :::demo
 ```html
 
-<el-steps :active="1" simple>
+<com-steps :active="1" simple>
   <com-step title="步骤 1" icon="el-icon-edit"></com-step> 
   <com-step title="步骤 2" icon="el-icon-upload"></com-step> 
   <com-step title="步骤 3" icon="el-icon-picture"></com-step> 
-</el-steps>
+</com-steps>
 
-<el-steps :active="1" finish-status="success" simple style="margin-top: 20px">
+<com-steps :active="1" finish-status="success" simple style="margin-top: 20px">
   <com-step title="步骤 1" ></com-step> 
   <com-step title="步骤 2" ></com-step> 
   <com-step title="步骤 3" ></com-step> 
-</el-steps>
+</com-steps>
 ```
 :::
 

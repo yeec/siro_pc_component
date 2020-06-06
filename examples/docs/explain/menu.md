@@ -11,18 +11,18 @@
 ```html
 <com-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
   <com-menu-item index="1">处理中心</com-menu-item>
-  <el-submenu index="2">
+  <com-submenu index="2">
     <template slot="title">我的工作台</template>
     <com-menu-item index="2-1">选项1</com-menu-item>
     <com-menu-item index="2-2">选项2</com-menu-item>
     <com-menu-item index="2-3">选项3</com-menu-item>
-    <el-submenu index="2-4">
+    <com-submenu index="2-4">
       <template slot="title">选项4</template>
       <com-menu-item index="2-4-1">选项1</com-menu-item>
       <com-menu-item index="2-4-2">选项2</com-menu-item>
       <com-menu-item index="2-4-3">选项3</com-menu-item>
-    </el-submenu>
-  </el-submenu>
+    </com-submenu>
+  </com-submenu>
   <com-menu-item index="3" disabled>消息中心</com-menu-item>
   <com-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></com-menu-item>
 </com-menu>
@@ -36,18 +36,18 @@
   text-color="#fff"
   active-text-color="#ffd04b">
   <com-menu-item index="1">处理中心</com-menu-item>
-  <el-submenu index="2">
+  <com-submenu index="2">
     <template slot="title">我的工作台</template>
     <com-menu-item index="2-1">选项1</com-menu-item>
     <com-menu-item index="2-2">选项2</com-menu-item>
     <com-menu-item index="2-3">选项3</com-menu-item>
-    <el-submenu index="2-4">
+    <com-submenu index="2-4">
       <template slot="title">选项4</template>
       <com-menu-item index="2-4-1">选项1</com-menu-item>
       <com-menu-item index="2-4-2">选项2</com-menu-item>
       <com-menu-item index="2-4-3">选项3</com-menu-item>
-    </el-submenu>
-  </el-submenu>
+    </com-submenu>
+  </com-submenu>
   <com-menu-item index="3" disabled>消息中心</com-menu-item>
   <com-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></com-menu-item>
 </com-menu>
@@ -84,7 +84,7 @@
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose">
-      <el-submenu index="1">
+      <com-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
           <span>导航一</span>
@@ -97,11 +97,11 @@
         <com-menu-item-group title="分组2">
           <com-menu-item index="1-3">选项3</com-menu-item>
         </com-menu-item-group>
-        <el-submenu index="1-4">
+        <com-submenu index="1-4">
           <template slot="title">选项4</template>
           <com-menu-item index="1-4-1">选项1</com-menu-item>
-        </el-submenu>
-      </el-submenu>
+        </com-submenu>
+      </com-submenu>
       <com-menu-item index="2">
         <i class="el-icon-menu"></i>
         <span slot="title">导航二</span>
@@ -126,7 +126,7 @@
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b">
-      <el-submenu index="1">
+      <com-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
           <span>导航一</span>
@@ -139,11 +139,11 @@
         <com-menu-item-group title="分组2">
           <com-menu-item index="1-3">选项3</com-menu-item>
         </com-menu-item-group>
-        <el-submenu index="1-4">
+        <com-submenu index="1-4">
           <template slot="title">选项4</template>
           <com-menu-item index="1-4-1">选项1</com-menu-item>
-        </el-submenu>
-      </el-submenu>
+        </com-submenu>
+      </com-submenu>
       <com-menu-item index="2">
         <i class="el-icon-menu"></i>
         <span slot="title">导航二</span>
@@ -184,7 +184,7 @@
   <com-radio-button :label="true">收起</com-radio-button>
 </com-radio-group>
 <com-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
-  <el-submenu index="1">
+  <com-submenu index="1">
     <template slot="title">
       <i class="el-icon-location"></i>
       <span slot="title">导航一</span>
@@ -197,11 +197,11 @@
     <com-menu-item-group title="分组2">
       <com-menu-item index="1-3">选项3</com-menu-item>
     </com-menu-item-group>
-    <el-submenu index="1-4">
+    <com-submenu index="1-4">
       <span slot="title">选项4</span>
       <com-menu-item index="1-4-1">选项1</com-menu-item>
-    </el-submenu>
-  </el-submenu>
+    </com-submenu>
+  </com-submenu>
   <com-menu-item index="2">
     <i class="el-icon-menu"></i>
     <span slot="title">导航二</span>
