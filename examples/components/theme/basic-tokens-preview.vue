@@ -23,7 +23,7 @@
   <div class="component-preview">
     <h4>Color</h4>
     <div class="color">
-      <el-row :gutter="12">
+      <com-row :gutter="12">
         <com-col :span="4" v-for="(color, key) in colorLine" :key="key">
           <div class="demo-color-box" :style="{ background: dataProxy(color) }">
             {{color}}
@@ -38,8 +38,8 @@
             </div>
           </div>
         </com-col>
-      </el-row>
-      <el-row :gutter="12">
+      </com-row>
+      <com-row :gutter="12">
         <com-col :span="4">
           <div class="demo-color-box demo-color-box-other" :style="{ background: color_text_primary }">
             Primary Text
@@ -64,9 +64,9 @@
             <div class="value">{{color_text_placeholder}}</div>
           </div>
         </com-col>
-      </el-row>
+      </com-row>
 
-      <el-row :gutter="12">
+      <com-row :gutter="12">
         <com-col :span="4">
           <div
             class="demo-color-box demo-color-box-other demo-color-box-lite"
@@ -103,9 +103,9 @@
             <div class="value">{{border_color_extra_light}}</div>
           </div>
         </com-col>
-      </el-row>
+      </com-row>
 
-      <el-row :gutter="12">
+      <com-row :gutter="12">
         <com-col :span="4">
           <div class="demo-color-box demo-color-box-other" :style="{ background: color_black }">
             Background B
@@ -127,10 +127,10 @@
             <div class="value">Transparent</div>
           </div>
         </com-col>
-      </el-row>
+      </com-row>
     </div>
     <h4>Typography</h4>
-    <el-row :gutter="12">
+    <com-row :gutter="12">
       <com-col :span="6" class="heading">
         <div :style="{ fontSize: font_size_extra_large }">Heading1</div>
         <div :style="{ fontSize: font_size_large }">Heading2</div>
@@ -161,7 +161,7 @@
           }" >
           Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery people scan bar codes with handhelds and workers in the field stay in touch with the central office via their notebooks. Computer hardware weaves itself through the fabric of our lives.</p>
       </com-col>
-    </el-row>
+    </com-row>
   </div>
 </template>
 
