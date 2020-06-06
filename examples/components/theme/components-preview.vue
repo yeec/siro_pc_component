@@ -40,42 +40,42 @@
   <div class="component-preview">
     <h4>Button</h4>
     <el-row class="demo-line">
-      <el-button>Default</el-button>
-      <el-button type="primary">Primary</el-button>
-      <el-button type="success">Success</el-button>
-      <el-button type="info">Info</el-button>
-      <el-button type="warning">Warning</el-button>
-      <el-button type="danger">Danger</el-button>
+      <com-button>Default</com-button>
+      <com-button type="primary">Primary</com-button>
+      <com-button type="success">Success</com-button>
+      <com-button type="info">Info</com-button>
+      <com-button type="warning">Warning</com-button>
+      <com-button type="danger">Danger</com-button>
     </el-row>
     <el-row class="demo-line">
-      <el-button plain>Plain</el-button>
-      <el-button type="primary" plain>Primary</el-button>
-      <el-button type="success" plain>Success</el-button>
-      <el-button type="info" plain>Info</el-button>
-      <el-button type="warning" plain>Warning</el-button>
-      <el-button type="danger" plain>Danger</el-button>
+      <com-button plain>Plain</com-button>
+      <com-button type="primary" plain>Primary</com-button>
+      <com-button type="success" plain>Success</com-button>
+      <com-button type="info" plain>Info</com-button>
+      <com-button type="warning" plain>Warning</com-button>
+      <com-button type="danger" plain>Danger</com-button>
     </el-row>
     <el-row class="demo-line">
-      <el-button round>Round</el-button>
-      <el-button type="primary" round>Primary</el-button>
-      <el-button type="success" round>Success</el-button>
-      <el-button type="info" round>Info</el-button>
-      <el-button type="warning" round>Warning</el-button>
-      <el-button type="danger" round>Danger</el-button>
+      <com-button round>Round</com-button>
+      <com-button type="primary" round>Primary</com-button>
+      <com-button type="success" round>Success</com-button>
+      <com-button type="info" round>Info</com-button>
+      <com-button type="warning" round>Warning</com-button>
+      <com-button type="danger" round>Danger</com-button>
     </el-row>
     <el-row class="demo-line">
-      <el-button icon="el-icon-search" circle></el-button>
-      <el-button type="primary" icon="el-icon-edit" circle></el-button>
-      <el-button type="success" icon="el-icon-check" circle></el-button>
-      <el-button type="info" icon="el-icon-message" circle></el-button>
-      <el-button type="warning" icon="el-icon-star-off" circle></el-button>
-      <el-button type="danger" icon="el-icon-delete" circle></el-button>
+      <com-button icon="el-icon-search" circle></com-button>
+      <com-button type="primary" icon="el-icon-edit" circle></com-button>
+      <com-button type="success" icon="el-icon-check" circle></com-button>
+      <com-button type="info" icon="el-icon-message" circle></com-button>
+      <com-button type="warning" icon="el-icon-star-off" circle></com-button>
+      <com-button type="danger" icon="el-icon-delete" circle></com-button>
     </el-row>
     <el-row class="demo-line">
-      <el-button>Default</el-button>
-      <el-button size="medium">Medium</el-button>
-      <el-button size="small">Small</el-button>
-      <el-button size="mini">Mini</el-button>
+      <com-button>Default</com-button>
+      <com-button size="medium">Medium</com-button>
+      <com-button size="small">Small</com-button>
+      <com-button size="mini">Mini</com-button>
     </el-row>
     <h4>Radio</h4>
     <el-row class="demo-line">
@@ -96,15 +96,15 @@
     </el-row>
     <h4>Checkbox</h4>
     <el-row class="demo-line">
-      <el-checkbox v-model="checked">Option</el-checkbox>
+      <com-checkbox v-model="checked">Option</com-checkbox>
     </el-row>
     <el-row class="demo-line">
-      <el-checkbox-group v-model="checked1">
-        <el-checkbox-button v-for="city in ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen']" :label="city" :key="city">{{city}}</el-checkbox-button>
-      </el-checkbox-group>
+      <com-checkbox-group v-model="checked1">
+        <com-checkbox-button v-for="city in ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen']" :label="city" :key="city">{{city}}</com-checkbox-button>
+      </com-checkbox-group>
     </el-row>
     <el-row class="demo-line">
-      <el-checkbox v-model="checked2" label="Option1" border></el-checkbox>
+      <com-checkbox v-model="checked2" label="Option1" border></com-checkbox>
     </el-row>
     <h4>Input</h4>
     <el-row style="width: 180px">
@@ -161,8 +161,8 @@
     <h4>Transfer</h4>
     <el-row>
       <el-transfer v-model="transfer" filterable :data="transferData">
-        <el-button class="transfer-footer" slot="left-footer" size="small">Operation</el-button>
-        <el-button class="transfer-footer" slot="right-footer" size="small">Operation</el-button>
+        <com-button class="transfer-footer" slot="left-footer" size="small">Operation</com-button>
+        <com-button class="transfer-footer" slot="right-footer" size="small">Operation</com-button>
       </el-transfer>
     </el-row>
     <h4>Table</h4>
@@ -198,16 +198,16 @@
     <h4>Badge</h4>
     <el-row>
       <el-badge :value="12" class="demo-item">
-        <el-button size="small">comments</el-button>
+        <com-button size="small">comments</com-button>
       </el-badge>
       <el-badge :value="3" class="demo-item">
-        <el-button size="small">replies</el-button>
+        <com-button size="small">replies</com-button>
       </el-badge>
       <el-badge :value="1" class="demo-item" type="primary">
-        <el-button size="small">comments</el-button>
+        <com-button size="small">comments</com-button>
       </el-badge>
       <el-badge :value="2" class="demo-item" type="warning">
-        <el-button size="small">replies</el-button>
+        <com-button size="small">replies</com-button>
       </el-badge>
     </el-row>
     <h4>Alert</h4>
