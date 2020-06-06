@@ -10,7 +10,7 @@
   
   从易用性的角度出发，我们对 `Button` 组件进行了处理，使它可以监听 `click` 事件：
   ```html
-  <el-button @click="handleButtonClick">Click Me</el-button>
+  <com-button @click="handleButtonClick">Click Me</com-button>
   ```
   
   但是对于其他组件，还是需要添加 `.native` 修饰符。
@@ -23,7 +23,7 @@
   ```html
   <el-table-column label="操作">
     <template slot-scope="props">
-      <el-button @click.native="showDetail(props.row)">查看详情</el-button>
+      <com-button @click.native="showDetail(props.row)">查看详情</com-button>
     </template>
   </el-table-column>
   ```
@@ -82,7 +82,7 @@
   
   For the sake of usability, we processed `Button` so it can listen to `click` events:
   ```html
-  <el-button @click="handleButtonClick">Click Me</el-button>
+  <com-button @click="handleButtonClick">Click Me</com-button>
   ```
   
   For other components, the `.native` modifier is still mandatory.
@@ -95,7 +95,7 @@
   ```html
   <el-table-column label="Operations">
     <template slot-scope="props">
-      <el-button @click.native="showDetail(props.row)">Details</el-button>
+      <com-button @click.native="showDetail(props.row)">Details</com-button>
     </template>
   </el-table-column>
   ```
@@ -156,7 +156,7 @@
   Para conveniencia, hemos ya procesado eventos para el componente `Button` para que el interfaz sea consistente con `clic` eventos de otros componentes:
   
   ```html
-  <el-button @click="handleButtonClick">Haga Clic Aquí</el-button>
+  <com-button @click="handleButtonClick">Haga Clic Aquí</com-button>
   ```
   
   Para otros componentes el uso del modificador `.native` sigue siendo obligatorio.
@@ -169,7 +169,7 @@
   ```html
   <el-table-column label="Operaciones">
     <template slot-scope="props">
-      <el-button @click.native="verDetalles(props.row)">Detalles</el-button>
+      <com-button @click.native="verDetalles(props.row)">Detalles</com-button>
     </template>
   </el-table-column>
   ```

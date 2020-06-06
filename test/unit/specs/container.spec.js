@@ -86,7 +86,7 @@ describe('Aside', () => {
   it('width', () => {
     vm = createVue({
       template: `
-        <el-aside width="200px"></el-aside>
+        <com-aside width="200px"></com-aside>
       `
     }, true);
     expect(vm.$children[0].$el.style.width).to.equal('200px');

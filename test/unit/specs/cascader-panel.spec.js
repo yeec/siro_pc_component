@@ -124,10 +124,10 @@ describe('CascaderPanel', () => {
   it('expand and check', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           ref="panel"
           v-model="value"
-          :options="options"></el-cascader-panel>
+          :options="options"></com-cascader-panel>
       `,
       data() {
         return {
@@ -166,10 +166,10 @@ describe('CascaderPanel', () => {
   it('with default value', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           ref="panel"
           v-model="value"
-          :options="options"></el-cascader-panel>
+          :options="options"></com-cascader-panel>
       `,
       data() {
         return {
@@ -191,10 +191,10 @@ describe('CascaderPanel', () => {
   it('disabled options', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           ref="panel"
           :value="value"
-          :options="options"></el-cascader-panel>
+          :options="options"></com-cascader-panel>
       `,
       data() {
         return {
@@ -223,9 +223,9 @@ describe('CascaderPanel', () => {
   it('expand by hover', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           :options="options"
-          :props="props"></el-cascader-panel>
+          :props="props"></com-cascader-panel>
       `,
       data() {
         return {
@@ -252,11 +252,11 @@ describe('CascaderPanel', () => {
   it('emit value only', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           ref="panel"
           v-model="value"
           :options="options"
-          :props="props"></el-cascader-panel>
+          :props="props"></com-cascader-panel>
       `,
       data() {
         return {
@@ -285,10 +285,10 @@ describe('CascaderPanel', () => {
   it('multiple mode', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></el-cascader-panel>
+          :props="props"></com-cascader-panel>
       `,
       data() {
         return {
@@ -315,10 +315,10 @@ describe('CascaderPanel', () => {
   it('multiple mode with disabled default value', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></el-cascader-panel>
+          :props="props"></com-cascader-panel>
       `,
       data() {
         return {
@@ -353,10 +353,10 @@ describe('CascaderPanel', () => {
   it('check strictly in single mode', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></el-cascader-panel>
+          :props="props"></com-cascader-panel>
       `,
       data() {
         return {
@@ -387,10 +387,10 @@ describe('CascaderPanel', () => {
   it('check strictly in multiple mode', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></el-cascader-panel>
+          :props="props"></com-cascader-panel>
       `,
       data() {
         return {
@@ -424,10 +424,10 @@ describe('CascaderPanel', () => {
   it('custom props', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></el-cascader-panel>
+          :props="props"></com-cascader-panel>
       `,
       data() {
         return {
@@ -467,10 +467,10 @@ describe('CascaderPanel', () => {
   it('value key is same as label key', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></el-cascader-panel>
+          :props="props"></com-cascader-panel>
       `,
       data() {
         return {
@@ -507,9 +507,9 @@ describe('CascaderPanel', () => {
   it('dynamic loading', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           v-model="value"
-          :props="props"></el-cascader-panel>
+          :props="props"></com-cascader-panel>
       `,
       data() {
         let id = 0;
@@ -553,10 +553,10 @@ describe('CascaderPanel', () => {
   it('click leaf hidden children', async() => {
     vm = createVue({
       template: `
-        <el-cascader-panel
+        <com-cascader-panel
           ref="panel"
           v-model="value"
-          :options="options"></el-cascader-panel>
+          :options="options"></com-cascader-panel>
       `,
       data() {
         return {

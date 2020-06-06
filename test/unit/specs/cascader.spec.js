@@ -77,10 +77,10 @@ describe('Cascader', () => {
   it('expand and check', async() => {
     vm = createTest({
       template: `
-        <el-cascader
+        <com-cascader
           ref="cascader"
           v-model="value"
-          :options="options"></el-cascader>
+          :options="options"></com-cascader>
       `,
       data() {
         return {
@@ -124,9 +124,9 @@ describe('Cascader', () => {
   it('with default value', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
-          :options="options"></el-cascader>
+          :options="options"></com-cascader>
       `,
       data() {
         return {
@@ -146,9 +146,9 @@ describe('Cascader', () => {
   it('async set selected value', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
-          :options="options"></el-cascader>
+          :options="options"></com-cascader>
       `,
       data() {
         return {
@@ -169,9 +169,9 @@ describe('Cascader', () => {
   it('default value with async options', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
-          :options="options"></el-cascader>
+          :options="options"></com-cascader>
       `,
       data() {
         return {
@@ -192,10 +192,10 @@ describe('Cascader', () => {
   it('clearable', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
           :options="options"
-          clearable></el-cascader>
+          clearable></com-cascader>
       `,
       data() {
         return {
@@ -217,10 +217,10 @@ describe('Cascader', () => {
   it('show last level label', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
           :options="options"
-          :show-all-levels="false"></el-cascader>
+          :show-all-levels="false"></com-cascader>
       `,
       data() {
         return {
@@ -240,11 +240,11 @@ describe('Cascader', () => {
   it('multiple mode', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
           :options="options"
           :disabled="disabled"
-          :props="props"></el-cascader>
+          :props="props"></com-cascader>
       `,
       data() {
         return {
@@ -280,11 +280,11 @@ describe('Cascader', () => {
   it('clearable in multiple mode', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
           :options="options"
           :props="props"
-          clearable></el-cascader>
+          clearable></com-cascader>
       `,
       data() {
         return {
@@ -312,11 +312,11 @@ describe('Cascader', () => {
   it('collapse tags', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
           :options="options"
           :props="props"
-          collapse-tags></el-cascader>
+          collapse-tags></com-cascader>
       `,
       data() {
         return {
@@ -350,10 +350,10 @@ describe('Cascader', () => {
   it('filterable', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
           :options="options"
-          filterable></el-cascader>
+          filterable></com-cascader>
       `,
       data() {
         return {
@@ -380,11 +380,11 @@ describe('Cascader', () => {
   it('filter method', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <com-cascader
           v-model="value"
           :options="options"
           :filter-method="filterMethod"
-          filterable></el-cascader>
+          filterable></com-cascader>
       `,
       data() {
         return {

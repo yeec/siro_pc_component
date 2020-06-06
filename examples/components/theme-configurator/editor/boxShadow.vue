@@ -4,14 +4,14 @@
       <com-tooltip :content="displayName" placement="top">
         <span>{{displayKeyName}}</span>
       </com-tooltip>
-      <el-button 
+      <com-button 
         class="plus-button" 
         size="mini" 
         round 
         icon="el-icon-plus"
         @click.stop="onAddShadow"
       >
-      </el-button>
+      </com-button>
     </div>
     <div class="config-content" v-for="(each, key) in valueArr" :key="key">
       <div class="content-10">
@@ -61,12 +61,12 @@
         <span class="content-tip">Blur</span>
       </div>
       <div class="content-10">
-        <el-button 
+        <com-button 
           size="mini" 
           round 
           icon="el-icon-minus"
           @click.stop="val => onMinusShadow(key)"
-        ></el-button>
+        ></com-button>
       </div>
     </div>
   </section>

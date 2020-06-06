@@ -28,34 +28,34 @@
   <div>
     <h2>设计原则</h2>
     <com-row :gutter="14" class="cards">
-      <el-col :xs="12" :sm="6">
+      <com-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/consistency.png" alt="Consistency">
           <h4>一致</h4>
           <span>Consistency</span>
         </div>
-      </el-col>
-      <el-col :xs="12" :sm="6">
+      </com-col>
+      <com-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/feedback.png" alt="Feedback">
           <h4>反馈</h4>
           <span>Feedback</span>
         </div>
-      </el-col>
-      <el-col :xs="12" :sm="6">
+      </com-col>
+      <com-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/efficiency.png" alt="Efficiency">
           <h4>效率</h4>
           <span>Efficiency</span>
         </div>
-      </el-col>
-      <el-col :xs="12" :sm="6">
+      </com-col>
+      <com-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/controllability.png" alt="Controllability">
           <h4>可控</h4>
           <span>Controllability</span>
         </div>
-      </el-col>
+      </com-col>
     </com-row>
     <h3>一致性 Consistency</h3>
     <ul>

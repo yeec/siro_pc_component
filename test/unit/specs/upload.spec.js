@@ -124,7 +124,7 @@ describe('Upload', () => {
         render(h) {
           return (
             <com-upload {...props} ref="upload">
-              <el-button size="small" type="primary">点击上传</el-button>
+              <com-button size="small" type="primary">点击上传</com-button>
             </com-upload>
           );
         }

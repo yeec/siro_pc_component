@@ -61,12 +61,12 @@
 <template>
   <div class="page-container page-guide">
     <com-row>
-      <el-col :xs="24" :sm="5">
+      <com-col :xs="24" :sm="5">
         <side-nav :data="navsData" :base="`/${ lang }/guide`"></side-nav>
-      </el-col>
-      <el-col :xs="24" :sm="19">
+      </com-col>
+      <com-col :xs="24" :sm="19">
         <router-view class="content"></router-view>
-      </el-col>
+      </com-col>
     </com-row>
   </div>
 </template>

@@ -1027,9 +1027,9 @@
       :filter-method="filterTag"
       filter-placement="bottom-end">
       <template slot-scope="scope">
-        <el-tag
+        <com-tag
           :type="scope.row.tag === '家' ? 'primary' : 'success'"
-          disable-transitions>{{scope.row.tag}}</el-tag>
+          disable-transitions>{{scope.row.tag}}</com-tag>
       </template>
     </el-table-column>
   </el-table>
@@ -1110,7 +1110,7 @@
           <p>姓名: {{ scope.row.name }}</p>
           <p>住址: {{ scope.row.address }}</p>
           <div slot="reference" class="name-wrapper">
-            <el-tag size="medium">{{ scope.row.name }}</el-tag>
+            <com-tag size="medium">{{ scope.row.name }}</com-tag>
           </div>
         </com-popover>
       </template>

@@ -37,8 +37,8 @@ describe('Dialog', () => {
           <el-dialog :title="title" :visible="visible">
             <span>这是一段信息</span>
             <span slot="footer" class="dialog-footer">
-              <el-button @click.native="dialogVisible = false">取消</el-button>
-              <el-button type="primary" @click.native="dialogVisible = false">确定</el-button>
+              <com-button @click.native="dialogVisible = false">取消</com-button>
+              <com-button type="primary" @click.native="dialogVisible = false">确定</com-button>
             </span>
           </el-dialog>
         </div>

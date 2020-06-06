@@ -10,9 +10,9 @@ describe('Carousel', () => {
     vm = createVue({
       template: `
         <div>
-          <el-carousel ref="carousel">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel ref="carousel">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
     });
@@ -24,9 +24,9 @@ describe('Carousel', () => {
     vm = createVue({
       template: `
         <div>
-          <el-carousel :interval="50">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel :interval="50">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
     });
@@ -45,9 +45,9 @@ describe('Carousel', () => {
     vm = createVue({
       template: `
         <div>
-          <el-carousel :autoplay="false" :initial-index="1">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel :autoplay="false" :initial-index="1">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
     });
@@ -62,9 +62,9 @@ describe('Carousel', () => {
     vm = createVue({
       template: `
         <div>
-          <el-carousel :interval="20">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel :interval="20">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
     });
@@ -88,9 +88,9 @@ describe('Carousel', () => {
     vm = createVue({
       template: `
         <div>
-          <el-carousel :interval="50" @change="handleChange">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel :interval="50" @change="handleChange">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `,
       data() {
@@ -118,9 +118,9 @@ describe('Carousel', () => {
     vm = createVue({
       template: `
         <div>
-          <el-carousel>
-            <el-carousel-item v-for="item in 3" :key="item" :label="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel>
+            <com-carousel-item  v-for="item in 3" :key="item" :label="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
     });
@@ -135,9 +135,9 @@ describe('Carousel', () => {
       vm = createVue({
         template: `
         <div>
-          <el-carousel :autoplay="false">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel :autoplay="false">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
       });
@@ -155,9 +155,9 @@ describe('Carousel', () => {
       vm = createVue({
         template: `
         <div>
-          <el-carousel :autoplay="false" trigger="click" ref="carousel">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel :autoplay="false" trigger="click" ref="carousel">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
       });
@@ -184,9 +184,9 @@ describe('Carousel', () => {
       vm = createVue({
         template: `
         <div>
-          <el-carousel :autoplay="false">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel :autoplay="false">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
       });
@@ -204,9 +204,9 @@ describe('Carousel', () => {
       vm = createVue({
         template: `
         <div>
-          <el-carousel :autoplay="false">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel :autoplay="false">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
       });
@@ -230,9 +230,9 @@ describe('Carousel', () => {
     vm = createVue({
       template: `
         <div>
-          <el-carousel :autoplay="false" type="card">
-            <el-carousel-item v-for="item in 7" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel :autoplay="false" type="card">
+            <com-carousel-item  v-for="item in 7" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
     });
@@ -262,9 +262,9 @@ describe('Carousel', () => {
     vm = createVue({
       template: `
         <div>
-          <el-carousel ref="carousel" :autoplay="false" direction="vertical" height="100px">
-            <el-carousel-item v-for="item in 3" :key="item"></el-carousel-item>
-          </el-carousel>
+          <com-carousel ref="carousel" :autoplay="false" direction="vertical" height="100px">
+            <com-carousel-item  v-for="item in 3" :key="item"></com-carousel-item >
+          </com-carousel>
         </div>
       `
     });

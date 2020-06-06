@@ -10,12 +10,12 @@ describe('Autocomplete', () => {
       template: `
         <div>
           <button class="btn">a</button>
-          <el-autocomplete
+          <com-autocomplete
             ref="autocomplete"
             v-model="state"
             :fetch-suggestions="querySearch"
             placeholder="请输入内容autocomplete1"
-          ></el-autocomplete>
+          ></com-autocomplete>
         </div>
       `,
       data() {
@@ -69,12 +69,12 @@ describe('Autocomplete', () => {
   it('select', done => {
     vm = createVue({
       template: `
-        <el-autocomplete
+        <com-autocomplete
           v-model="state"
           ref="autocomplete"
           :fetch-suggestions="querySearch"
           placeholder="请输入内容autocomplete2"
-        ></el-autocomplete>
+        ></com-autocomplete>
       `,
       data() {
         return {
@@ -130,12 +130,12 @@ describe('Autocomplete', () => {
   it('input', done => {
     vm = createVue({
       template: `
-        <el-autocomplete
+        <com-autocomplete
           ref="autocomplete"
           v-model="state"
           :trigger-on-focus="false"
           :fetch-suggestions="querySearch"
-        ></el-autocomplete>
+        ></com-autocomplete>
       `,
       data() {
         return {
@@ -185,14 +185,14 @@ describe('Autocomplete', () => {
     const createVm = (selectWhenUnmatched = false) => {
       return createVue({
         template: `
-          <el-autocomplete
+          <com-autocomplete
             ref="autocomplete"
             v-model="state"
             @select="handleSelect"
             :trigger-on-focus="false"
             :select-when-unmatched="selectWhenUnmatched"
             :fetch-suggestions="querySearch"
-          ></el-autocomplete>
+          ></com-autocomplete>
         `,
         data() {
           return {
@@ -266,13 +266,13 @@ describe('Autocomplete', () => {
   it('props', done => {
     vm = createVue({
       template: `
-        <el-autocomplete
+        <com-autocomplete
           v-model="state"
           ref="autocomplete"
           value-key="address"
           :fetch-suggestions="querySearch"
           placeholder="请输入内容autocomplete2"
-        ></el-autocomplete>
+        ></com-autocomplete>
       `,
       data() {
         return {
@@ -329,12 +329,12 @@ describe('Autocomplete', () => {
   it('highlight', done => {
     vm = createVue({
       template: `
-        <el-autocomplete
+        <com-autocomplete
           ref="autocomplete"
           v-model="state"
           :fetch-suggestions="querySearch"
           placeholder="请输入内容autocomplete3"
-        ></el-autocomplete>
+        ></com-autocomplete>
       `,
       data() {
         return {
@@ -404,12 +404,12 @@ describe('Autocomplete', () => {
   it('highlight out of bounds', done => {
     vm = createVue({
       template: `
-        <el-autocomplete
+        <com-autocomplete
           ref="autocomplete"
           v-model="state"
           :fetch-suggestions="querySearch"
           placeholder="请输入内容autocomplete3"
-        ></el-autocomplete>
+        ></com-autocomplete>
       `,
       data() {
         return {
@@ -467,13 +467,13 @@ describe('Autocomplete', () => {
   it('triggerOnFocus', done => {
     vm = createVue({
       template: `
-        <el-autocomplete
+        <com-autocomplete
           ref="autocomplete"
           v-model="state"
           :fetch-suggestions="querySearch"
           :trigger-on-focus="false"
           placeholder="请输入内容autocomplete1"
-        ></el-autocomplete>
+        ></com-autocomplete>
       `,
       data() {
         return {
@@ -517,13 +517,13 @@ describe('Autocomplete', () => {
   it('event:focus & blur', done => {
     vm = createVue({
       template: `
-        <el-autocomplete
+        <com-autocomplete
           ref="input"
           v-model="state"
           :fetch-suggestions="querySearch"
           :trigger-on-focus="false"
           placeholder="请输入内容autocomplete1"
-        ></el-autocomplete>
+        ></com-autocomplete>
       `,
       data() {
         return {
@@ -573,12 +573,12 @@ describe('Autocomplete', () => {
   it('can highlight first item', done => {
     vm = createVue({
       template: `
-        <el-autocomplete
+        <com-autocomplete
           ref="autocomplete"
           v-model="state"
           :fetch-suggestions="querySearch"
           highlight-first-item
-        ></el-autocomplete>
+        ></com-autocomplete>
       `,
       data() {
         return {

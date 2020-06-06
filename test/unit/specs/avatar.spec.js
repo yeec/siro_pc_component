@@ -16,8 +16,8 @@ describe('Avatar', () => {
   it('size is number', () => {
     vm = createVue({
       template: `
-        <el-avatar :size="50">
-        </el-avatar>
+        <com-avatar :size="50">
+        </com-avatar>
       `
     }, true);
     const avatarElm = vm.$el;
@@ -27,9 +27,9 @@ describe('Avatar', () => {
   it('size is string', () => {
     vm = createVue({
       template: `
-        <el-avatar size="small">
+        <com-avatar size="small">
           user
-        </el-avatar>
+        </com-avatar>
       `
     }, true);
     const avatarElm = vm.$el;
@@ -39,9 +39,9 @@ describe('Avatar', () => {
   it('shape', () => {
     vm = createVue({
       template: `
-        <el-avatar size="small" shape="square">
+        <com-avatar size="small" shape="square">
           user
-        </el-avatar>
+        </com-avatar>
       `
     }, true);
     const avatarElm = vm.$el;
@@ -51,8 +51,8 @@ describe('Avatar', () => {
   it('icon avatar', () => {
     vm = createVue({
       template: `
-        <el-avatar icon="el-icon-user-solid">
-        </el-avatar>
+        <com-avatar icon="el-icon-user-solid">
+        </com-avatar>
       `
     }, true);
     const avatarElm = vm.$el;
@@ -64,7 +64,7 @@ describe('Avatar', () => {
   it('image avatar', () => {
     vm = createVue({
       template: `
-        <el-avatar src="${IMAGE_SUCCESS}"></el-avatar>
+        <com-avatar src="${IMAGE_SUCCESS}"></com-avatar>
       `
     }, true);
     const imgElm = vm.$el.children[0];
@@ -75,9 +75,9 @@ describe('Avatar', () => {
   it('image fallback', async() => {
     vm = createVue({
       template: `
-        <el-avatar src="${IMAGE_FAIL}" @error="errorHandler">
+        <com-avatar src="${IMAGE_FAIL}" @error="errorHandler">
           fallback
-        </el-avatar>
+        </com-avatar>
       `,
       methods: {
         errorHandler() {
@@ -94,8 +94,8 @@ describe('Avatar', () => {
     vm = createVue({
       template: `
         <div>
-          <el-avatar :src="url"></el-avatar>
-          <el-avatar :src="url" v-for="fit in fits" :fit="fit" :key="fit"></el-avatar>
+          <com-avatar :src="url"></com-avatar>
+          <com-avatar :src="url" v-for="fit in fits" :fit="fit" :key="fit"></com-avatar>
         </div>
         
       `,

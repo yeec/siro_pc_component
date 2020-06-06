@@ -31,9 +31,9 @@
 <template>
   <div class="page-container page-theme-preview" ref="themePreview">
     <section class="display">
-      <el-button type="text" icon="el-icon-back" @click="navBack">
+      <com-button type="text" icon="el-icon-back" @click="navBack">
         返回
-      </el-button>
+      </com-button>
       <h3>{{previewConfig.name}}</h3>
       <basic-tokens-preview>
       </basic-tokens-preview>

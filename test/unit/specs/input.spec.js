@@ -196,7 +196,7 @@ describe('Input', () => {
           <com-option label="订单号" value="2"></com-option>
           <com-option label="用户电话" value="3"></com-option>
         </com-select>
-        <el-button slot="append" icon="el-icon-search"></el-button>
+        <com-button slot="append" icon="el-icon-search"></com-button>
       </el-input>
       `,
       data() {

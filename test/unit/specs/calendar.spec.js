@@ -9,7 +9,7 @@ describe('Calendar', () => {
   it('create', async() => {
     vm = createVue({
       template: `
-      <el-calendar v-model="value"></el-calendar>
+      <com-calendar v-model="value"></com-calendar>
       `,
       data() {
         return {
@@ -36,7 +36,7 @@ describe('Calendar', () => {
   it('range', () => {
     vm = createVue({
       template: `
-      <el-calendar :range="['2019-03-04', '2019-03-24']"></el-calendar>
+      <com-calendar :range="['2019-03-04', '2019-03-24']"></com-calendar>
       `
     }, true);
     const titleEl = vm.$el.querySelector('.el-calendar__title');
@@ -49,7 +49,7 @@ describe('Calendar', () => {
   it('range tow monthes', async() => {
     vm = createVue({
       template: `
-      <el-calendar :range="['2019-04-15', '2019-05-19']"></el-calendar>
+      <com-calendar :range="['2019-04-15', '2019-05-19']"></com-calendar>
       `
     }, true);
     const titleEl = vm.$el.querySelector('.el-calendar__title');
@@ -70,7 +70,7 @@ describe('Calendar', () => {
   it('firstDayOfWeek', async() => {
     vm = createVue({
       template: `
-      <el-calendar v-model="value" :first-day-of-week="0"></el-calendar>
+      <com-calendar v-model="value" :first-day-of-week="0"></com-calendar>
       `,
       data() {
         return {
@@ -89,7 +89,7 @@ describe('Calendar', () => {
   it('firstDayOfWeek in range mode', async() => {
     vm = createVue({
       template: `
-      <el-calendar v-model="value" :first-day-of-week="7" :range="['2019-02-03', '2019-03-23']"></el-calendar>
+      <com-calendar v-model="value" :first-day-of-week="7" :range="['2019-02-03', '2019-03-23']"></com-calendar>
       `,
       data() {
         return {

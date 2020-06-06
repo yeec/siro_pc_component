@@ -14,9 +14,9 @@ describe('Badge', () => {
 
   it('is fixed', () => {
     vm = createVue(`
-      <el-badge>
+      <com-badge>
         <button>click</button>
-      </el-badge>
+      </com-badge>
     `);
 
     expect(vm.$el.querySelector('.el-badge__content.is-fixed')).to.exist;
@@ -24,9 +24,9 @@ describe('Badge', () => {
 
   it('is dot', () => {
     vm = createVue(`
-      <el-badge is-dot>
+      <com-badge is-dot>
         <button>click</button>
-      </el-badge>
+      </com-badge>
     `);
 
     expect(vm.$el.querySelector('.el-badge__content.is-dot')).to.exist;

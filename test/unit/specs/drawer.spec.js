@@ -39,8 +39,8 @@ describe('Drawer', () => {
         template: `
           <el-drawer :title='title' :visible='visible'>
             <span>这是一段信息</span>
-            <el-button @click.native='dialogVisible = false'>取消</el-button>
-            <el-button type='primary' @click.native='dialogVisible = false'>确定</el-button>
+            <com-button @click.native='dialogVisible = false'>取消</com-button>
+            <com-button type='primary' @click.native='dialogVisible = false'>确定</com-button>
           </el-drawer>
       `,
 

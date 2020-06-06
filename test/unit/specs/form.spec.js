@@ -204,12 +204,12 @@ describe('Form', () => {
             <el-input v-model="form.address" ref="fieldAddr"></el-input>
           </el-form-item>
           <el-form-item label="活动性质" prop="type">
-            <el-checkbox-group v-model="form.type">
-              <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
-              <el-checkbox label="地推活动" name="type"></el-checkbox>
-              <el-checkbox label="线下主题活动" name="type"></el-checkbox>
-              <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
-            </el-checkbox-group>
+            <com-checkbox-group v-model="form.type">
+              <com-checkbox label="美食/餐厅线上活动" name="type"></com-checkbox>
+              <com-checkbox label="地推活动" name="type"></com-checkbox>
+              <com-checkbox label="线下主题活动" name="type"></com-checkbox>
+              <com-checkbox label="单纯品牌曝光" name="type"></com-checkbox>
+            </com-checkbox-group>
           </el-form-item>
         </el-form>
       `,
@@ -261,12 +261,12 @@ describe('Form', () => {
             <el-input v-model="form.address"></el-input>
           </el-form-item>
           <el-form-item label="活动性质" prop="type">
-            <el-checkbox-group v-model="form.type">
-              <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
-              <el-checkbox label="地推活动" name="type"></el-checkbox>
-              <el-checkbox label="线下主题活动" name="type"></el-checkbox>
-              <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
-            </el-checkbox-group>
+            <com-checkbox-group v-model="form.type">
+              <com-checkbox label="美食/餐厅线上活动" name="type"></com-checkbox>
+              <com-checkbox label="地推活动" name="type"></com-checkbox>
+              <com-checkbox label="线下主题活动" name="type"></com-checkbox>
+              <com-checkbox label="单纯品牌曝光" name="type"></com-checkbox>
+            </com-checkbox-group>
           </el-form-item>
         </el-form>
       `,
@@ -313,17 +313,17 @@ describe('Form', () => {
       template: `
         <el-form ref="form" :model="form" :rules="rules">
           <el-form-item label="活动时间" required>
-            <el-col :span="11">
+            <com-col :span="11">
               <el-form-item prop="date1">
                 <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
               </el-form-item>
-            </el-col>
-            <el-col class="line" :span="2">-</el-col>
-            <el-col :span="11">
+            </com-col>
+            <com-col class="line" :span="2">-</com-col>
+            <com-col :span="11">
               <el-form-item prop="date2">
                 <el-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></el-time-picker>
               </el-form-item>
-            </el-col>
+            </com-col>
           </el-form-item>
         </el-form>
       `,
@@ -601,9 +601,9 @@ describe('Form', () => {
         template: `
           <el-form :model="form" :rules="rules" ref="form">
             <el-form-item label="是否接受协议" prop="accept" ref="field">
-              <el-checkbox v-model="form.accept">
+              <com-checkbox v-model="form.accept">
                 <span>接受协议</span>
-              </el-checkbox>
+              </com-checkbox>
             </el-form-item>
           </el-form>
         `,
@@ -653,12 +653,12 @@ describe('Form', () => {
         template: `
           <el-form :model="form" :rules="rules" ref="form">
             <el-form-item label="活动名称" prop="type" ref="field">
-              <el-checkbox-group v-model="form.type">
-                <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
-                <el-checkbox label="地推活动" name="type"></el-checkbox>
-                <el-checkbox label="线下主题活动" name="type"></el-checkbox>
-                <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
-              </el-checkbox-group>
+              <com-checkbox-group v-model="form.type">
+                <com-checkbox label="美食/餐厅线上活动" name="type"></com-checkbox>
+                <com-checkbox label="地推活动" name="type"></com-checkbox>
+                <com-checkbox label="线下主题活动" name="type"></com-checkbox>
+                <com-checkbox label="单纯品牌曝光" name="type"></com-checkbox>
+              </com-checkbox-group>
             </el-form-item>
           </el-form>
         `,

@@ -16,7 +16,7 @@
           />
         </com-tooltip>
         <div class="button-group">
-          <el-button 
+          <com-button 
             class="reset"
             type="primary" 
             round 
@@ -25,8 +25,8 @@
             @click="onReset"
           >
             {{getActionDisplayName('reset-theme')}}
-          </el-button>
-          <el-button 
+          </com-button>
+          <com-button 
             class="download"
             type="primary" 
             round 
@@ -35,7 +35,7 @@
             @click="onDownload"
           >
             {{getActionDisplayName('download-theme')}}
-          </el-button>
+          </com-button>
         </div>
       </div>
       <com-select v-model="selectedComponent" class="selector">

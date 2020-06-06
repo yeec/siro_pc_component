@@ -45,9 +45,9 @@ describe('Alert', () => {
 
   it('title slot', () => {
     vm = createVue(`
-      <el-alert>
+      <com-alert>
         <span slot="title">foo</span>
-      </el-alert>
+      </com-alert>
     `);
 
     expect(vm.$el.querySelector('.el-alert__title').textContent).to.equal('foo');
@@ -57,9 +57,9 @@ describe('Alert', () => {
     vm = createVue({
       template: `
         <div>
-          <el-alert
+          <com-alert
             title="test"
-            close-text="close"></el-alert>
+            close-text="close"></com-alert>
         </div>
       `
     }, true);

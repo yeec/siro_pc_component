@@ -9,9 +9,9 @@ describe('Card', () => {
 
   it('slot:header', () => {
     vm = createVue(`
-      <el-card>
+      <com-card>
         <header slot="header">二师兄叫我埋梗 啦啦啦</header>
-      </el-card>
+      </com-card>
     `);
 
     expect(vm.$el.querySelector('.el-card__header')).to.property('textContent').to.include('二师兄叫我埋梗 啦啦啦');

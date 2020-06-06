@@ -9,18 +9,18 @@ describe('Col', () => {
   it('create', () => {
     vm = createVue({
       template: `
-        <el-col :span="12">
-        </el-col>
+        <com-col :span="12">
+        </com-col>
       `
     }, true);
     let colElm = vm.$el;
-    expect(colElm.classList.contains('el-col')).to.be.true;
+    expect(colElm.classList.contains('com-col')).to.be.true;
   });
   it('span', () => {
     vm = createVue({
       template: `
-        <el-col :span="12">
-        </el-col>
+        <com-col :span="12">
+        </com-col>
       `
     }, true);
     let colElm = vm.$el;
@@ -29,8 +29,8 @@ describe('Col', () => {
   it('pull', () => {
     vm = createVue({
       template: `
-        <el-col :span="12" :pull="3">
-        </el-col>
+        <com-col :span="12" :pull="3">
+        </com-col>
       `
     }, true);
     let colElm = vm.$el;
@@ -39,8 +39,8 @@ describe('Col', () => {
   it('push', () => {
     vm = createVue({
       template: `
-        <el-col :span="12" :push="3">
-        </el-col>
+        <com-col :span="12" :push="3">
+        </com-col>
       `
     }, true);
     let colElm = vm.$el;
@@ -50,8 +50,8 @@ describe('Col', () => {
     vm = createVue({
       template: `
         <com-row :gutter="20">
-          <el-col :span="12" ref="col">
-          </el-col>
+          <com-col :span="12" ref="col">
+          </com-col>
         </com-row>
       `
     }, true);
@@ -63,8 +63,8 @@ describe('Col', () => {
     vm = createVue({
       template: `
         <com-row :gutter="20">
-          <el-col ref="col" :sm="{ span: 4, offset: 2 }" :md="8" :lg="{ span: 6, offset: 3 }">
-          </el-col>
+          <com-col ref="col" :sm="{ span: 4, offset: 2 }" :md="8" :lg="{ span: 6, offset: 3 }">
+          </com-col>
         </com-row>
       `
     }, true);

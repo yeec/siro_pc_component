@@ -73,8 +73,8 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="closeCopyForm">{{getActionDisplayName('cancel')}}</el-button>
-        <el-button type="primary" @click="copyToUser">{{getActionDisplayName('confirm')}}</el-button>
+        <com-button @click="closeCopyForm">{{getActionDisplayName('cancel')}}</com-button>
+        <com-button type="primary" @click="copyToUser">{{getActionDisplayName('confirm')}}</com-button>
       </div>
     </el-dialog>
   </div>

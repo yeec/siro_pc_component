@@ -75,7 +75,7 @@ describe('Button', () => {
     let result;
     vm = createVue({
       template: `
-        <el-button @click="handleClick"></el-button>
+        <com-button @click="handleClick"></com-button>
       `,
       methods: {
         handleClick(evt) {
@@ -95,7 +95,7 @@ describe('Button', () => {
     let result;
     vm = createVue({
       template: `
-        <el-button @click="handleClick"><span class="inner-slot"></span></el-button>
+        <com-button @click="handleClick"><span class="inner-slot"></span></com-button>
       `,
       methods: {
         handleClick(evt) {
@@ -115,7 +115,7 @@ describe('Button', () => {
     let result;
     vm = createVue({
       template: `
-        <el-button loading @click="handleClick"><span class="inner-slot"></span></el-button>
+        <com-button loading @click="handleClick"><span class="inner-slot"></span></com-button>
       `,
       methods: {
         handleClick(evt) {

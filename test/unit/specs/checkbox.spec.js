@@ -9,8 +9,8 @@ describe('Checkbox', () => {
   it('create', done => {
     vm = createVue({
       template: `
-        <el-checkbox v-model="checked">
-        </el-checkbox>
+        <com-checkbox v-model="checked">
+        </com-checkbox>
       `,
       data() {
         return {
@@ -19,7 +19,7 @@ describe('Checkbox', () => {
       }
     }, true);
     let checkboxElm = vm.$el;
-    expect(checkboxElm.classList.contains('el-checkbox')).to.be.true;
+    expect(checkboxElm.classList.contains('com-checkbox')).to.be.true;
     checkboxElm.click();
     vm.$nextTick(_ => {
       expect(checkboxElm.querySelector('.is-checked')).to.be.ok;
@@ -29,11 +29,11 @@ describe('Checkbox', () => {
   it('disabled', () => {
     vm = createVue({
       template: `
-        <el-checkbox
+        <com-checkbox
           v-model="checked"
           disabled
         >
-        </el-checkbox>
+        </com-checkbox>
       `,
       data() {
         return {
@@ -47,8 +47,8 @@ describe('Checkbox', () => {
   it('change event', done => {
     vm = createVue({
       template: `
-        <el-checkbox v-model="checked" @change="onChange">
-        </el-checkbox>
+        <com-checkbox v-model="checked" @change="onChange">
+        </com-checkbox>
       `,
       methods: {
         onChange(val) {
@@ -76,12 +76,12 @@ describe('Checkbox', () => {
   it('checkbox group', done => {
     vm = createVue({
       template: `
-        <el-checkbox-group v-model="checkList">
-          <el-checkbox label="a" ref="a"></el-checkbox>
-          <el-checkbox label="b" ref="b"></el-checkbox>
-          <el-checkbox label="c" ref="c"></el-checkbox>
-          <el-checkbox label="d" ref="d"></el-checkbox>
-        </el-checkbox-group>
+        <com-checkbox-group v-model="checkList">
+          <com-checkbox label="a" ref="a"></com-checkbox>
+          <com-checkbox label="b" ref="b"></com-checkbox>
+          <com-checkbox label="c" ref="c"></com-checkbox>
+          <com-checkbox label="d" ref="d"></com-checkbox>
+        </com-checkbox-group>
       `,
       data() {
         return {
@@ -100,10 +100,10 @@ describe('Checkbox', () => {
   it('checkbox group change event', done => {
     vm = createVue({
       template: `
-        <el-checkbox-group v-model="checkList" @change="onChange">
-          <el-checkbox label="a" ref="a"></el-checkbox>
-          <el-checkbox label="b" ref="b"></el-checkbox>
-        </el-checkbox-group>
+        <com-checkbox-group v-model="checkList" @change="onChange">
+          <com-checkbox label="a" ref="a"></com-checkbox>
+          <com-checkbox label="b" ref="b"></com-checkbox>
+        </com-checkbox-group>
       `,
       methods: {
         onChange(val) {
@@ -128,16 +128,16 @@ describe('Checkbox', () => {
   it('checkbox group minimum and maximum', done => {
     vm = createVue({
       template: `
-        <el-checkbox-group 
+        <com-checkbox-group 
           v-model="checkList" 
           :min="1" 
           :max="2"
         >
-          <el-checkbox label="a" ref="a"></el-checkbox>
-          <el-checkbox label="b" ref="b"></el-checkbox>
-          <el-checkbox label="c" ref="c"></el-checkbox>
-          <el-checkbox label="d" ref="d"></el-checkbox>
-        </el-checkbox-group>
+          <com-checkbox label="a" ref="a"></com-checkbox>
+          <com-checkbox label="b" ref="b"></com-checkbox>
+          <com-checkbox label="c" ref="c"></com-checkbox>
+          <com-checkbox label="d" ref="d"></com-checkbox>
+        </com-checkbox-group>
       `,
       data() {
         return {
@@ -170,14 +170,14 @@ describe('Checkbox', () => {
   it('nested group', done => {
     vm = createVue({
       template: `
-        <el-checkbox-group v-model="checkList">
+        <com-checkbox-group v-model="checkList">
           <com-row>
-            <el-checkbox label="a" ref="a"></el-checkbox>
-            <el-checkbox label="b" ref="b"></el-checkbox>
-            <el-checkbox label="c" ref="c"></el-checkbox>
-            <el-checkbox label="d" ref="d"></el-checkbox>
+            <com-checkbox label="a" ref="a"></com-checkbox>
+            <com-checkbox label="b" ref="b"></com-checkbox>
+            <com-checkbox label="c" ref="c"></com-checkbox>
+            <com-checkbox label="d" ref="d"></com-checkbox>
           </com-row>
-        </el-checkbox-group>
+        </com-checkbox-group>
       `,
       data() {
         return {
@@ -196,7 +196,7 @@ describe('Checkbox', () => {
   it('true false label', done => {
     vm = createVue({
       template: `
-        <el-checkbox true-label="a" :false-label="3" v-model="checked"></el-checkbox>
+        <com-checkbox true-label="a" :false-label="3" v-model="checked"></com-checkbox>
       `,
       data() {
         return {
@@ -214,10 +214,10 @@ describe('Checkbox', () => {
     vm = createVue({
       template: `
         <div>
-          <el-checkbox v-model="checked" checked></el-checkbox>
-          <el-checkbox-group v-model="checklist">
-            <el-checkbox checked label="a"></el-checkbox>
-          </el-checkbox-group>
+          <com-checkbox v-model="checked" checked></com-checkbox>
+          <com-checkbox-group v-model="checklist">
+            <com-checkbox checked label="a"></com-checkbox>
+          </com-checkbox-group>
         </div>
       `,
       data() {
@@ -240,8 +240,8 @@ describe('Checkbox', () => {
     it('create', done => {
       vm = createVue({
         template: `
-          <el-checkbox-button v-model="checked">
-          </el-checkbox-button>
+          <com-checkbox-button v-model="checked">
+          </com-checkbox-button>
         `,
         data() {
           return {
@@ -260,11 +260,11 @@ describe('Checkbox', () => {
     it('disabled', () => {
       vm = createVue({
         template: `
-          <el-checkbox-button
+          <com-checkbox-button
             v-model="checked"
             disabled
           >
-          </el-checkbox-button>
+          </com-checkbox-button>
         `,
         data() {
           return {
@@ -279,8 +279,8 @@ describe('Checkbox', () => {
     it('change event', done => {
       vm = createVue({
         template: `
-        <el-checkbox-button v-model="checked" @change="onChange">
-        </el-checkbox-button>
+        <com-checkbox-button v-model="checked" @change="onChange">
+        </com-checkbox-button>
       `,
         methods: {
           onChange(val) {
@@ -309,12 +309,12 @@ describe('Checkbox', () => {
     it('checkbox group', done => {
       vm = createVue({
         template: `
-          <el-checkbox-group v-model="checkList">
-            <el-checkbox-button label="a" ref="a"></el-checkbox-button>
-            <el-checkbox-button label="b" ref="b"></el-checkbox-button>
-            <el-checkbox-button label="c" ref="c"></el-checkbox-button>
-            <el-checkbox-button label="d" ref="d"></el-checkbox-button>
-          </el-checkbox-group>
+          <com-checkbox-group v-model="checkList">
+            <com-checkbox-button label="a" ref="a"></com-checkbox-button>
+            <com-checkbox-button label="b" ref="b"></com-checkbox-button>
+            <com-checkbox-button label="c" ref="c"></com-checkbox-button>
+            <com-checkbox-button label="d" ref="d"></com-checkbox-button>
+          </com-checkbox-group>
         `,
         data() {
           return {
@@ -338,12 +338,12 @@ describe('Checkbox', () => {
     it('checkbox-button group change event', done => {
       vm = createVue({
         template: `
-        <el-checkbox-group v-model="checkList" @change="onChange">
-          <el-checkbox-button label="a" ref="a"></el-checkbox-button>
-          <el-checkbox-button label="b" ref="b"></el-checkbox-button>
-          <el-checkbox-button label="c" ref="c"></el-checkbox-button>
-          <el-checkbox-button label="d" ref="d"></el-checkbox-button>
-        </el-checkbox-group>
+        <com-checkbox-group v-model="checkList" @change="onChange">
+          <com-checkbox-button label="a" ref="a"></com-checkbox-button>
+          <com-checkbox-button label="b" ref="b"></com-checkbox-button>
+          <com-checkbox-button label="c" ref="c"></com-checkbox-button>
+          <com-checkbox-button label="d" ref="d"></com-checkbox-button>
+        </com-checkbox-group>
       `,
         methods: {
           onChange(val) {
@@ -371,12 +371,12 @@ describe('Checkbox', () => {
     it('checkbox group props', () => {
       vm = createVue({
         template: `
-          <el-checkbox-group v-model="checkList" size="large" fill="#FF0000" text-color="#000">
-            <el-checkbox-button label="a" ref="a"></el-checkbox-button>
-            <el-checkbox-button label="b" ref="b"></el-checkbox-button>
-            <el-checkbox-button label="c" ref="c"></el-checkbox-button>
-            <el-checkbox-button label="d" ref="d"></el-checkbox-button>
-          </el-checkbox-group>
+          <com-checkbox-group v-model="checkList" size="large" fill="#FF0000" text-color="#000">
+            <com-checkbox-button label="a" ref="a"></com-checkbox-button>
+            <com-checkbox-button label="b" ref="b"></com-checkbox-button>
+            <com-checkbox-button label="c" ref="c"></com-checkbox-button>
+            <com-checkbox-button label="d" ref="d"></com-checkbox-button>
+          </com-checkbox-group>
         `,
         data() {
           return {
@@ -399,16 +399,16 @@ describe('Checkbox', () => {
     it('checkbox group minimum and maximum', done => {
       vm = createVue({
         template: `
-          <el-checkbox-group 
+          <com-checkbox-group 
             v-model="checkList" 
             :min="1" 
             :max="2"
           >
-            <el-checkbox-button label="a" ref="a"></el-checkbox-button>
-            <el-checkbox-button label="b" ref="b"></el-checkbox-button>
-            <el-checkbox-button label="c" ref="c"></el-checkbox-button>
-            <el-checkbox-button label="d" ref="d"></el-checkbox-button>
-          </el-checkbox-group>
+            <com-checkbox-button label="a" ref="a"></com-checkbox-button>
+            <com-checkbox-button label="b" ref="b"></com-checkbox-button>
+            <com-checkbox-button label="c" ref="c"></com-checkbox-button>
+            <com-checkbox-button label="d" ref="d"></com-checkbox-button>
+          </com-checkbox-group>
         `,
         data() {
           return {
@@ -438,14 +438,14 @@ describe('Checkbox', () => {
     it('nested group', done => {
       vm = createVue({
         template: `
-          <el-checkbox-group v-model="checkList">
+          <com-checkbox-group v-model="checkList">
             <com-row>
-              <el-checkbox-button label="a" ref="a"></el-checkbox-button>
-              <el-checkbox-button label="b" ref="b"></el-checkbox-button>
-              <el-checkbox-button label="c" ref="c"></el-checkbox-button>
-              <el-checkbox-button label="d" ref="d"></el-checkbox-button>
+              <com-checkbox-button label="a" ref="a"></com-checkbox-button>
+              <com-checkbox-button label="b" ref="b"></com-checkbox-button>
+              <com-checkbox-button label="c" ref="c"></com-checkbox-button>
+              <com-checkbox-button label="d" ref="d"></com-checkbox-button>
             </com-row>
-          </el-checkbox-group>
+          </com-checkbox-group>
         `,
         data() {
           return {
@@ -464,11 +464,11 @@ describe('Checkbox', () => {
     it('true false label', done => {
       vm = createVue({
         template: `
-          <el-checkbox-button 
+          <com-checkbox-button 
             true-label="a" 
             :false-label="3" 
             v-model="checked"
-          ></el-checkbox-button>
+          ></com-checkbox-button>
         `,
         data() {
           return {
@@ -486,10 +486,10 @@ describe('Checkbox', () => {
       vm = createVue({
         template: `
           <div>
-            <el-checkbox-button v-model="checked" checked></el-checkbox-button>
-            <el-checkbox-group v-model="checklist">
-              <el-checkbox-button checked label="a"></el-checkbox-button>
-            </el-checkbox-group>
+            <com-checkbox-button v-model="checked" checked></com-checkbox-button>
+            <com-checkbox-group v-model="checklist">
+              <com-checkbox-button checked label="a"></com-checkbox-button>
+            </com-checkbox-group>
           </div>
         `,
         data() {

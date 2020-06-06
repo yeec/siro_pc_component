@@ -568,7 +568,7 @@ describe('Tree', () => {
         renderContent(h, node) {
           return (
             <span class="custom-content">
-              <el-button>{ node.node.label }</el-button>
+              <com-button>{ node.node.label }</com-button>
             </span>
           );
         }
@@ -587,7 +587,7 @@ describe('Tree', () => {
         <com-tree ref="tree" :data="data">
           <div slot-scope="scope" class="custom-tree-template">
             <span>{{ scope.node.label }}</span>
-            <el-button></el-button>
+            <com-button></com-button>
           </div>
         </com-tree>
         `,

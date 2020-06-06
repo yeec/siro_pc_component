@@ -87,10 +87,10 @@
     <div class="block">
       <h3><%= 5 ></h3>
       <com-row :gutter="20">
-        <el-col :span="9">
+        <com-col :span="9">
           <p><%= 6 ></p>
-        </el-col>
-        <el-col :span="15" class="nav-demos">
+        </com-col>
+        <com-col :span="15" class="nav-demos">
           <img src="~examples/assets/images/navbar_1.png" alt="<%= 7 >" @click="enlarge(846, $event)">
           <h5><%= 7 ></h5>
           <p><%= 8 ></p>
@@ -100,19 +100,19 @@
           <img src="~examples/assets/images/navbar_3.png" alt="<%= 11 >" @click="enlarge(846, $event)">
           <h5><%= 11 ></h5>
           <p><%= 12 ></p>
-        </el-col>
+        </com-col>
       </com-row>
     </div>
     <div class="block">
       <h3><%= 13 ></h3>
       <com-row>
-        <el-col :span="10">
+        <com-col :span="10">
           <p><%= 14 ></p>
-        </el-col>
-        <el-col :span="14" class="nav-demos">
+        </com-col>
+        <com-col :span="14" class="nav-demos">
           <img src="~examples/assets/images/navbar_0.png" alt="" @click="enlarge(846, $event)">
           <p><%= 15 ></p>
-        </el-col>
+        </com-col>
       </com-row>
     </div>
     <transition name="fade">
