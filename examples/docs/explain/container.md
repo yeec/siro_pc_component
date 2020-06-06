@@ -72,7 +72,7 @@
 </el-container>
 
 <style>
-  .com-header, .com-footer {
+  .el-header, .el-footer {
     background-color: #B3C0D1;
     color: #333;
     text-align: center;
@@ -86,7 +86,7 @@
     line-height: 200px;
   }
   
-  .com-main {
+  .el-main {
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
@@ -191,7 +191,7 @@
 </el-container>
 
 <style>
-  .com-header {
+  .el-header {
     background-color: #B3C0D1;
     color: #333;
     line-height: 60px;
