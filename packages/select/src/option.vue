@@ -84,7 +84,7 @@
 
     watch: {
       currentLabel() {
-        if (!this.created && !this.select.remote) this.dispatch('ElSelect', 'setSelected');
+        if (!this.created && !this.select.remote) this.dispatch('ComSelect', 'setSelected');
       },
       value(val, oldVal) {
         const { remote, valueKey } = this.select;
@@ -92,7 +92,7 @@
           if (valueKey && typeof val === 'object' && typeof oldVal === 'object' && val[valueKey] === oldVal[valueKey]) {
             return;
           }
-          this.dispatch('ElSelect', 'setSelected');
+          this.dispatch('ComSelect', 'setSelected');
         }
       }
     },
@@ -130,7 +130,7 @@
 
       selectOptionClick() {
         if (this.disabled !== true && this.groupDisabled !== true) {
-          this.dispatch('ElSelect', 'handleOptionClick', [this, true]);
+          this.dispatch('ComSelect', 'handleOptionClick', [this, true]);
         }
       },
 

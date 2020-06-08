@@ -181,7 +181,7 @@
         }
       },
       updatePopper() {
-        this.broadcast('ElSelectDropdown', 'updatePopper');
+        this.broadcast('ComSelectDropdown', 'updatePopper');
         this.broadcast('ElDropdownMenu', 'updatePopper');
       },
       afterEnter() {

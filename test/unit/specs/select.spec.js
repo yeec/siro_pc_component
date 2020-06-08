@@ -357,7 +357,7 @@ describe('Select', () => {
     expect(vm.$el.querySelector('.el-input__icon').classList.contains('el-icon-search')).to.be.true;
   });
 
-  it('custom el-option template', () => {
+  it('custom com-option template', () => {
     vm = createVue({
       template: `
         <div>

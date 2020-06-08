@@ -48,7 +48,7 @@
 
 ### 有禁用选项
 
-:::demo 在`el-option`中，设定`disabled`值为 true，即可禁用该选项
+:::demo 在`com-option`中，设定`disabled`值为 true，即可禁用该选项
 ```html
 <template>
   <com-select v-model="value" placeholder="请选择">

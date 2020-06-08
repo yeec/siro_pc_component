@@ -104,7 +104,7 @@
       name="el-zoom-in-top"
       @before-enter="handleMenuEnter"
       @after-leave="doDestroy">
-      <el-select-menu
+      <com-select-menu
         ref="popper"
         :append-to-body="popperAppendToBody"
         v-show="visible && emptyText !== false">
@@ -128,7 +128,7 @@
             {{ emptyText }}
           </p>
         </template>
-      </el-select-menu>
+      </com-select-menu>
     </transition>
   </div>
 </template>
@@ -138,7 +138,7 @@
   import Focus from 'element-ui/src/mixins/focus';
   import Locale from 'element-ui/src/mixins/locale';
   import ElInput from 'element-ui/packages/input';
-  import ElSelectMenu from './select-dropdown.vue';
+  import ComSelectMenu from './select-dropdown.vue';
   import ComOption from './option.vue';
   import ElTag from 'element-ui/packages/tag';
   import ElScrollbar from 'element-ui/packages/scrollbar';
@@ -240,7 +240,7 @@
 
     components: {
       ElInput,
-      ElSelectMenu,
+      ComSelectMenu,
       ComOption,
       ElTag,
       ElScrollbar
@@ -367,7 +367,7 @@
 
       visible(val) {
         if (!val) {
-          this.broadcast('ElSelectDropdown', 'destroyPopper');
+          this.broadcast('ComSelectDropdown', 'destroyPopper');
           if (this.$refs.input) {
             this.$refs.input.blur();
           }
@@ -400,7 +400,7 @@
             }
           }
         } else {
-          this.broadcast('ElSelectDropdown', 'updatePopper');
+          this.broadcast('ComSelectDropdown', 'updatePopper');
           if (this.filterable) {
             this.query = this.remote ? '' : this.selectedLabel;
             this.handleQueryChange(this.query);
@@ -425,7 +425,7 @@
       options() {
         if (this.$isServer) return;
         this.$nextTick(() => {
-          this.broadcast('ElSelectDropdown', 'updatePopper');
+          this.broadcast('ComSelectDropdown', 'updatePopper');
         });
         if (this.multiple) {
           this.resetInputHeight();
@@ -462,7 +462,7 @@
         }
         this.previousQuery = val;
         this.$nextTick(() => {
-          if (this.visible) this.broadcast('ElSelectDropdown', 'updatePopper');
+          if (this.visible) this.broadcast('ComSelectDropdown', 'updatePopper');
         });
         this.hoverIndex = -1;
         if (this.multiple && this.filterable) {
@@ -655,7 +655,7 @@
               sizeInMap
             ) + 'px';
           if (this.visible && this.emptyText !== false) {
-            this.broadcast('ElSelectDropdown', 'updatePopper');
+            this.broadcast('ComSelectDropdown', 'updatePopper');
           }
         });
       },

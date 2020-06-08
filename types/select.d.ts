@@ -8,7 +8,7 @@ export interface QueryChangeHandler {
 }
 
 /** Dropdown Select Component */
-export declare class ElSelect extends ElementUIComponent {
+export declare class ComSelect extends ElementUIComponent {
   /** The form input value */
   value: any
 

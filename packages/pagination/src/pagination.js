@@ -1,5 +1,5 @@
 import Pager from './pager.vue';
-import ElSelect from 'element-ui/packages/select';
+import ComSelect from 'element-ui/packages/select';
 import ComOption from 'element-ui/packages/option';
 import ElInput from 'element-ui/packages/input';
 import Locale from 'element-ui/src/mixins/locale';
@@ -191,7 +191,7 @@ export default {
       },
 
       components: {
-        ElSelect,
+        ComSelect,
         ComOption
       },
 
