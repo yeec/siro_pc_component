@@ -27,21 +27,21 @@ const install = function(Vue, opts = {}) {
     Vue.component(component.name, component);
   });
 
-  Vue.use(InfiniteScroll);
-  Vue.use(Loading.directive);
+  Vue.use(ComInfiniteScroll);
+  Vue.use(ComLoading.directive);
 
   Vue.prototype.$ELEMENT = {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
 
-  Vue.prototype.$loading = Loading.service;
-  Vue.prototype.$msgbox = MessageBox;
-  Vue.prototype.$alert = MessageBox.alert;
-  Vue.prototype.$confirm = MessageBox.confirm;
-  Vue.prototype.$prompt = MessageBox.prompt;
-  Vue.prototype.$notify = Notification;
-  Vue.prototype.$message = Message;
+  Vue.prototype.$loading = ComLoading.service;
+  Vue.prototype.$msgbox = ComMessageBox;
+  Vue.prototype.$alert = ComMessageBox.alert;
+  Vue.prototype.$confirm = ComMessageBox.confirm;
+  Vue.prototype.$prompt = ComMessageBox.prompt;
+  Vue.prototype.$notify = ComNotification;
+  Vue.prototype.$message = ComMessage;
 
 };
 
@@ -56,7 +56,7 @@ export default {
   i18n: locale.i18n,
   install,
   CollapseTransition,
-  Loading,
+  ComLoading,
 {{list}}
 };
 `;
@@ -70,21 +70,22 @@ var installTemplate = [];
 var listTemplate = [];
 
 ComponentNames.forEach(name => {
-  var componentName = uppercamelcase(name);
+  var componentName = 'Com' + uppercamelcase(name);
+  console.log(name + '|' + componentName);
 
   includeComponentTemplate.push(render(IMPORT_TEMPLATE, {
     name: componentName,
     package: name
   }));
 
-  if (['Loading', 'MessageBox', 'Notification', 'Message', 'InfiniteScroll'].indexOf(componentName) === -1) {
+  if (['ComLoading', 'ComMessageBox', 'ComNotification', 'ComMessage', 'ComInfiniteScroll'].indexOf(componentName) === -1) {
     installTemplate.push(render(INSTALL_COMPONENT_TEMPLATE, {
       name: componentName,
       component: name
     }));
   }
 
-  if (componentName !== 'Loading') listTemplate.push(`  ${componentName}`);
+  if (componentName !== 'ComLoading') listTemplate.push(`  ${componentName}`);
 });
 
 var template = render(MAIN_TEMPLATE, {
