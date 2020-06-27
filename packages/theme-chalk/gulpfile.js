@@ -10,7 +10,7 @@ function compile() {
   return src('./src/*.scss')
     .pipe(sass.sync())
     .pipe(autoprefixer({
-      browsers: ['ie > 9', 'last 2 versions'],
+      overrideBrowserslist: ['ie > 9', 'last 2 versions'],
       cascade: false
     }))
     .pipe(concat('components.css'))
